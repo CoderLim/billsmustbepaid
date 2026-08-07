@@ -5,7 +5,7 @@ export function BrandLogo({
   name,
   showName = true,
   className,
-  imgClassName = 'size-8 rounded-md object-cover',
+  imgClassName = 'size-8 aspect-square rounded-md object-contain',
   nameClassName = 'font-serif text-lg italic',
 }: {
   name?: string;

@@ -73,7 +73,9 @@ function SettingsLayout() {
     <AppLayout
       navItems={navItems}
       footerNavItems={footerNavItems}
-      brand={<BrandLogo imgClassName="size-6 rounded-md object-cover" />}
+      brand={
+        <BrandLogo imgClassName="size-6 aspect-square rounded-md object-contain" />
+      }
       brandHref="/settings"
     >
       <Outlet />

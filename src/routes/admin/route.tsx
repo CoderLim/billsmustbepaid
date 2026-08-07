@@ -74,7 +74,9 @@ function AdminLayout() {
     <AppLayout
       navItems={navItems}
       footerNavItems={footerNavItems}
-      brand={<BrandLogo imgClassName="size-6 rounded-md object-cover" />}
+      brand={
+        <BrandLogo imgClassName="size-6 aspect-square rounded-md object-contain" />
+      }
       brandHref="/admin"
       profileHref="/settings/profile"
       requirePermission="admin.*"
