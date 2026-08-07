@@ -4,8 +4,10 @@ import { SiteHeader } from '@/components/site-header';
 export function Header() {
   const navLinks = [
     { href: '/#play', label: m['landing.nav.play']() },
-    { href: '/#about', label: m['landing.nav.about']() },
-    { href: '/#faq', label: m['landing.nav.faq']() },
+    { href: '/guides', label: 'Guides' },
+    { href: '/wiki', label: 'Wiki' },
+    { href: '/achievements', label: 'Achievements' },
+    { href: '/tier-lists', label: 'Tier Lists' },
     {
       href: 'https://store.steampowered.com/app/4421010/Bills_Must_Be_Paid/',
       label: m['landing.nav.steam'](),
