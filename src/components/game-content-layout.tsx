@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import { BookOpen, ExternalLink, ShieldCheck } from 'lucide-react';
 
 import { Footer } from '@/blocks/footer';
@@ -87,7 +87,7 @@ export function GameContentLayout({
               </Link>
             </BreadcrumbItem>
             {breadcrumbs.map((item) => (
-              <span key={`${item.label}-${item.href ?? 'current'}`} className="contents">
+              <Fragment key={`${item.label}-${item.href ?? 'current'}`}>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   {item.href ? (
@@ -101,7 +101,7 @@ export function GameContentLayout({
                     <BreadcrumbPage>{item.label}</BreadcrumbPage>
                   )}
                 </BreadcrumbItem>
-              </span>
+              </Fragment>
             ))}
           </BreadcrumbList>
         </Breadcrumb>
