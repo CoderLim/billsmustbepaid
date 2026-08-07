@@ -9,6 +9,30 @@ import { GamePlay } from '@/blocks/game-play';
 import { GameSeo } from '@/blocks/game-seo';
 import { Header } from '@/blocks/header';
 
+const ENGLISH_FAQ_ANSWERS = {
+  free:
+    'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
+  browser:
+    'Yes. The player at the top of this page runs in the browser, so no local game installation is required. Rike Games also links to its own free browser build, and itch.io hosts an HTML5 demo.',
+  steam:
+    'The free browser and demo versions cover the core loop. The full Steam game adds documented systems including bankruptcy and prestige progression, rings and bracelets, more piggies, hammers and perks, desk gadgets, risk mechanics, an ending, achievements, and Steam Cloud support.',
+  developer:
+    'Rike Games — Roxy and Mike, a two-person indie studio based in Frankfurt, Germany. Its official press kit says the studio has shipped mobile and web games since 2019, reaching more than 500,000 mobile downloads and over 20 million web plays across its catalog.',
+  controls:
+    'Use the left mouse button on desktop to move the hammer over piggy banks. The hammer swings while you hover over targets, and smashing consumes stamina.',
+  idle:
+    'No. Rike Games describes Bills Must Be Paid as an active incremental game. Runs involve smashing targets, watching stamina, paying bills, choosing perks, and deciding how to spend money on upgrades.',
+} as const;
+
+const FAQ_KEYS = [
+  'free',
+  'browser',
+  'steam',
+  'developer',
+  'controls',
+  'idle',
+] as const;
+
 function HomePage() {
   return (
     <div className="bg-background text-foreground flex min-h-screen flex-col">
@@ -26,6 +50,7 @@ function buildJsonLd(locale: string) {
   const url = localizeUrl(`${envConfigs.app_url}/`, {
     locale: locale as ReturnType<typeof getLocale>,
   }).href;
+  const isEnglish = locale === 'en';
 
   return [
     {
@@ -54,14 +79,7 @@ function buildJsonLd(locale: string) {
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: [
-        'free',
-        'browser',
-        'steam',
-        'developer',
-        'controls',
-        'idle',
-      ].map((key) => ({
+      mainEntity: FAQ_KEYS.map((key) => ({
         '@type': 'Question',
         name: m[`landing.seo.faq.${key}.question` as keyof typeof m](
           {},
@@ -69,10 +87,12 @@ function buildJsonLd(locale: string) {
         ),
         acceptedAnswer: {
           '@type': 'Answer',
-          text: m[`landing.seo.faq.${key}.answer` as keyof typeof m](
-            {},
-            { locale: locale as any }
-          ),
+          text: isEnglish
+            ? ENGLISH_FAQ_ANSWERS[key]
+            : m[`landing.seo.faq.${key}.answer` as keyof typeof m](
+                {},
+                { locale: locale as any }
+              ),
         },
       })),
     },
