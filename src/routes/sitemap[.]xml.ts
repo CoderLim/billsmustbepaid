@@ -4,7 +4,23 @@ import { envConfigs } from '@/config';
 import { baseLocale, locales, localizeUrl } from '@/paraglide/runtime.js';
 import { getLocalPosts, mergePosts } from '@/content/posts';
 
-const STATIC_PATHS = ['', '/blog', '/privacy-policy', '/terms-of-service'];
+const STATIC_PATHS = [
+  '',
+  '/guides',
+  '/guides/beginner-guide',
+  '/guides/prestige-bankruptcy',
+  '/guides/piggy-shuffle',
+  '/wiki',
+  '/wiki/piggy-banks',
+  '/wiki/hammers',
+  '/wiki/skill-tree',
+  '/achievements',
+  '/tier-lists',
+  '/demo-vs-full-game',
+  '/blog',
+  '/privacy-policy',
+  '/terms-of-service',
+];
 
 type Entry = {
   path: string;
@@ -45,8 +61,23 @@ export const Route = createFileRoute('/sitemap.xml')({
       GET: async () => {
         const entries: Entry[] = STATIC_PATHS.map((path) => ({
           path,
-          changeFrequency: path === '/blog' ? 'daily' : 'weekly',
-          priority: path === '' ? 1 : 0.8,
+          changeFrequency:
+            path === '/blog'
+              ? 'daily'
+              : path.startsWith('/guides') ||
+                  path.startsWith('/wiki') ||
+                  path === '/achievements' ||
+                  path === '/tier-lists'
+                ? 'weekly'
+                : 'monthly',
+          priority:
+            path === ''
+              ? 1
+              : path === '/guides' || path === '/wiki'
+                ? 0.9
+                : path.startsWith('/guides') || path.startsWith('/wiki')
+                  ? 0.8
+                  : 0.7,
         }));
 
         // Blog posts: db posts merged with local MDX posts.
