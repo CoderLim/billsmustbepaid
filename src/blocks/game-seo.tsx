@@ -30,35 +30,35 @@ const FEATURE_KEYS = [
 
 const ENGLISH_COPY = {
   intro:
-    'Bills Must Be Paid is a short active incremental game about smashing piggy banks, collecting money, paying bills, and upgrading before stamina runs out. The player above uses the browser build distributed through CrazyGames. Rike Games also publishes a free HTML5 demo on itch.io and a free Steam demo, while the complete Steam version launched on July 29, 2026.',
+    'Bills Must Be Paid is a short active incremental game about smashing piggy banks, collecting money, paying bills, and upgrading before stamina runs out. The Bills Must Be Paid player above uses the browser build distributed through CrazyGames. Rike Games also publishes a free HTML5 demo on itch.io and a free Steam demo, while the complete Steam version launched on July 29, 2026.',
   whatIs:
     'Bills Must Be Paid is an active incremental game by Rike Games, the two-person Frankfurt studio run by Roxy and Mike. It is not a passive idle game: a run is hands-on, smashing consumes stamina, broken piggies drop random loot, bills arrive with deadlines, and paid bills unlock perk choices. Coins can also go into the skill tree and new hammers. The full Steam release expands the loop with more piggy types, more perks and hammers, prestige progression, rings and bracelets, desk gadgets, risk mechanics, an ending, Steam achievements, and Steam Cloud.',
   howToPlayIntro:
-    'The basic loop is earn, pay, then upgrade. Rike Games describes it in four steps:',
+    'Bills Must Be Paid follows a basic loop of earn, pay, then upgrade. Rike Games describes it in four steps:',
   howToPlaySteps: [
-    'Move the hammer with the left mouse button and smash piggy banks. Smashing consumes stamina, and the run ends when your hand gets tired.',
+    'In Bills Must Be Paid, move the hammer with the left mouse button and smash piggy banks. Smashing consumes stamina, and the run ends when your hand gets tired.',
     'Collect loot from broken piggies. Loot is random, and different piggy types can behave differently or provide different rewards. The Tourist, for example, restores stamina when smashed.',
-    'Watch the bill deadline. Paying a bill lets you choose a perk. If you ignore a bill, the collector starts taking a cut of your earnings.',
+    'Bills Must Be Paid keeps pressure on you with bill deadlines. Paying a bill lets you choose a perk. If you ignore a bill, the collector starts taking a cut of your earnings.',
     'Use money left after bills on the skill tree or hammers. In the full game, paying bills contributes to long-term legacy or prestige progression that can be spent on rings and bracelets after bankruptcy.',
   ],
   controls:
-    'On desktop, use the left mouse button to move the hammer over piggy banks. Rike Games describes the interaction as hovering over a piggy while the hammer swings, so this is not rapid button-mashing. CrazyGames lists the browser version as desktop-only and identifies Unity 6 as the engine. The itch.io version is listed as HTML5 with mouse input.',
+    'Bills Must Be Paid uses the left mouse button on desktop to move the hammer over piggy banks. Rike Games describes the interaction as hovering over a piggy while the hammer swings, so this is not rapid button-mashing. CrazyGames lists the browser version as desktop-only and identifies Unity 6 as the engine. The itch.io version is listed as HTML5 with mouse input.',
   features: {
     smash:
-      'Hover a piggy and the hammer swings. Stamina drains while you play, so a run cannot continue forever. Loot is random, and some piggy types pay more than others. Rike Games specifically describes Piñata as a gamble that can produce very little or a much larger stack.',
+      'In Bills Must Be Paid, hovering a piggy makes the hammer swing. Stamina drains while you play, so a run cannot continue forever. Loot is random, and some piggy types pay more than others. Rike Games specifically describes Piñata as a gamble that can produce very little or a much larger stack.',
     bills:
-      'Bills create the pressure behind the game. They appear with deadlines, and paying one unlocks a perk choice. If a bill is ignored, the collector takes a cut of earnings. Rike Games later announced that the full Steam game also connects failed bills with bankruptcy. Official sources do not support a fixed 20–50% penalty, so this page does not state one.',
+      'Bills Must Be Paid uses recurring bills to create the pressure behind the game. They appear with deadlines, and paying one unlocks a perk choice. If a bill is ignored, the collector takes a cut of earnings. Rike Games later announced that the full Steam game also connects failed bills with bankruptcy. Official sources do not support a fixed 20–50% penalty, so this page does not state one.',
     skill_tree:
-      'Invest coins in grip strength, caffeine addiction, gym training, wrist enhancement, luck, and stranger branches deeper in, including rock rain and hammer electrification. Official descriptions connect these branches with damage, stamina, recovery, swing speed, luck, and special abilities. For a source-backed breakdown, see the Bills Must Be Paid skill tree wiki.',
+      'The Bills Must Be Paid skill tree lets you invest coins in grip strength, caffeine addiction, gym training, wrist enhancement, luck, and stranger branches deeper in, including rock rain and hammer electrification. Official descriptions connect these branches with damage, stamina, recovery, swing speed, luck, and special abilities. For a source-backed breakdown, see the Bills Must Be Paid skill tree wiki.',
     piggies:
-      'Rike Games lists Normalito, The Tourist, Woody, Piñata, El Loco, and rarer piggies. Normalito is slow and predictable. The Tourist is large and mostly stationary and restores stamina when smashed. Woody barely moves. Piñata rewards are random. El Loco can wander, zigzag, freeze, and charge. See the piggy bank wiki for confirmed behaviors without guessed hidden stats.',
+      'Bills Must Be Paid includes Normalito, The Tourist, Woody, Piñata, El Loco, and rarer piggies listed by Rike Games. Normalito is slow and predictable. The Tourist is large and mostly stationary and restores stamina when smashed. Woody barely moves. Piñata rewards are random. El Loco can wander, zigzag, freeze, and charge. See the piggy bank wiki for confirmed behaviors without guessed hidden stats.',
     hammers:
-      'Each hammer has its own damage, swing speed, crit chance, and hit radius. The official description contrasts higher-crit, smaller-radius hammers with faster, wider hammers that do less damage. Our hammer wiki keeps confirmed information separate from rankings that require version-specific testing.',
+      'Bills Must Be Paid hammers differ in damage, swing speed, crit chance, and hit radius. The official description contrasts higher-crit, smaller-radius hammers with faster, wider hammers that do less damage. Our hammer wiki keeps confirmed information separate from rankings that require version-specific testing.',
     coins:
-      'Some piggies drop rare coins instead of regular money. Rike Games describes these as a collection that carries across runs. The Steam release also supports achievements, so collection and completion sit alongside the core goal of paying bills and improving your build.',
+      'Bills Must Be Paid also has rare coins that can drop instead of regular money. Rike Games describes these as a collection that carries across runs. The Steam release also supports achievements, so collection and completion sit alongside the core goal of paying bills and improving your build.',
   },
   platformsBody:
-    'You can play the free browser build on this page. Other official or developer-authorized options include Steam, CrazyGames, and itch.io.',
+    'Bills Must Be Paid can be played for free in the browser on this page. Other official or developer-authorized options include Steam, CrazyGames, and itch.io.',
   platforms: {
     browser: 'Free browser build (this page) — no install required',
     steam:
@@ -67,14 +67,14 @@ const ENGLISH_COPY = {
     itch: 'itch.io — HTML5 demo by RikeGames',
   },
   mobile:
-    'Rike Games also says iOS and Android versions are planned, but its official page does not currently list a mobile release date.',
+    'For Bills Must Be Paid, Rike Games says iOS and Android versions are planned, but its official page does not currently list a mobile release date.',
   faq: {
     free:
       'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
     browser:
-      'Yes. The player at the top of this page runs in the browser, so no local game installation is required. Rike Games also links to its own free browser build, and itch.io hosts an HTML5 demo.',
+      'Yes. Bills Must Be Paid runs in the player at the top of this page, so no local game installation is required. Rike Games also links to its own free browser build, and itch.io hosts an HTML5 demo.',
     steam:
-      'The free browser and demo versions cover the core loop. The full Steam game adds documented systems including bankruptcy and prestige progression, rings and bracelets, more piggies, hammers and perks, desk gadgets, risk mechanics, an ending, achievements, and Steam Cloud support.',
+      'The free Bills Must Be Paid browser and demo versions cover the core loop. The full Steam game adds documented systems including bankruptcy and prestige progression, rings and bracelets, more piggies, hammers and perks, desk gadgets, risk mechanics, an ending, achievements, and Steam Cloud support.',
     developer:
       'Rike Games — Roxy and Mike, a two-person indie studio based in Frankfurt, Germany. Its official press kit says the studio has shipped mobile and web games since 2019, reaching more than 500,000 mobile downloads and over 20 million web plays across its catalog.',
     controls:
@@ -207,7 +207,7 @@ export function GameSeo() {
           {isEnglish ? (
             <section>
               <h2 className="text-foreground text-xl font-semibold tracking-tight sm:text-2xl">
-                Browser Demo vs. Full Steam Game
+                Bills Must Be Paid Browser Demo vs. Full Steam Game
               </h2>
               <p className="text-muted-foreground mt-3 text-[15px] leading-7">
                 The free browser version of Bills Must Be Paid should not be
@@ -232,7 +232,7 @@ export function GameSeo() {
           {isEnglish ? (
             <section>
               <h2 className="text-foreground text-xl font-semibold tracking-tight sm:text-2xl">
-                Bankruptcy, Prestige, Rings and Bracelets
+                Bills Must Be Paid Bankruptcy, Prestige, Rings and Bracelets
               </h2>
               <p className="text-muted-foreground mt-3 text-[15px] leading-7">
                 Bankruptcy is one of the biggest progression differences between
@@ -350,7 +350,7 @@ export function GameSeo() {
           {isEnglish ? (
             <section className="border-border rounded-lg border p-5">
               <h2 className="text-foreground text-lg font-semibold">
-                Game facts & original sources
+                Bills Must Be Paid game facts & original sources
               </h2>
               <p className="text-muted-foreground mt-2 text-[15px] leading-7">
                 Game facts on this page are checked against first-party Rike
