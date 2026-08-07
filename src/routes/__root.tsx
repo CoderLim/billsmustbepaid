@@ -122,9 +122,7 @@ function RootComponent() {
         <Toaster position="top-center" richColors />
         <GoogleOneTap />
         <Pageview domain="billsmustbepaid.net" />
-        {analytics?.gaId ? (
-          <GoogleAnalytics measurementId={analytics.gaId} />
-        ) : null}
+        <GoogleAnalytics measurementId="G-BBWBRF7T26" />
         {analytics?.plausibleDomain || analytics?.plausibleSrc ? (
           <Plausible
             domain={analytics.plausibleDomain}
