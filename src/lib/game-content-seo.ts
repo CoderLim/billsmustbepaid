@@ -35,7 +35,6 @@ export function buildGamePageHead({
       { property: 'og:url', content: canonical },
       { property: 'og:site_name', content: envConfigs.app_name },
       { property: 'og:image', content: ogImage },
-      { property: 'og:locale', content: locale },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: localizedTitle },
       { name: 'twitter:description', content: localizedDescription },
