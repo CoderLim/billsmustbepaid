@@ -7,6 +7,7 @@ import {
   GameContentLayout,
   SourceNote,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -24,6 +25,9 @@ function TierListsPage() {
         { label: 'Hammer ranking evidence', href: '#hammers' },
         { label: 'Skill ranking evidence', href: '#skills' },
         { label: 'What a future tier list needs', href: '#requirements' },
+        { label: 'Ranking method', href: '#tier-method' },
+        { label: 'Ranking criteria', href: '#tier-criteria' },
+        { label: 'Why rankings are incomplete', href: '#tier-search-intent' },
       ]}
       related={[
         {
@@ -104,6 +108,8 @@ function TierListsPage() {
           ]}
         />
       </ArticleSection>
+
+      <GameLongformExpansion page="tier-lists" />
     </GameContentLayout>
   );
 }
