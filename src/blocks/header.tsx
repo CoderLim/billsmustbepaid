@@ -1,32 +1,35 @@
+import { getGameCommon } from '@/content/game-page-locales';
+import { getLocale } from '@/paraglide/runtime.js';
 import { m } from '@/paraglide/messages.js';
 import { SiteHeader } from '@/components/site-header';
 
 export function Header() {
+  const common = getGameCommon(getLocale());
   const navLinks = [
     {
       href: '/guides',
-      label: 'Guides',
+      label: common.guides,
       children: [
-        { href: '/guides/beginner-guide', label: 'Beginner Guide' },
+        { href: '/guides/beginner-guide', label: common.beginnerGuide },
         {
           href: '/guides/prestige-bankruptcy',
-          label: 'Prestige & Bankruptcy',
+          label: common.prestigeBankruptcy,
         },
-        { href: '/guides/piggy-shuffle', label: 'Piggy Shuffle' },
-        { href: '/demo-vs-full-game', label: 'Demo vs Full Game' },
+        { href: '/guides/piggy-shuffle', label: common.piggyShuffle },
+        { href: '/demo-vs-full-game', label: common.demoVsFullGame },
       ],
     },
     {
       href: '/wiki',
-      label: 'Wiki',
+      label: common.wiki,
       children: [
-        { href: '/wiki/piggy-banks', label: 'Piggy Banks' },
-        { href: '/wiki/hammers', label: 'Hammers' },
-        { href: '/wiki/skill-tree', label: 'Skill Tree' },
+        { href: '/wiki/piggy-banks', label: common.piggyBanks },
+        { href: '/wiki/hammers', label: common.hammers },
+        { href: '/wiki/skill-tree', label: common.skillTree },
       ],
     },
-    { href: '/achievements', label: 'Achievements' },
-    { href: '/tier-lists', label: 'Tier Lists' },
+    { href: '/achievements', label: common.achievements },
+    { href: '/tier-lists', label: common.tierLists },
   ];
 
   return (
