@@ -95,8 +95,8 @@ export function GameContentLayout({
         cta={{ href: '/', label: 'Play Now' }}
       />
 
-      <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:py-12">
-        <Breadcrumb className="mb-7">
+      <main className="mx-auto w-full max-w-6xl px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-12">
+        <Breadcrumb className="mb-5">
           <BreadcrumbList>
             <BreadcrumbItem>
               <Link
