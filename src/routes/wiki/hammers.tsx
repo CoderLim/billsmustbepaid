@@ -7,6 +7,7 @@ import {
   GameScreenshot,
   SourceNote,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -24,6 +25,9 @@ function HammersPage() {
         { label: 'Confirmed named changes', href: '#patches' },
         { label: 'How to compare hammers', href: '#compare' },
         { label: 'Tier-list status', href: '#tier-list' },
+        { label: 'Hammer design', href: '#hammer-design' },
+        { label: 'Patch context', href: '#hammer-patches' },
+        { label: 'Build context', href: '#hammer-build-context' },
       ]}
       related={[
         {
@@ -110,6 +114,8 @@ function HammersPage() {
           The <Link href="/tier-lists" className="text-foreground underline underline-offset-4">Tier Lists page</Link> records what can currently be ranked responsibly and what evidence is still missing.
         </p>
       </ArticleSection>
+
+      <GameLongformExpansion page="hammers" />
     </GameContentLayout>
   );
 }
