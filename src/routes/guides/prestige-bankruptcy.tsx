@@ -7,6 +7,7 @@ import {
   GameScreenshot,
   SourceNote,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -25,6 +26,9 @@ function PrestigeBankruptcyPage() {
         { label: 'Prestige vs legacy points', href: '#points' },
         { label: 'Rings and bracelets', href: '#jewelry' },
         { label: 'Demo save warning', href: '#demo-save' },
+        { label: 'Prestige loop', href: '#prestige-loop' },
+        { label: 'Points and jewelry', href: '#prestige-jewelry' },
+        { label: 'Version notes', href: '#prestige-version' },
       ]}
       related={[
         {
@@ -110,6 +114,8 @@ function PrestigeBankruptcyPage() {
           See <Link href="/demo-vs-full-game" className="text-foreground underline underline-offset-4">Demo vs Full Game</Link> for the complete first-party comparison we can verify.
         </p>
       </ArticleSection>
+
+      <GameLongformExpansion page="prestige-bankruptcy" />
     </GameContentLayout>
   );
 }
