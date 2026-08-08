@@ -28,12 +28,49 @@ export const Route = createFileRoute('/blog/$slug')({
     const canonical = localizeUrl(`${envConfigs.app_url}/blog/${post.slug}`, {
       locale: locale as any,
     }).href;
+    const pageTitle = `${post.title} | ${envConfigs.app_name}`;
+    const ogImage = post.image
+      ? new URL(post.image, envConfigs.app_url).href
+      : undefined;
+
     return {
       meta: [
-        { title: `${post.title} | ${envConfigs.app_name}` },
+        { title: pageTitle },
         { name: 'description', content: post.description },
+        { name: 'robots', content: 'index, follow' },
+        { property: 'og:title', content: pageTitle },
+        { property: 'og:description', content: post.description },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:url', content: canonical },
+        { property: 'og:site_name', content: envConfigs.app_name },
+        ...(ogImage ? [{ property: 'og:image', content: ogImage }] : []),
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: pageTitle },
+        { name: 'twitter:description', content: post.description },
+        ...(ogImage ? [{ name: 'twitter:image', content: ogImage }] : []),
       ],
       links: [{ rel: 'canonical', href: canonical }],
+      scripts: [
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: post.title,
+            description: post.description,
+            url: canonical,
+            datePublished: post.createdAt,
+            ...(ogImage ? { image: ogImage } : {}),
+            ...(post.authorName
+              ? { author: { '@type': 'Organization', name: post.authorName } }
+              : {}),
+            about: {
+              '@type': 'VideoGame',
+              name: 'Bills Must Be Paid',
+            },
+          }),
+        },
+      ],
     };
   },
   component: BlogPostPage,
