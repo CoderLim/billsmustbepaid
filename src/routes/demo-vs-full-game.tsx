@@ -6,6 +6,7 @@ import {
   GameContentLayout,
   SourceNote,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -23,6 +24,9 @@ function DemoVsFullGamePage() {
         { label: 'Save compatibility', href: '#saves' },
         { label: 'Full-game additions', href: '#additions' },
         { label: 'Browser and Steam demo', href: '#browser' },
+        { label: 'Shared core loop', href: '#demo-shared-loop' },
+        { label: 'Full-game additions in context', href: '#demo-full-additions' },
+        { label: 'Save and version context', href: '#demo-save-context' },
       ]}
       related={[
         {
@@ -119,6 +123,8 @@ function DemoVsFullGamePage() {
           For mechanics that are shared across builds, start with the <Link href="/guides/beginner-guide" className="text-foreground underline underline-offset-4">Beginner Guide</Link>. For full-release-specific progression, use the <Link href="/guides/prestige-bankruptcy" className="text-foreground underline underline-offset-4">Prestige & Bankruptcy guide</Link>.
         </p>
       </ArticleSection>
+
+      <GameLongformExpansion page="demo-vs-full-game" />
     </GameContentLayout>
   );
 }
