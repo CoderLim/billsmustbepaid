@@ -3,7 +3,6 @@ import { SiteHeader } from '@/components/site-header';
 
 export function Header() {
   const navLinks = [
-    { href: '/#play', label: m['landing.nav.play']() },
     {
       href: '/guides',
       label: 'Guides',

@@ -69,8 +69,7 @@ const ENGLISH_COPY = {
   mobile:
     'For Bills Must Be Paid, Rike Games says iOS and Android versions are planned, but its official page does not currently list a mobile release date.',
   faq: {
-    free:
-      'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
+    free: 'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
     browser:
       'Yes. Bills Must Be Paid runs in the player at the top of this page, so no local game installation is required. Rike Games also links to its own free browser build, and itch.io hosts an HTML5 demo.',
     steam:
@@ -79,8 +78,7 @@ const ENGLISH_COPY = {
       'Rike Games — Roxy and Mike, a two-person indie studio based in Frankfurt, Germany. Its official press kit says the studio has shipped mobile and web games since 2019, reaching more than 500,000 mobile downloads and over 20 million web plays across its catalog.',
     controls:
       'Use the left mouse button on desktop to move the hammer over piggy banks. The hammer swings while you hover over targets, and smashing consumes stamina.',
-    idle:
-      'No. Rike Games describes Bills Must Be Paid as an active incremental game. Runs involve smashing targets, watching stamina, paying bills, choosing perks, and deciding how to spend money on upgrades.',
+    idle: 'No. Rike Games describes Bills Must Be Paid as an active incremental game. Runs involve smashing targets, watching stamina, paying bills, choosing perks, and deciding how to spend money on upgrades.',
   },
 } as const;
 
@@ -89,7 +87,7 @@ export function GameSeo() {
 
   return (
     <section className="border-border border-t">
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <header id="about" className="scroll-mt-20">
           <h1 className="font-serif text-3xl leading-tight tracking-tight italic sm:text-4xl">
             {m['landing.seo.h1']()}
@@ -106,7 +104,9 @@ export function GameSeo() {
               {m['landing.seo.what_is.title']()}
             </h2>
             <p className="text-muted-foreground mt-3 text-[15px] leading-7">
-              {isEnglish ? ENGLISH_COPY.whatIs : m['landing.seo.what_is.body']()}
+              {isEnglish
+                ? ENGLISH_COPY.whatIs
+                : m['landing.seo.what_is.body']()}
             </p>
           </section>
 
@@ -146,7 +146,9 @@ export function GameSeo() {
               {m['landing.seo.controls.title']()}
             </h3>
             <p className="text-muted-foreground mt-2 text-[15px] leading-7">
-              {isEnglish ? ENGLISH_COPY.controls : m['landing.seo.controls.body']()}
+              {isEnglish
+                ? ENGLISH_COPY.controls
+                : m['landing.seo.controls.body']()}
             </p>
           </section>
 
@@ -163,7 +165,9 @@ export function GameSeo() {
                   <p className="text-muted-foreground mt-2 text-[15px] leading-7">
                     {isEnglish
                       ? ENGLISH_COPY.features[key]
-                      : m[`landing.seo.features.${key}.body` as keyof typeof m]()}
+                      : m[
+                          `landing.seo.features.${key}.body` as keyof typeof m
+                        ]()}
                   </p>
                   {isEnglish && key === 'skill_tree' ? (
                     <p className="mt-3 text-sm">
@@ -354,8 +358,8 @@ export function GameSeo() {
               </h2>
               <p className="text-muted-foreground mt-2 text-[15px] leading-7">
                 Game facts on this page are checked against first-party Rike
-                Games material and the platform pages that host the game. Dynamic
-                ratings and unsupported fixed penalty percentages are
+                Games material and the platform pages that host the game.
+                Dynamic ratings and unsupported fixed penalty percentages are
                 intentionally not used.
               </p>
               <ul className="text-muted-foreground mt-4 list-disc space-y-2 pl-5 text-sm leading-6">
