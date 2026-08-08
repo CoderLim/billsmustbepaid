@@ -6,6 +6,7 @@ import {
   FactList,
   GameContentLayout,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
 const sources = [
@@ -40,6 +41,9 @@ function GuidesPage() {
         { label: 'Progression guides', href: '#progression' },
         { label: 'Challenge guides', href: '#challenges' },
         { label: 'How we verify guides', href: '#verification' },
+        { label: 'How to use these guides', href: '#guide-roadmap' },
+        { label: 'Version context', href: '#guide-version-context' },
+        { label: 'Guide evidence', href: '#guide-evidence' },
       ]}
       related={[
         {
@@ -129,6 +133,8 @@ function GuidesPage() {
           ]}
         />
       </ArticleSection>
+
+      <GameLongformExpansion page="guides" />
     </GameContentLayout>
   );
 }
