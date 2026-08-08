@@ -42,10 +42,12 @@ function entryXml(e: Entry): string {
         `    <xhtml:link rel="alternate" hreflang="${loc}" href="${urlFor(e.path, loc)}"/>`
     )
     .join('\n');
+  const xDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor(e.path, baseLocale)}"/>`;
   return [
     '  <url>',
     `    <loc>${urlFor(e.path, baseLocale)}</loc>`,
     alternates,
+    xDefault,
     e.lastModified ? `    <lastmod>${e.lastModified}</lastmod>` : null,
     `    <changefreq>${e.changeFrequency}</changefreq>`,
     `    <priority>${e.priority}</priority>`,
