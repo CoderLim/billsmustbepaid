@@ -7,6 +7,7 @@ import {
   GameScreenshot,
   SourceNote,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -26,6 +27,9 @@ function BeginnerGuidePage() {
         { label: 'Hammers', href: '#hammers' },
         { label: 'Bankruptcy progression', href: '#bankruptcy' },
         { label: 'Collections', href: '#collections' },
+        { label: 'Beginner priorities', href: '#beginner-priorities' },
+        { label: 'Reading game systems', href: '#beginner-read-systems' },
+        { label: 'Next steps', href: '#beginner-next-steps' },
       ]}
       related={[
         {
@@ -128,6 +132,8 @@ function BeginnerGuidePage() {
           Continue with <Link href="/wiki/piggy-banks" className="text-foreground underline underline-offset-4">Piggy Banks</Link> or use the <Link href="/achievements" className="text-foreground underline underline-offset-4">Achievements checklist</Link> to see the official completion objectives.
         </p>
       </ArticleSection>
+
+      <GameLongformExpansion page="beginner-guide" />
     </GameContentLayout>
   );
 }
