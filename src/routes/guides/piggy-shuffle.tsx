@@ -6,6 +6,7 @@ import {
   GameContentLayout,
   SourceNote,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -22,6 +23,9 @@ function PiggyShufflePage() {
         { label: 'What the challenge requires', href: '#objective' },
         { label: 'Community slow-motion method', href: '#community-method' },
         { label: 'What is not verified', href: '#not-verified' },
+        { label: 'Challenge context', href: '#shuffle-context' },
+        { label: 'Slow-motion method', href: '#shuffle-method' },
+        { label: 'Troubleshooting', href: '#shuffle-troubleshooting' },
       ]}
       related={[
         {
@@ -85,6 +89,8 @@ function PiggyShufflePage() {
           For the broader pig roster, use the <Link href="/wiki/piggy-banks" className="text-foreground underline underline-offset-4">Piggy Banks wiki page</Link>.
         </p>
       </ArticleSection>
+
+      <GameLongformExpansion page="piggy-shuffle" />
     </GameContentLayout>
   );
 }
