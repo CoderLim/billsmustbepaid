@@ -121,8 +121,10 @@ function RootComponent() {
         <SandboxPreviewBridge />
         <Toaster position="top-center" richColors />
         <GoogleOneTap />
-        <Pageview domain="billsmustbepaid.net" />
-        <GoogleAnalytics measurementId="G-BBWBRF7T26" />
+        <Pageview />
+        {analytics?.gaId ? (
+          <GoogleAnalytics measurementId={analytics.gaId} />
+        ) : null}
         {analytics?.plausibleDomain || analytics?.plausibleSrc ? (
           <Plausible
             domain={analytics.plausibleDomain}

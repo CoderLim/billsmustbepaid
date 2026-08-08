@@ -1,6 +1,8 @@
 import { Fragment, type ReactNode } from 'react';
 import { BookOpen, ExternalLink, ShieldCheck } from 'lucide-react';
 
+import { Link } from '@/core/i18n/navigation';
+import { gameSeoImages, type GameSeoImageKey } from '@/config/game-seo-images';
 import { Footer } from '@/blocks/footer';
 import { SiteHeader } from '@/components/site-header';
 import {
@@ -10,11 +12,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import {
-  gameSeoImages,
-  type GameSeoImageKey,
-} from '@/config/game-seo-images';
-import { Link } from '@/core/i18n/navigation';
 
 export type ContentBreadcrumb = {
   label: string;
@@ -102,7 +99,10 @@ export function GameContentLayout({
         <Breadcrumb className="mb-7">
           <BreadcrumbList>
             <BreadcrumbItem>
-              <Link href="/" className="hover:text-foreground transition-colors">
+              <Link
+                href="/"
+                className="hover:text-foreground transition-colors"
+              >
                 Play
               </Link>
             </BreadcrumbItem>
@@ -146,12 +146,13 @@ export function GameContentLayout({
             </div>
           </div>
 
-          <figure className="overflow-hidden rounded-2xl border bg-black shadow-sm">
+          <figure className="border-border bg-muted/20 overflow-hidden rounded-2xl border shadow-sm">
             <img
               src={image.src}
               width={image.width}
               height={image.height}
               alt={imageAlt}
+              decoding="async"
               className="aspect-video h-auto w-full object-cover"
             />
             <figcaption className="border-border bg-background/95 text-muted-foreground border-t px-4 py-3 text-xs">
@@ -161,7 +162,7 @@ export function GameContentLayout({
         </section>
 
         <div className="grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-14">
-          <article className="min-w-0 max-w-3xl">{children}</article>
+          <article className="max-w-3xl min-w-0">{children}</article>
 
           {toc?.length ? (
             <aside className="hidden lg:block">
@@ -228,7 +229,7 @@ export function ArticleSection({
   return (
     <section id={id} className="scroll-mt-24 [&+section]:mt-10">
       <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">{title}</h2>
-      <div className="text-muted-foreground mt-4 space-y-4 text-base leading-7 [&_strong]:text-foreground">
+      <div className="text-muted-foreground [&_strong]:text-foreground mt-4 space-y-4 text-base leading-7">
         {children}
       </div>
     </section>
@@ -313,12 +314,17 @@ export function ContentCardGrid({ items }: { items: RelatedPage[] }) {
 
 function SourceList({ sources }: { sources: ContentSource[] }) {
   return (
-    <section className="border-border border-t py-10" aria-labelledby="sources-title">
+    <section
+      className="border-border border-t py-10"
+      aria-labelledby="sources-title"
+    >
       <h2 id="sources-title" className="text-2xl font-bold tracking-tight">
         Original sources
       </h2>
       <p className="text-muted-foreground mt-2 max-w-3xl text-sm leading-6">
-        Facts on this page are tied to the first-party or clearly labeled community sources below. Community advice is not presented as an official game mechanic.
+        Facts on this page are tied to the first-party or clearly labeled
+        community sources below. Community advice is not presented as an
+        official game mechanic.
       </p>
       <ol className="mt-5 space-y-4">
         {sources.map((source, index) => (

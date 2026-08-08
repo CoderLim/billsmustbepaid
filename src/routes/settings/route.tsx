@@ -10,12 +10,14 @@ import {
   User,
 } from 'lucide-react';
 
+import { buildPrivatePageHead } from '@/lib/page-head';
 import { m } from '@/paraglide/messages.js';
 import { SupportWidget } from '@/blocks/support-widget';
 import { AppLayout } from '@/components/app-layout';
 import { BrandLogo } from '@/components/brand-logo';
 
 export const Route = createFileRoute('/settings')({
+  head: () => buildPrivatePageHead(m['common.systems.settings']()),
   component: SettingsLayout,
 });
 

@@ -3,15 +3,15 @@
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
+import { useSession } from '@/core/auth/client';
+import { Link } from '@/core/i18n/navigation';
+import { cn } from '@/lib/utils';
+import { m } from '@/paraglide/messages.js';
 import { BrandLogo } from '@/components/brand-logo';
 import { LocaleSelector } from '@/components/locale-selector';
 import { SiteUserMenu } from '@/components/site-user-menu';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { buttonVariants } from '@/components/ui/button';
-import { useSession } from '@/core/auth/client';
-import { Link } from '@/core/i18n/navigation';
-import { cn } from '@/lib/utils';
-import { m } from '@/paraglide/messages.js';
 
 export interface NavLink {
   href: string;
@@ -67,10 +67,10 @@ function DesktopNavItem({ link }: { link: NavLink }) {
     <div className="group relative flex h-16 items-center">
       <div className="flex items-center gap-1">
         <DesktopNavLink link={link} />
-        <ChevronDown className="text-muted-foreground size-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
+        <ChevronDown className="text-muted-foreground size-3.5 transition-transform group-focus-within:rotate-180 group-hover:rotate-180" />
       </div>
 
-      <div className="pointer-events-none invisible absolute top-full left-1/2 z-50 w-64 -translate-x-1/2 pt-2 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100">
+      <div className="pointer-events-none invisible absolute top-full left-1/2 z-50 w-64 -translate-x-1/2 pt-2 opacity-0 transition-all duration-150 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100">
         <div className="border-border bg-popover text-popover-foreground rounded-xl border p-2 shadow-lg">
           {link.children.map((child) =>
             isExternalHref(child.href) ? (
@@ -166,7 +166,7 @@ export function SiteHeader({
 
         {/* Mobile toggle */}
         <button
-          className="p-2 md:hidden"
+          className="inline-flex size-11 items-center justify-center rounded-md md:hidden"
           onClick={() => {
             setMobileOpen(!mobileOpen);
             if (mobileOpen) setMobileSubmenu(null);
