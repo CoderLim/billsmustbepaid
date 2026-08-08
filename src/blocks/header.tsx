@@ -28,10 +28,6 @@ export function Header() {
     },
     { href: '/achievements', label: 'Achievements' },
     { href: '/tier-lists', label: 'Tier Lists' },
-    {
-      href: 'https://store.steampowered.com/app/4421010/Bills_Must_Be_Paid/',
-      label: m['landing.nav.steam'](),
-    },
   ];
 
   return (
