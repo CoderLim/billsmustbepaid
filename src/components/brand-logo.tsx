@@ -5,7 +5,7 @@ export function BrandLogo({
   name,
   showName = true,
   className,
-  imgClassName = 'size-8 aspect-square rounded-md object-contain',
+  imgClassName = 'size-11 aspect-square rounded-md object-contain',
   nameClassName = 'font-serif text-lg italic',
 }: {
   name?: string;
@@ -22,8 +22,8 @@ export function BrandLogo({
         src={envConfigs.app_logo}
         alt={displayName}
         className={imgClassName}
-        width={32}
-        height={32}
+        width={44}
+        height={44}
       />
       {showName ? <span className={nameClassName}>{displayName}</span> : null}
     </span>

@@ -41,7 +41,7 @@ export function SiteHeader({
 
   return (
     <header className="bg-background/80 sticky top-0 z-50 w-full backdrop-blur-sm">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Brand */}
         <Link href="/" className="flex items-center">
           <BrandLogo />
