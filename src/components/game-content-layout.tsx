@@ -1,9 +1,15 @@
 import { Fragment, type ReactNode } from 'react';
 import { BookOpen, ExternalLink, ShieldCheck } from 'lucide-react';
 
-import { Link } from '@/core/i18n/navigation';
-import { gameSeoImages, type GameSeoImageKey } from '@/config/game-seo-images';
 import { Footer } from '@/blocks/footer';
+import { gameSeoImages, type GameSeoImageKey } from '@/config/game-seo-images';
+import {
+  getGameCommon,
+  getLocalizedGamePage,
+  type LocalizedGamePage,
+} from '@/content/game-page-locales';
+import { Link, usePathname } from '@/core/i18n/navigation';
+import { getLocale } from '@/paraglide/runtime.js';
 import { SiteHeader } from '@/components/site-header';
 import {
   Breadcrumb,
@@ -35,33 +41,82 @@ export type TocItem = {
   href: string;
 };
 
-const innerNavLinks = [
-  { href: '/', label: 'Play' },
-  {
-    href: '/guides',
-    label: 'Guides',
-    children: [
-      { href: '/guides/beginner-guide', label: 'Beginner Guide' },
-      {
-        href: '/guides/prestige-bankruptcy',
-        label: 'Prestige & Bankruptcy',
-      },
-      { href: '/guides/piggy-shuffle', label: 'Piggy Shuffle' },
-      { href: '/demo-vs-full-game', label: 'Demo vs Full Game' },
-    ],
-  },
-  {
-    href: '/wiki',
-    label: 'Wiki',
-    children: [
-      { href: '/wiki/piggy-banks', label: 'Piggy Banks' },
-      { href: '/wiki/hammers', label: 'Hammers' },
-      { href: '/wiki/skill-tree', label: 'Skill Tree' },
-    ],
-  },
-  { href: '/achievements', label: 'Achievements' },
-  { href: '/tier-lists', label: 'Tier Lists' },
-];
+function buildInnerNav(common: ReturnType<typeof getGameCommon>) {
+  return [
+    { href: '/', label: common.play },
+    {
+      href: '/guides',
+      label: common.guides,
+      children: [
+        { href: '/guides/beginner-guide', label: common.beginnerGuide },
+        {
+          href: '/guides/prestige-bankruptcy',
+          label: common.prestigeBankruptcy,
+        },
+        { href: '/guides/piggy-shuffle', label: common.piggyShuffle },
+        { href: '/demo-vs-full-game', label: common.demoVsFullGame },
+      ],
+    },
+    {
+      href: '/wiki',
+      label: common.wiki,
+      children: [
+        { href: '/wiki/piggy-banks', label: common.piggyBanks },
+        { href: '/wiki/hammers', label: common.hammers },
+        { href: '/wiki/skill-tree', label: common.skillTree },
+      ],
+    },
+    { href: '/achievements', label: common.achievements },
+    { href: '/tier-lists', label: common.tierLists },
+  ];
+}
+
+function localizeBreadcrumbs(
+  breadcrumbs: ContentBreadcrumb[],
+  localized?: LocalizedGamePage
+): ContentBreadcrumb[] {
+  return breadcrumbs.map((item, index) => ({
+    ...item,
+    label: localized?.breadcrumbs[index] ?? item.label,
+  }));
+}
+
+function localizeToc(
+  toc: TocItem[] | undefined,
+  localized?: LocalizedGamePage
+): TocItem[] | undefined {
+  return toc?.map((item, index) => ({
+    ...item,
+    label: localized?.toc[index] ?? item.label,
+  }));
+}
+
+function localizeRelated(
+  related: RelatedPage[],
+  localized?: LocalizedGamePage
+): RelatedPage[] {
+  return related.map((item, index) => ({
+    ...item,
+    title: localized?.related[index]?.title ?? item.title,
+    description: localized?.related[index]?.description ?? item.description,
+  }));
+}
+
+function localizeSources(
+  sources: ContentSource[],
+  localized?: LocalizedGamePage
+): ContentSource[] {
+  return sources.map((source, index) => {
+    const translated = localized?.sources[index];
+    return translated
+      ? {
+          ...source,
+          label: translated.label,
+          note: translated.note,
+        }
+      : source;
+  });
+}
 
 export function GameContentLayout({
   eyebrow,
@@ -86,13 +141,21 @@ export function GameContentLayout({
   related?: RelatedPage[];
   sources: ContentSource[];
 }) {
+  const locale = getLocale();
+  const pathname = usePathname();
+  const localized = getLocalizedGamePage(pathname, locale);
+  const common = getGameCommon(locale);
   const image = gameSeoImages[imageKey];
+  const displayedBreadcrumbs = localizeBreadcrumbs(breadcrumbs, localized);
+  const displayedToc = localizeToc(toc, localized);
+  const displayedRelated = localizeRelated(related, localized);
+  const displayedSources = localizeSources(sources, localized);
 
   return (
     <div className="bg-background text-foreground min-h-screen">
       <SiteHeader
-        navLinks={innerNavLinks}
-        cta={{ href: '/', label: 'Play Now' }}
+        navLinks={buildInnerNav(common)}
+        cta={{ href: '/', label: common.playNow }}
       />
 
       <main className="mx-auto w-full max-w-6xl px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-12">
@@ -103,10 +166,10 @@ export function GameContentLayout({
                 href="/"
                 className="hover:text-foreground transition-colors"
               >
-                Play
+                {common.play}
               </Link>
             </BreadcrumbItem>
-            {breadcrumbs.map((item) => (
+            {displayedBreadcrumbs.map((item) => (
               <Fragment key={`${item.label}-${item.href ?? 'current'}`}>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
@@ -129,20 +192,20 @@ export function GameContentLayout({
         <section className="border-border grid gap-8 border-b pb-10 lg:grid-cols-[minmax(0,1fr)_460px] lg:items-center">
           <div>
             <div className="text-primary mb-3 text-sm font-semibold tracking-wide uppercase">
-              {eyebrow}
+              {localized?.eyebrow ?? eyebrow}
             </div>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-              {title}
+              {localized?.title ?? title}
             </h1>
             <p className="text-muted-foreground mt-5 max-w-2xl text-lg leading-8">
-              {description}
+              {localized?.description ?? description}
             </p>
             <div className="text-muted-foreground mt-5 flex flex-wrap items-center gap-4 text-sm">
               <span className="inline-flex items-center gap-1.5">
                 <ShieldCheck className="text-primary size-4" />
-                Source-checked
+                {common.sourceChecked}
               </span>
-              <span>Updated August 7, 2026</span>
+              <span>{common.updated}</span>
             </div>
           </div>
 
@@ -151,28 +214,34 @@ export function GameContentLayout({
               src={image.src}
               width={image.width}
               height={image.height}
-              alt={imageAlt}
+              alt={localized?.imageAlt ?? imageAlt}
               decoding="async"
               className="aspect-video h-auto w-full object-cover"
             />
             <figcaption className="border-border bg-background/95 text-muted-foreground border-t px-4 py-3 text-xs">
-              Official Bills Must Be Paid screenshot from Rike Games / Steam.
+              {common.screenshotCaption}
             </figcaption>
           </figure>
         </section>
 
         <div className="grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-14">
-          <article className="max-w-3xl min-w-0">{children}</article>
+          <article className="max-w-3xl min-w-0">
+            {localized ? (
+              <LocalizedSections sections={localized.sections} />
+            ) : (
+              children
+            )}
+          </article>
 
-          {toc?.length ? (
+          {displayedToc?.length ? (
             <aside className="hidden lg:block">
               <div className="sticky top-24">
                 <div className="mb-3 flex items-center gap-2 text-sm font-semibold">
                   <BookOpen className="size-4" />
-                  On this page
+                  {common.onThisPage}
                 </div>
                 <nav className="border-border flex flex-col gap-2 border-l pl-4">
-                  {toc.map((item) => (
+                  {displayedToc.map((item) => (
                     <a
                       key={item.href}
                       href={item.href}
@@ -187,11 +256,13 @@ export function GameContentLayout({
           ) : null}
         </div>
 
-        {related.length ? (
+        {displayedRelated.length ? (
           <section className="border-border border-t py-10">
-            <h2 className="text-2xl font-bold tracking-tight">Related pages</h2>
+            <h2 className="text-2xl font-bold tracking-tight">
+              {common.relatedPages}
+            </h2>
             <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {related.map((item) => (
+              {displayedRelated.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -209,11 +280,34 @@ export function GameContentLayout({
           </section>
         ) : null}
 
-        <SourceList sources={sources} />
+        <SourceList
+          sources={displayedSources}
+          title={common.originalSources}
+          intro={common.sourcesIntro}
+        />
       </main>
 
       <Footer />
     </div>
+  );
+}
+
+function LocalizedSections({
+  sections,
+}: {
+  sections: LocalizedGamePage['sections'];
+}) {
+  return (
+    <>
+      {sections.map((section) => (
+        <ArticleSection key={section.id} id={section.id} title={section.title}>
+          {section.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          {section.bullets?.length ? <FactList items={section.bullets} /> : null}
+        </ArticleSection>
+      ))}
+    </>
   );
 }
 
@@ -312,19 +406,25 @@ export function ContentCardGrid({ items }: { items: RelatedPage[] }) {
   );
 }
 
-function SourceList({ sources }: { sources: ContentSource[] }) {
+function SourceList({
+  sources,
+  title,
+  intro,
+}: {
+  sources: ContentSource[];
+  title: string;
+  intro: string;
+}) {
   return (
     <section
       className="border-border border-t py-10"
       aria-labelledby="sources-title"
     >
       <h2 id="sources-title" className="text-2xl font-bold tracking-tight">
-        Original sources
+        {title}
       </h2>
       <p className="text-muted-foreground mt-2 max-w-3xl text-sm leading-6">
-        Facts on this page are tied to the first-party or clearly labeled
-        community sources below. Community advice is not presented as an
-        official game mechanic.
+        {intro}
       </p>
       <ol className="mt-5 space-y-4">
         {sources.map((source, index) => (
