@@ -5,6 +5,7 @@ import {
   FactList,
   GameContentLayout,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -75,6 +76,9 @@ function AchievementsPage() {
         { label: 'Money, gambling and loans', href: '#money-risk' },
         { label: 'Collection and completion', href: '#completion' },
         { label: 'Guide links', href: '#guides' },
+        { label: 'Achievement structure', href: '#achievement-overview' },
+        { label: 'Completion roadmap', href: '#achievement-completion' },
+        { label: 'Verification', href: '#achievement-verification' },
       ]}
       related={[
         {
@@ -132,6 +136,8 @@ function AchievementsPage() {
           ]}
         />
       </ArticleSection>
+
+      <GameLongformExpansion page="achievements" />
     </GameContentLayout>
   );
 }
