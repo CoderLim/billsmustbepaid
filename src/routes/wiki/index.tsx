@@ -6,6 +6,7 @@ import {
   FactList,
   GameContentLayout,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
 function WikiPage() {
@@ -22,6 +23,9 @@ function WikiPage() {
         { label: 'Equipment and upgrades', href: '#equipment' },
         { label: 'Collections and completion', href: '#completion' },
         { label: 'Evidence policy', href: '#evidence' },
+        { label: 'What this wiki covers', href: '#wiki-scope' },
+        { label: 'Versioning', href: '#wiki-versioning' },
+        { label: 'Research policy', href: '#wiki-research' },
       ]}
       related={[
         {
@@ -130,6 +134,8 @@ function WikiPage() {
           ]}
         />
       </ArticleSection>
+
+      <GameLongformExpansion page="wiki" />
     </GameContentLayout>
   );
 }
