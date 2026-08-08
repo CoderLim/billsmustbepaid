@@ -52,6 +52,16 @@ const PATH_TO_KEY: Record<string, GamePageKey> = {
   '/demo-vs-full-game': 'demo-vs-full-game',
 };
 
+const ZH_UI_LABELS: Record<string, string> = {
+  Wiki: '游戏百科',
+  'Tier List': '强度榜',
+  'Tier Lists': '强度榜',
+};
+
+function localizeZhUiLabel(label: string): string {
+  return ZH_UI_LABELS[label] ?? label;
+}
+
 export function normalizeGamePath(path: string): string {
   if (path.length > 1 && path.endsWith('/')) return path.slice(0, -1);
   return path;
@@ -66,7 +76,15 @@ export function getLocalizedGamePage(
   locale: string
 ): LocalizedGamePage | undefined {
   const key = getGamePageKey(path);
-  return key ? bundles[locale]?.pages[key] : undefined;
+  const page = key ? bundles[locale]?.pages[key] : undefined;
+
+  if (!page || locale !== 'zh') return page;
+
+  return {
+    ...page,
+    eyebrow: localizeZhUiLabel(page.eyebrow),
+    breadcrumbs: page.breadcrumbs.map(localizeZhUiLabel),
+  };
 }
 
 export function getGameLocaleBundle(
@@ -78,5 +96,13 @@ export function getGameLocaleBundle(
 export function getGameCommon(
   locale: string
 ): GamePageLocaleBundle['common'] {
-  return bundles[locale]?.common ?? enGameCommon;
+  const common = bundles[locale]?.common ?? enGameCommon;
+
+  if (locale !== 'zh') return common;
+
+  return {
+    ...common,
+    wiki: '游戏百科',
+    tierLists: '强度榜',
+  };
 }
