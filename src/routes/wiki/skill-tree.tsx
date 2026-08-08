@@ -7,6 +7,7 @@ import {
   GameScreenshot,
   SourceNote,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -24,6 +25,9 @@ function SkillTreePage() {
         { label: 'Confirmed upgrade examples', href: '#examples' },
         { label: 'Full-game changes', href: '#changes' },
         { label: 'Tier-list limits', href: '#ranking' },
+        { label: 'Progression role', href: '#skill-purpose-expanded' },
+        { label: 'Version differences', href: '#skill-versioning-expanded' },
+        { label: 'How to read advice', href: '#skill-build-reading' },
       ]}
       related={[
         {
@@ -103,6 +107,8 @@ function SkillTreePage() {
           </p>
         </SourceNote>
       </ArticleSection>
+
+      <GameLongformExpansion page="skill-tree" />
     </GameContentLayout>
   );
 }
