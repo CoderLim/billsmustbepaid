@@ -6,6 +6,7 @@ import {
   GameContentLayout,
   GameScreenshot,
 } from '@/components/game-content-layout';
+import { GameLongformExpansion } from '@/components/game-longform-expansion';
 import { Link } from '@/core/i18n/navigation';
 import { buildGamePageHead } from '@/lib/game-content-seo';
 
@@ -23,6 +24,9 @@ function PiggyBanksPage() {
         { label: 'Loot and behavior', href: '#loot' },
         { label: 'Collection goals', href: '#collection' },
         { label: 'Piggy Shuffle', href: '#shuffle' },
+        { label: 'Role in a run', href: '#piggy-role' },
+        { label: 'Known behavior', href: '#piggy-known-behavior' },
+        { label: 'Completion context', href: '#piggy-completion' },
       ]}
       related={[
         {
@@ -94,6 +98,8 @@ function PiggyBanksPage() {
           The achievement <strong>Eyes on the Piggy</strong> asks players to pick the correct piggy in Piggy Shuffle. Because the most detailed workaround we found is player-created, it lives in a separate <Link href="/guides/piggy-shuffle" className="text-foreground underline underline-offset-4">Piggy Shuffle guide</Link> where community advice is clearly labeled.
         </p>
       </ArticleSection>
+
+      <GameLongformExpansion page="piggy-banks" />
     </GameContentLayout>
   );
 }
