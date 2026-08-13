@@ -64,9 +64,9 @@ function AchievementList({ items }: { items: readonly (readonly [string, string]
 function AchievementsPage() {
   return (
     <GameContentLayout
-      eyebrow="Completion"
-      title="All 27 Bills Must Be Paid Achievements"
-      description="A clean checklist of the official Steam achievement names and objectives, grouped by progression, smashing skill, money/risk and full completion."
+      eyebrow="Completion Guide"
+      title="Bills Must Be Paid Achievements: All 27 Steam Achievements"
+      description="All 27 official Steam achievements in one checklist, with direct guide links for Eyes on the Piggy, Fresh Start, Piggy Bank Collector and other completion goals."
       breadcrumbs={[{ label: 'Achievements' }]}
       imageKey="coins"
       imageAlt="Bills Must Be Paid rare coin collection screen"
@@ -82,8 +82,8 @@ function AchievementsPage() {
       ]}
       related={[
         {
-          title: 'Piggy Shuffle Guide',
-          description: 'Help for Eyes on the Piggy, including a labeled community workaround.',
+          title: 'Eyes on the Piggy / Piggy Shuffle Guide',
+          description: 'Focused help for the Piggy Shuffle achievement, including a clearly labeled community slow-motion method.',
           href: '/guides/piggy-shuffle',
         },
         {
@@ -129,7 +129,7 @@ function AchievementsPage() {
       <ArticleSection id="guides" title="Use the objectives as guide entry points">
         <FactList
           items={[
-            <><Link href="/guides/piggy-shuffle" className="text-foreground underline underline-offset-4">Eyes on the Piggy</Link> has a dedicated challenge guide.</>,
+            <><Link href="/guides/piggy-shuffle" className="text-foreground font-semibold underline underline-offset-4">Bills Must Be Paid Piggy Shuffle guide for Eyes on the Piggy</Link> explains the verified objective and the labeled community slow-motion method.</>,
             <><Link href="/guides/prestige-bankruptcy" className="text-foreground underline underline-offset-4">Fresh Start</Link> is directly tied to declaring bankruptcy and beginning a new cycle.</>,
             <><Link href="/wiki/piggy-banks" className="text-foreground underline underline-offset-4">Piggy Bank Collector</Link> confirms that unlocking every piggy is a formal completion goal.</>,
             <><Link href="/wiki/skill-tree" className="text-foreground underline underline-offset-4">Maxed Out</Link> confirms that buying every skill-tree upgrade is part of 100% completion.</>,
@@ -146,9 +146,9 @@ export const Route = createFileRoute('/achievements')({
   head: () =>
     buildGamePageHead({
       path: '/achievements',
-      title: 'Bills Must Be Paid Achievements - All 27 Objectives',
+      title: 'Bills Must Be Paid Achievements - All 27 Steam Achievements',
       description:
-        'All 27 Bills Must Be Paid Steam achievements with official names and objectives, including Eyes on the Piggy, Fresh Start, Freedom and Maxed Out.',
+        'Bills Must Be Paid achievements guide with all 27 Steam achievements, official objectives, and help for Eyes on the Piggy, Fresh Start, Freedom and Maxed Out.',
       image: '/images/game/rare-coins-collection.jpg',
     }),
   component: AchievementsPage,

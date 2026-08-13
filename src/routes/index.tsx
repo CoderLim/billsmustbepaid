@@ -8,6 +8,7 @@ import { Footer } from '@/blocks/footer';
 import { GamePlay } from '@/blocks/game-play';
 import { GameSeo } from '@/blocks/game-seo';
 import { Header } from '@/blocks/header';
+import { PiggyShufflePromo } from '@/components/piggy-shuffle-promo';
 
 const ENGLISH_FAQ_ANSWERS = {
   free:
@@ -33,6 +34,28 @@ const FAQ_KEYS = [
   'idle',
 ] as const;
 
+const HOME_SEO = {
+  en: {
+    title: 'Bills Must Be Paid Game - Play Free Online',
+    description:
+      'Bills Must Be Paid game online: play the free browser demo, smash piggy banks, pay bills, upgrade hammers and skills, and compare the full Steam game.',
+  },
+  zh: {
+    title: 'Bills Must Be Paid Game - 免费在线玩',
+    description:
+      'Bills Must Be Paid Game 免费在线玩：浏览器直接试玩，砸存钱罐、付账单、升级锤子与技能树，并了解 Steam 完整版差异。',
+  },
+  es: {
+    title: 'Bills Must Be Paid Game - Juega Gratis Online',
+    description:
+      'Bills Must Be Paid juego online: juega gratis en el navegador, rompe alcancías, paga facturas, mejora tu build y compara la versión completa de Steam.',
+  },
+} as const;
+
+function getHomeSeo(locale: string) {
+  return HOME_SEO[locale as keyof typeof HOME_SEO] ?? HOME_SEO.en;
+}
+
 function HomePage() {
   return (
     <div className="bg-background text-foreground flex min-h-screen flex-col">
@@ -40,6 +63,7 @@ function HomePage() {
       <main>
         <GamePlay />
         <GameSeo />
+        <PiggyShufflePromo />
       </main>
       <Footer />
     </div>
@@ -51,6 +75,7 @@ function buildJsonLd(locale: string) {
     locale: locale as ReturnType<typeof getLocale>,
   }).href;
   const isEnglish = locale === 'en';
+  const seo = getHomeSeo(locale);
 
   return [
     {
@@ -61,10 +86,7 @@ function buildJsonLd(locale: string) {
       applicationCategory: 'GameApplication',
       operatingSystem: 'Any',
       browserRequirements: 'Requires JavaScript. Desktop browser recommended.',
-      description: m['landing.seo.meta_description'](
-        {},
-        { locale: locale as any }
-      ),
+      description: seo.description,
       offers: {
         '@type': 'Offer',
         price: '0',
@@ -108,11 +130,7 @@ export const Route = createFileRoute('/')({
     const locale = loaderData?.locale ?? 'en';
     const urlFor = (loc: string) =>
       localizeUrl(`${envConfigs.app_url}/`, { locale: loc as any }).href;
-    const title = m['landing.seo.meta_title']({}, { locale: locale as any });
-    const description = m['landing.seo.meta_description'](
-      {},
-      { locale: locale as any }
-    );
+    const { title, description } = getHomeSeo(locale);
     const ogImage = `${envConfigs.app_url}${gameSeoImages.smash.src}`;
 
     return {
@@ -127,6 +145,8 @@ export const Route = createFileRoute('/')({
         { property: 'og:site_name', content: envConfigs.app_name },
         { property: 'og:image', content: ogImage },
         { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
         { name: 'twitter:image', content: ogImage },
       ],
       links: [
