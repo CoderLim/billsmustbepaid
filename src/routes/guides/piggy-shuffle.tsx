@@ -14,8 +14,8 @@ function PiggyShufflePage() {
   return (
     <GameContentLayout
       eyebrow="Challenge Guide"
-      title="Bills Must Be Paid Piggy Shuffle Guide"
-      description="The verified Piggy Shuffle objective plus a clearly labeled Steam Community workaround for tracking the correct piggy."
+      title="Bills Must Be Paid Piggy Shuffle: Eyes on the Piggy Guide"
+      description="Learn the verified Eyes on the Piggy objective and a clearly labeled slow-motion community method for tracking the correct piggy in Piggy Shuffle."
       breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Piggy Shuffle' }]}
       imageKey="piggies"
       imageAlt="Bills Must Be Paid piggy bank collection screen"
@@ -29,14 +29,14 @@ function PiggyShufflePage() {
       ]}
       related={[
         {
+          title: 'Achievements',
+          description: 'See Eyes on the Piggy in the complete list of 27 official Steam achievements.',
+          href: '/achievements',
+        },
+        {
           title: 'Piggy Banks',
           description: 'What official sources say about piggy types, behavior and collection.',
           href: '/wiki/piggy-banks',
-        },
-        {
-          title: 'Achievements',
-          description: 'See Eyes on the Piggy in the complete official achievement list.',
-          href: '/achievements',
         },
         {
           title: 'Beginner Guide',
@@ -86,7 +86,7 @@ function PiggyShufflePage() {
           Player comments may describe visual tells or movement patterns, but those observations are anecdotal unless they are confirmed by first-party documentation or repeatable evidence. This page intentionally keeps those claims out of the main instructions.
         </p>
         <p>
-          For the broader pig roster, use the <Link href="/wiki/piggy-banks" className="text-foreground underline underline-offset-4">Piggy Banks wiki page</Link>.
+          For the broader pig roster, use the <Link href="/wiki/piggy-banks" className="text-foreground underline underline-offset-4">Piggy Banks wiki page</Link>. For the complete achievement checklist, open <Link href="/achievements" className="text-foreground font-medium underline underline-offset-4">Bills Must Be Paid Achievements</Link>.
         </p>
       </ArticleSection>
 
@@ -99,9 +99,9 @@ export const Route = createFileRoute('/guides/piggy-shuffle')({
   head: () =>
     buildGamePageHead({
       path: '/guides/piggy-shuffle',
-      title: 'Bills Must Be Paid Piggy Shuffle Guide - Eyes on the Piggy',
+      title: 'Bills Must Be Paid Piggy Shuffle - Eyes on the Piggy Guide',
       description:
-        'How the Bills Must Be Paid Piggy Shuffle challenge works, plus a clearly labeled Steam Community slow-motion workaround for Eyes on the Piggy.',
+        'Bills Must Be Paid Piggy Shuffle guide: learn the Eyes on the Piggy objective and a clearly labeled slow-motion community method for tracking the correct piggy.',
       image: '/images/game/piggy-types-collection.jpg',
     }),
   component: PiggyShufflePage,
