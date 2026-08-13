@@ -407,6 +407,46 @@ Just the `INSERT OR IGNORE ... SELECT` + verify from above. 0 rows → user hasn
 | Postgres mode: intermittent `Cannot perform I/O on behalf of a different request` | A postgres client got cached across requests (e.g. someone re-added a module-level cache for TCP drivers) | `src/core/db/index.ts` deliberately skips the singleton cache for postgres/mysql on Workers — restore that behavior |
 | `wrangler hyperdrive create` fails with connection error | Postgres unreachable from Cloudflare: IP allowlist, no TLS, or blocked port | Allow Cloudflare egress / enable TLS on the DB; for Neon/Supabase use the direct (non-pooler) connection string |
 
+## Workers Builds — merge to main auto-deploy (no GitHub Actions)
+
+Cloudflare's native Git integration (**Workers Builds**) watches your repo and deploys on every push to the production branch (default `main`). PR merges to `main` trigger production deploys; other branches get preview versions (`wrangler versions upload`).
+
+### One-time dashboard setup
+
+1. [Workers & Pages](https://dash.cloudflare.com/) → select Worker `billsmustgetpaid` (or create from **Import a repository**).
+2. **Settings → Builds → Connect** → authorize GitHub → pick `CoderLim/billsmustbepaid`.
+3. **Production branch:** `main`.
+4. **Build command:**
+   ```bash
+   pnpm cf:migrate:remote && pnpm cf:build
+   ```
+5. **Deploy command:**
+   ```bash
+   pnpm exec wrangler deploy
+   ```
+6. **Build variables** (Settings → Builds → Build variables — build-time only, must match `wrangler.jsonc` `vars`):
+   - `VITE_APP_URL` — e.g. `https://billsmustbepaid.net`
+   - `VITE_APP_NAME` — e.g. `Bills Must Be Paid`
+7. **Runtime secrets** (Settings → Variables & Secrets — not build variables):
+   - `AUTH_SECRET`
+   - `CONFIG_ENCRYPTION_KEY` (if used)
+   - Provider keys normally live in admin Settings (config table), not env.
+
+### Repo requirements
+
+`wrangler.jsonc` is gitignored by default (local working copy), but **Workers Builds reads from Git** — commit it once:
+
+```bash
+git add -f wrangler.jsonc
+git commit -m "chore: track wrangler.jsonc for Workers Builds"
+```
+
+It holds public config (D1 `database_id`, routes, `vars.VITE_APP_URL`) — not secrets. Secrets stay in Cloudflare (Variables & Secrets + `wrangler secret`).
+
+After connecting, every merge to `main` runs: migrate D1 → build Worker bundle → `wrangler deploy`. Monitor builds under the Worker's **Deployments** tab.
+
+Local manual deploys still use `pnpm cf:deploy` (sources `.env.production`).
+
 ## What this skill never does
 
 - Run the final deploy without an explicit `yes` (Phase 7's redeploy belongs to the confirmed event)

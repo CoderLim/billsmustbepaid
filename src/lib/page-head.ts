@@ -21,7 +21,7 @@ export function buildStaticPageHead({
   description: string;
 }) {
   const canonical = new URL(path, envConfigs.app_url).href;
-  const ogImage = new URL('/logo.svg', envConfigs.app_url).href;
+  const ogImage = new URL('/logo.png', envConfigs.app_url).href;
 
   return {
     meta: [
