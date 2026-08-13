@@ -38,6 +38,75 @@ const bundles: Partial<Record<string, GamePageLocaleBundle>> = {
   es: esGamePages,
 };
 
+type SeoOverride = Partial<
+  Pick<LocalizedGamePage, 'metaTitle' | 'metaDescription' | 'title' | 'description'>
+>;
+
+const pageOverrides: Partial<
+  Record<string, Partial<Record<GamePageKey, SeoOverride>>>
+> = {
+  zh: {
+    achievements: {
+      metaTitle: 'Bills Must Be Paid 成就 - 全部 27 个 Steam 成就',
+      metaDescription:
+        'Bills Must Be Paid 成就：查看全部 27 个 Steam 成就、官方目标，以及 Eyes on the Piggy、Fresh Start、Freedom、Maxed Out 等任务攻略入口。',
+      title: 'Bills Must Be Paid 成就：全部 27 个 Steam 成就',
+      description:
+        '完整整理 27 个官方 Steam 成就与目标，并为 Eyes on the Piggy、Fresh Start、Piggy Bank Collector 等高意图任务提供对应攻略入口。',
+    },
+  },
+  es: {
+    guides: {
+      metaTitle: 'Bills Must Be Paid Guía - Cómo jugar, prestigio y retos',
+      metaDescription:
+        'Bills Must Be Paid guía: aprende cómo jugar, gestionar resistencia y facturas, elegir mejoras y avanzar hacia prestigio, bancarrota y retos.',
+      title: 'Bills Must Be Paid Guía: cómo jugar, progresar y superar retos',
+      description:
+        'Empieza por el bucle principal y pasa a guías concretas de prestigio, bancarrota, Piggy Shuffle, martillos, habilidades y logros.',
+    },
+    'beginner-guide': {
+      metaTitle: 'Bills Must Be Paid Guía para Principiantes - Cómo Jugar',
+      metaDescription:
+        'Bills Must Be Paid guía para principiantes: aprende el bucle, la resistencia, las facturas, los martillos, las habilidades y la progresión.',
+      title: 'Bills Must Be Paid Guía para Principiantes: Cómo Jugar',
+      description:
+        'Aprende qué hacer desde la primera partida: romper huchas, gestionar resistencia, pagar facturas, elegir mejoras y preparar la progresión del juego completo.',
+    },
+    'prestige-bankruptcy': {
+      metaTitle: 'Bills Must Be Paid Prestigio y Bancarrota - Guía',
+      metaDescription:
+        'Bills Must Be Paid prestigio y bancarrota: entiende nuevos ciclos, puntos, anillos, pulseras y por qué la partida de la demo no se transfiere.',
+      title: 'Bills Must Be Paid Prestigio y Bancarrota: Guía',
+      description:
+        'Entiende qué activa la bancarrota, cómo comienza un nuevo ciclo y cómo se conectan los puntos de progresión con anillos y pulseras.',
+    },
+    'piggy-shuffle': {
+      metaTitle: 'Bills Must Be Paid Piggy Shuffle - Guía Eyes on the Piggy',
+      metaDescription:
+        'Bills Must Be Paid Piggy Shuffle: cómo superar Eyes on the Piggy con el objetivo oficial y un método comunitario a cámara lenta claramente identificado.',
+      title: 'Bills Must Be Paid Piggy Shuffle: Guía de Eyes on the Piggy',
+      description:
+        'Consulta el objetivo oficial de Eyes on the Piggy y una solución comunitaria a cámara lenta claramente separada de las mecánicas confirmadas por el desarrollador.',
+    },
+    achievements: {
+      metaTitle: 'Bills Must Be Paid Logros - Los 27 logros de Steam',
+      metaDescription:
+        'Bills Must Be Paid logros: consulta los 27 logros oficiales de Steam, sus objetivos y las guías para Eyes on the Piggy, Fresh Start y Maxed Out.',
+      title: 'Bills Must Be Paid Logros: los 27 logros de Steam',
+      description:
+        'Lista completa de los 27 logros oficiales de Steam con objetivos y accesos directos a las guías de Eyes on the Piggy, Fresh Start y otros retos.',
+    },
+    'demo-vs-full-game': {
+      metaTitle: 'Bills Must Be Paid Demo vs Juego Completo - Diferencias',
+      metaDescription:
+        'Bills Must Be Paid Demo vs juego completo: compara fechas, guardados, prestigio, bancarrota, joyería, tienda y funciones añadidas en Steam.',
+      title: 'Bills Must Be Paid Demo vs Juego Completo: Diferencias',
+      description:
+        'Compara la demo gratuita con el lanzamiento completo de Steam: compatibilidad de guardados, prestigio, bancarrota, joyería, tienda y contenido añadido.',
+    },
+  },
+};
+
 const PATH_TO_KEY: Record<string, GamePageKey> = {
   '/guides': 'guides',
   '/guides/beginner-guide': 'beginner-guide',
@@ -77,13 +146,17 @@ export function getLocalizedGamePage(
 ): LocalizedGamePage | undefined {
   const key = getGamePageKey(path);
   const page = key ? bundles[locale]?.pages[key] : undefined;
+  if (!page || !key) return page;
 
-  if (!page || locale !== 'zh') return page;
+  const override = pageOverrides[locale]?.[key];
+  const localizedPage = override ? { ...page, ...override } : page;
+
+  if (locale !== 'zh') return localizedPage;
 
   return {
-    ...page,
-    eyebrow: localizeZhUiLabel(page.eyebrow),
-    breadcrumbs: page.breadcrumbs.map(localizeZhUiLabel),
+    ...localizedPage,
+    eyebrow: localizeZhUiLabel(localizedPage.eyebrow),
+    breadcrumbs: localizedPage.breadcrumbs.map(localizeZhUiLabel),
   };
 }
 
