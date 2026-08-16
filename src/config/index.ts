@@ -82,4 +82,9 @@ export const envConfigs: Record<string, string> = {
 
   // Locale (public)
   locale: publicEnv('VITE_DEFAULT_LOCALE') ?? 'en',
+
+  // Ads — publisher ID is public (also in page source / ads.txt). Prefer
+  // admin Settings; env is a deploy fallback so production can ship without
+  // a DB write. DB values still win via getAllConfigs().
+  adsense_code: procEnv.ADSENSE_CODE ?? '',
 };

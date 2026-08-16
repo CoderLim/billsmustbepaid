@@ -6,7 +6,7 @@ import { Expand, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
-const GAME_URL = 'https://cg-cdn.browsergamers.gg/g/bills-must-be-paid';
+const GAME_URL = 'https://freetopgames.io/bills-must-be-paid.embed';
 
 export function GameEmbed({
   title,

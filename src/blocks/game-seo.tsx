@@ -442,6 +442,22 @@ export function GameSeo() {
               </a>
               .{' '}
               <Link
+                href="/contact"
+                title="Contact"
+                className="text-foreground underline-offset-4 hover:underline"
+              >
+                {m['landing.footer.contact']()}
+              </Link>
+              {' · '}
+              <Link
+                href="/about"
+                title="About"
+                className="text-foreground underline-offset-4 hover:underline"
+              >
+                {m['landing.nav.about']()}
+              </Link>
+              {' · '}
+              <Link
                 href="/privacy-policy"
                 title="Privacy Policy"
                 className="text-foreground underline-offset-4 hover:underline"

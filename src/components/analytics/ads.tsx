@@ -3,19 +3,29 @@
 // <meta> and async <script> into <head> so they land in the SSR HTML directly
 // and are visible to the AdSense crawler in View Source. `code` is the
 // publisher ID (e.g. "ca-pub-XXXXXXXXXXXXXXXX").
-export function Ads({ code }: { code: string }) {
+//
+// `loadScript` defaults to true. Pass false on pages that primarily frame
+// third-party content (e.g. the homepage game embed) so Google ads are not
+// served beside framed inventory — meta remains for site verification.
+export function Ads({
+  code,
+  loadScript = true,
+}: {
+  code: string;
+  loadScript?: boolean;
+}) {
   if (!code) return null;
   return (
     <>
       <meta name="google-adsense-account" content={code} />
-      {/* async={true} flags this to React 19 as a hoistable resource —
-          see google-analytics.tsx for the full rationale. */}
-      <script
-        id="adsbygoogle-loader"
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${code}`}
-        crossOrigin="anonymous"
-      />
+      {loadScript ? (
+        <script
+          id="adsbygoogle-loader"
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${code}`}
+          crossOrigin="anonymous"
+        />
+      ) : null}
     </>
   );
 }

@@ -59,7 +59,19 @@ export async function getDbConfigs(): Promise<ConfigMap> {
  */
 export async function getAllConfigs(): Promise<ConfigMap> {
   const dbConfigs = await getDbConfigs();
-  return { ...envConfigs, ...dbConfigs };
+  const base: ConfigMap = { ...envConfigs };
+
+  // Cloudflare Workers expose wrangler `vars` on the binding env, which may
+  // not be mirrored into process.env at module-eval time.
+  if (!base.adsense_code?.trim()) {
+    const cf = (globalThis as any).__CF_ENV__ ?? (globalThis as any).__env__;
+    const fromCf = cf?.ADSENSE_CODE;
+    if (typeof fromCf === 'string' && fromCf.trim()) {
+      base.adsense_code = fromCf.trim();
+    }
+  }
+
+  return { ...base, ...dbConfigs };
 }
 
 /**

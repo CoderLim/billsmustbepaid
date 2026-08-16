@@ -35,12 +35,10 @@ export function Footer() {
     {
       title: m['landing.footer.legal'](),
       links: [
+        { label: m['landing.nav.about'](), href: '/about' },
         { label: m['landing.footer.privacy'](), href: '/privacy-policy' },
         { label: m['landing.footer.terms'](), href: '/terms-of-service' },
-        {
-          label: m['landing.footer.contact'](),
-          href: 'mailto:support@billsmustbepaid.net',
-        },
+        { label: m['landing.footer.contact'](), href: '/contact' },
       ],
     },
   ];

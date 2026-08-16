@@ -770,7 +770,7 @@
   "landing.seo.how_to_play.intro": "每一局都遵循同样的压力循环：快速赚钱、按时付账、把剩余硬币投入升级。核心流程如下：",
   "landing.seo.how_to_play.step1": "用鼠标移动锤子砸存钱罐。每次挥击消耗体力——手累了，本局结束。",
   "landing.seo.how_to_play.step2": "砸碎的存钱罐掉落硬币和随机战利品。不同猪型回报不同，有的还能恢复体力。",
-  "landing.seo.how_to_play.step3": "账单会带截止日期出现。付清后从三张增益卡中选一张；若拖欠，催收员会从收入中扣除 20–50%。",
+  "landing.seo.how_to_play.step3": "账单会带截止日期出现。付清后从三张增益卡中选一张；若拖欠，催收员会对收入抽成（官方未公布固定百分比）。",
   "landing.seo.how_to_play.step4": "剩余硬币投入技能树或购买新锤子。宣布破产后，进度可转化为传承点数，用于购买永久戒指和手镯。",
   "landing.seo.controls.title": "操作方式",
   "landing.seo.controls.body": "在桌面端，按住鼠标左键并移动光标即可挥锤——与 CrazyGames 页面列出的操作一致。游戏基于 Unity 6 开发，建议在支持 JavaScript 的现代 Chromium 浏览器中游玩。",
