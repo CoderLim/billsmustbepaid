@@ -11,8 +11,7 @@ import { Header } from '@/blocks/header';
 import { PiggyShufflePromo } from '@/components/piggy-shuffle-promo';
 
 const ENGLISH_FAQ_ANSWERS = {
-  free:
-    'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
+  free: 'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
   browser:
     'Yes. The player at the top of this page runs in the browser, so no local game installation is required. Rike Games also links to its own free browser build, and itch.io hosts an HTML5 demo.',
   steam:
@@ -21,8 +20,7 @@ const ENGLISH_FAQ_ANSWERS = {
     'Rike Games — Roxy and Mike, a two-person indie studio based in Frankfurt, Germany. Its official press kit says the studio has shipped mobile and web games since 2019, reaching more than 500,000 mobile downloads and over 20 million web plays across its catalog.',
   controls:
     'Use the left mouse button on desktop to move the hammer over piggy banks. The hammer swings while you hover over targets, and smashing consumes stamina.',
-  idle:
-    'No. Rike Games describes Bills Must Be Paid as an active incremental game. Runs involve smashing targets, watching stamina, paying bills, choosing perks, and deciding how to spend money on upgrades.',
+  idle: 'No. Rike Games describes Bills Must Be Paid as an active incremental game. Runs involve smashing targets, watching stamina, paying bills, choosing perks, and deciding how to spend money on upgrades.',
 } as const;
 
 const FAQ_KEYS = [
@@ -36,19 +34,19 @@ const FAQ_KEYS = [
 
 const HOME_SEO = {
   en: {
-    title: 'Bills Must Be Paid - Wiki, Guides & Free Online Demo',
+    title: 'Bills Must Be Paid Game Wiki & Guides | Play Free',
     description:
-      'Bills Must Be Paid: play free in your browser, or read the full wiki & guides: piggy banks, hammers, skill tree, prestige & bankruptcy explained.',
+      'Bills Must Be Paid game wiki: Piggy Shuffle, skill tree, achievements, and beginner guides. Play free in your browser. Steam full game on Windows and Mac.',
   },
   zh: {
-    title: 'Bills Must Be Paid Game - 免费在线玩',
+    title: 'Bills Must Be Paid 游戏 Wiki 与攻略 | 免费在线玩',
     description:
-      'Bills Must Be Paid Game 免费在线玩：浏览器直接试玩，砸存钱罐、付账单、升级锤子与技能树，并了解 Steam 完整版差异。',
+      'Bills Must Be Paid 游戏 Wiki：Piggy Shuffle、技能树、成就与新手攻略。浏览器免费畅玩，Steam 完整版支持 Windows 与 Mac。',
   },
   es: {
-    title: 'Bills Must Be Paid Game - Juega Gratis Online',
+    title: 'Bills Must Be Paid Juego: Wiki, Guías y Gratis',
     description:
-      'Bills Must Be Paid juego online: juega gratis en el navegador, rompe alcancías, paga facturas, mejora tu build y compara la versión completa de Steam.',
+      'Wiki y guías de Bills Must Be Paid: cómo jugar, Piggy Shuffle, logros y árbol de habilidades. Juega el juego gratis en el navegador o descárgalo en Steam.',
   },
 } as const;
 
