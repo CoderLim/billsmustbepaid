@@ -31,16 +31,22 @@ jobs:
           import urllib.request
 
           seeds = [
-              'bills must be paid coin',
-              'bills must be paid coin flip',
-              'bills must be paid double',
-              'bills must be paid big',
-              'bills must be paid big toni',
-              'bills must be paid super',
-              'bills must be paid jackpot',
-              'bills must be paid max',
-              'bills must be paid maxed out',
-              'bills must be paid achievements',
+              'bills must be paid loan',
+              'bills must be paid toni',
+              'bills must be paid pay back',
+              'bills must be paid big t',
+              'bills must be paid double or nothing',
+              'bills must be paid gambling',
+              'bills must be paid coin rain',
+              'bills must be paid coins',
+              'bills must be paid super j',
+              'bills must be paid super jackpot',
+              'bills must be paid skill',
+              'bills must be paid skill tree',
+              'bills must be paid maxed',
+              'bills must be paid maxed achievement',
+              'bills must be paid achievement max',
+              'bills must be paid jackpot achievement',
           ]
           for seed in seeds:
               params = urllib.parse.urlencode({
