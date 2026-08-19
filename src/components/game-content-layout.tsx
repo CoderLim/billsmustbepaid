@@ -41,7 +41,21 @@ export type TocItem = {
   href: string;
 };
 
-function buildInnerNav(common: ReturnType<typeof getGameCommon>) {
+function getNewPageLabels(locale: string) {
+  if (locale === 'zh') {
+    return { doubleOrNothing: 'Double or Nothing', coins: '硬币' };
+  }
+  if (locale === 'es') {
+    return { doubleOrNothing: 'Double or Nothing', coins: 'Monedas' };
+  }
+  return { doubleOrNothing: 'Double or Nothing', coins: 'Coins' };
+}
+
+function buildInnerNav(
+  common: ReturnType<typeof getGameCommon>,
+  locale: string
+) {
+  const newPageLabels = getNewPageLabels(locale);
   return [
     { href: '/', label: common.play },
     {
@@ -54,6 +68,10 @@ function buildInnerNav(common: ReturnType<typeof getGameCommon>) {
           label: common.prestigeBankruptcy,
         },
         { href: '/guides/piggy-shuffle', label: common.piggyShuffle },
+        {
+          href: '/guides/double-or-nothing',
+          label: newPageLabels.doubleOrNothing,
+        },
         { href: '/demo-vs-full-game', label: common.demoVsFullGame },
       ],
     },
@@ -64,6 +82,7 @@ function buildInnerNav(common: ReturnType<typeof getGameCommon>) {
         { href: '/wiki/piggy-banks', label: common.piggyBanks },
         { href: '/wiki/hammers', label: common.hammers },
         { href: '/wiki/skill-tree', label: common.skillTree },
+        { href: '/wiki/coins', label: newPageLabels.coins },
       ],
     },
     { href: '/achievements', label: common.achievements },
@@ -154,7 +173,7 @@ export function GameContentLayout({
   return (
     <div className="bg-background text-foreground min-h-screen">
       <SiteHeader
-        navLinks={buildInnerNav(common)}
+        navLinks={buildInnerNav(common, locale)}
         cta={{ href: '/', label: common.playNow }}
       />
 
