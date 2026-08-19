@@ -111,6 +111,11 @@ function WikiPage() {
         <ContentCardGrid
           items={[
             {
+              title: 'Bills Must Be Paid Coins',
+              description: 'Rare coins, Coin Collector and what first-party sources do or do not say about Coin Rain.',
+              href: '/wiki/coins',
+            },
+            {
               title: 'Achievements',
               description: 'All 27 official Steam achievements, grouped by goal type.',
               href: '/achievements',
@@ -119,6 +124,11 @@ function WikiPage() {
               title: 'Piggy Shuffle',
               description: 'The Eyes on the Piggy objective and a labeled community workaround.',
               href: '/guides/piggy-shuffle',
+            },
+            {
+              title: 'Double or Nothing',
+              description: 'The coin flip, 50/50 and All or Nothing achievement requirements.',
+              href: '/guides/double-or-nothing',
             },
           ]}
         />
