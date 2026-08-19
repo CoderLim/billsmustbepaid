@@ -23,6 +23,44 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check Google autocomplete seeds
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.parse
+          import urllib.request
+
+          seeds = [
+              'bills must be paid coin',
+              'bills must be paid coin flip',
+              'bills must be paid double',
+              'bills must be paid big',
+              'bills must be paid big toni',
+              'bills must be paid super',
+              'bills must be paid jackpot',
+              'bills must be paid max',
+              'bills must be paid maxed out',
+              'bills must be paid achievements',
+          ]
+          for seed in seeds:
+              params = urllib.parse.urlencode({
+                  'client': 'firefox',
+                  'q': seed,
+                  'hl': 'en',
+                  'gl': 'us',
+              })
+              url = 'https://suggestqueries.google.com/complete/search?' + params
+              req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as response:
+                      data = json.loads(response.read().decode('utf-8'))
+                  print('SUGGEST_SEED:', seed)
+                  print('SUGGESTIONS:', json.dumps(data[1], ensure_ascii=False))
+              except Exception as exc:
+                  print('SUGGEST_SEED:', seed)
+                  print('SUGGEST_ERROR:', repr(exc))
+          PY
+
       - name: Create .env.production
         env:
           ENV_PRODUCTION: ${{ secrets.ENV_PRODUCTION }}
