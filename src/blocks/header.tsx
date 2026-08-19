@@ -3,8 +3,20 @@ import { getLocale } from '@/paraglide/runtime.js';
 import { m } from '@/paraglide/messages.js';
 import { SiteHeader } from '@/components/site-header';
 
+function getNewPageLabels(locale: string) {
+  if (locale === 'zh') {
+    return { doubleOrNothing: 'Double or Nothing', coins: '硬币' };
+  }
+  if (locale === 'es') {
+    return { doubleOrNothing: 'Double or Nothing', coins: 'Monedas' };
+  }
+  return { doubleOrNothing: 'Double or Nothing', coins: 'Coins' };
+}
+
 export function Header() {
-  const common = getGameCommon(getLocale());
+  const locale = getLocale();
+  const common = getGameCommon(locale);
+  const newPageLabels = getNewPageLabels(locale);
   const navLinks = [
     {
       href: '/guides',
@@ -16,6 +28,10 @@ export function Header() {
           label: common.prestigeBankruptcy,
         },
         { href: '/guides/piggy-shuffle', label: common.piggyShuffle },
+        {
+          href: '/guides/double-or-nothing',
+          label: newPageLabels.doubleOrNothing,
+        },
         { href: '/demo-vs-full-game', label: common.demoVsFullGame },
       ],
     },
@@ -26,6 +42,7 @@ export function Header() {
         { href: '/wiki/piggy-banks', label: common.piggyBanks },
         { href: '/wiki/hammers', label: common.hammers },
         { href: '/wiki/skill-tree', label: common.skillTree },
+        { href: '/wiki/coins', label: newPageLabels.coins },
       ],
     },
     { href: '/achievements', label: common.achievements },
