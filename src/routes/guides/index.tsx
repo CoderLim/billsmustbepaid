@@ -111,8 +111,18 @@ function GuidesPage() {
           items={[
             {
               title: 'Piggy Shuffle Guide',
-              description: 'The official achievement objective plus a clearly labeled community workaround.',
+              description: 'The official Eyes on the Piggy objective plus a clearly labeled community workaround.',
               href: '/guides/piggy-shuffle',
+            },
+            {
+              title: 'Double or Nothing',
+              description: 'The coin flip, 50/50 and All or Nothing achievements, plus what is and is not verified about odds or aim.',
+              href: '/guides/double-or-nothing',
+            },
+            {
+              title: 'Bills Must Be Paid Coins',
+              description: 'Rare coins, Coin Collector and a source-checked answer to the Coin Rain search term.',
+              href: '/wiki/coins',
             },
             {
               title: 'Achievements',
