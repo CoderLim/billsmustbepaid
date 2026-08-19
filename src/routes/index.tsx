@@ -36,9 +36,9 @@ const FAQ_KEYS = [
 
 const HOME_SEO = {
   en: {
-    title: 'Bills Must Be Paid Game - Play Free Online',
+    title: 'Bills Must Be Paid - Wiki, Guides & Free Online Demo',
     description:
-      'Bills Must Be Paid game online: play the free browser demo, smash piggy banks, pay bills, upgrade hammers and skills, and compare the full Steam game.',
+      'Bills Must Be Paid: play free in your browser, or read the full wiki & guides: piggy banks, hammers, skill tree, prestige & bankruptcy explained.',
   },
   zh: {
     title: 'Bills Must Be Paid Game - 免费在线玩',
