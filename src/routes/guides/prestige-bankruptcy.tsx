@@ -15,8 +15,8 @@ function PrestigeBankruptcyPage() {
   return (
     <GameContentLayout
       eyebrow="Progression Guide"
-      title="Prestige & Bankruptcy in Bills Must Be Paid"
-      description="What first-party sources confirm about failing a bill, starting a new cycle, earning post-bankruptcy progression points, and spending them on rings and bracelets."
+      title="Bills Must Be Paid: How Prestige & Bankruptcy Unlock Rings, Bracelets & New Cycles"
+      description="See how bankruptcy becomes progression in Bills Must Be Paid, how Prestige/Legacy Points connect to paid bills, and how rings and bracelets strengthen future cycles."
       breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Prestige & Bankruptcy' }]}
       imageKey="bills"
       imageAlt="Bills Must Be Paid bill payment screen"
@@ -63,11 +63,16 @@ function PrestigeBankruptcyPage() {
           url: 'https://steamcommunity.com/stats/4421010/achievements/',
           note: '“Fresh Start” explicitly requires declaring bankruptcy and starting a new cycle.',
         },
+        {
+          label: 'Whisper of the House — Bills Must Be Paid Guide',
+          url: 'https://www.whisperofthehouse.com/bills-must-be-paid',
+          note: 'Community-recorded launch-version example: five bills totaling $2,015 produced 40 Legacy Points. This is presented as version-specific community evidence, not an official fixed conversion formula.',
+        },
       ]}
     >
       <ArticleSection id="trigger" title="What triggers bankruptcy?">
         <p>
-          In the full game, official Steam material says that failing or ignoring a bill results in bankruptcy. This is not merely a game-over label: the developer’s pre-launch explanation ties it directly to the next progression cycle.
+          In the full game, official Steam material says that failing or ignoring a bill results in bankruptcy. This is not merely a game-over label: the developer’s pre-launch explanation ties it directly to the next progression cycle and to the persistent upgrades you buy afterward.
         </p>
         <GameScreenshot
           imageKey="bills"
@@ -84,11 +89,16 @@ function PrestigeBankruptcyPage() {
 
       <ArticleSection id="points" title="Prestige Points vs legacy points">
         <p>
-          Rike Games’ June launch announcement says Prestige Points are awarded based on the total amount paid toward bills before bankruptcy, with more paid producing more points. The current Steam store description instead calls the post-bankruptcy currency <strong>legacy points</strong>.
+          Pay more before bankruptcy and the progression reward grows. Rike Games’ June pre-launch announcement says Prestige Points are based on the total amount paid toward bills, with more paid producing more points. A launch-version community run documented by Whisper of the House paid five bills totaling <strong>$2,015</strong> and received <strong>40 Legacy Points</strong> at bankruptcy.
         </p>
+        <SourceNote title="The $2,015 → 40 points example is community evidence">
+          <p>
+            The $2,015 figure is useful as a concrete launch-version example, but it is not an official universal formula. Rike Games confirms the relationship between paid bills and post-bankruptcy points, while community sources differ on the exact calculation shown by specific builds. Treat the number as version-specific evidence rather than a guaranteed conversion for every patch.
+          </p>
+        </SourceNote>
         <SourceNote title="Terminology changed in official material">
           <p>
-            Because the two first-party sources use different names, this wiki does not rewrite one term into the other in quotations or source summaries. Functionally, both descriptions connect bill-paying, bankruptcy and jewelry-based persistent progression.
+            Rike Games’ June announcement uses <strong>Prestige Points</strong>, while the current Steam store description calls the post-bankruptcy currency <strong>legacy points</strong>. Functionally, both descriptions connect bill-paying, bankruptcy and jewelry-based persistent progression.
           </p>
         </SourceNote>
       </ArticleSection>
@@ -100,7 +110,7 @@ function PrestigeBankruptcyPage() {
         <FactList
           items={[
             'Paying more toward bills before bankruptcy is explicitly tied to earning more progression points in the June announcement.',
-            'Rings and bracelets are the documented permanent-progression destination for those points.',
+            'Rings and bracelets are the documented persistent-progression destination for those points.',
             'The official achievements include “Prestige Jewelry — Unlock all rings and bracelets,” confirming jewelry is a completion system as well as progression.',
           ]}
         />
@@ -124,9 +134,9 @@ export const Route = createFileRoute('/guides/prestige-bankruptcy')({
   head: () =>
     buildGamePageHead({
       path: '/guides/prestige-bankruptcy',
-      title: 'Bills Must Be Paid Prestige & Bankruptcy Guide',
+      title: 'Bills Must Be Paid Game: Bankruptcy, Rings & Legacy Points',
       description:
-        'Verified Bills Must Be Paid prestige and bankruptcy guide: new cycles, Prestige/legacy points, rings, bracelets and demo-save differences.',
+        'Bills Must Be Paid: bankruptcy unlocks rings and bracelets. Sources tie Legacy Points to paid bills; one community run reports $2,015 paid → 40 points.',
       image: '/images/game/pay-bill-rent.jpg',
     }),
   component: PrestigeBankruptcyPage,
