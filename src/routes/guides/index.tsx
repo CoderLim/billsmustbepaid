@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { buildGamePageHead } from '@/lib/game-content-seo';
 import {
   ArticleSection,
   ContentCardGrid,
@@ -7,7 +8,6 @@ import {
   GameContentLayout,
 } from '@/components/game-content-layout';
 import { GameLongformExpansion } from '@/components/game-longform-expansion';
-import { buildGamePageHead } from '@/lib/game-content-seo';
 
 const sources = [
   {
@@ -48,17 +48,20 @@ function GuidesPage() {
       related={[
         {
           title: 'Bills Must Be Paid Wiki',
-          description: 'Reference pages for piggy banks, hammers and the skill tree.',
+          description:
+            'Reference pages for piggy banks, hammers and the skill tree.',
           href: '/wiki',
         },
         {
           title: 'Achievements',
-          description: 'All 27 official Steam achievements and their objectives.',
+          description:
+            'All 27 official Steam achievements and their objectives.',
           href: '/achievements',
         },
         {
           title: 'Demo vs Full Game',
-          description: 'What changed between the free demo and the July 29 full release.',
+          description:
+            'What changed between the free demo and the July 29 full release.',
           href: '/demo-vs-full-game',
         },
       ]}
@@ -66,18 +69,21 @@ function GuidesPage() {
     >
       <ArticleSection id="start-here" title="Start here">
         <p>
-          If you are new to the game, begin with the core-loop guide before jumping into individual systems.
+          If you are new to the game, begin with the core-loop guide before
+          jumping into individual systems.
         </p>
         <ContentCardGrid
           items={[
             {
               title: 'Beginner Guide',
-              description: 'How smashing, stamina, bills, perks, hammers and upgrades fit together.',
+              description:
+                'How smashing, stamina, bills, perks, hammers and upgrades fit together.',
               href: '/guides/beginner-guide',
             },
             {
               title: 'Demo vs Full Game',
-              description: 'Know which mechanics belong to the free demo and which were added or changed for the full release.',
+              description:
+                'Know which mechanics belong to the free demo and which were added or changed for the full release.',
               href: '/demo-vs-full-game',
             },
           ]}
@@ -89,17 +95,20 @@ function GuidesPage() {
           items={[
             {
               title: 'Prestige & Bankruptcy',
-              description: 'What bankruptcy does, how a new cycle begins, and what official materials say about Prestige/legacy points.',
+              description:
+                'What bankruptcy does, how a new cycle begins, and what official materials say about Prestige/legacy points.',
               href: '/guides/prestige-bankruptcy',
             },
             {
               title: 'Skill Tree',
-              description: 'A verified overview of the upgrade paths and examples shown by Rike Games.',
+              description:
+                'A verified overview of the upgrade paths and examples shown by Rike Games.',
               href: '/wiki/skill-tree',
             },
             {
               title: 'Hammers',
-              description: 'The officially documented hammer tradeoffs and confirmed balance changes.',
+              description:
+                'The officially documented hammer tradeoffs and confirmed balance changes.',
               href: '/wiki/hammers',
             },
           ]}
@@ -111,22 +120,26 @@ function GuidesPage() {
           items={[
             {
               title: 'Piggy Shuffle Guide',
-              description: 'The official Eyes on the Piggy objective plus a clearly labeled community workaround.',
+              description:
+                'The official Eyes on the Piggy objective plus a clearly labeled community workaround.',
               href: '/guides/piggy-shuffle',
             },
             {
               title: 'Double or Nothing',
-              description: 'The coin flip, 50/50 and All or Nothing achievements, plus what is and is not verified about odds or aim.',
+              description:
+                'The coin flip, 50/50 and All or Nothing achievements, plus what is and is not verified about odds or aim.',
               href: '/guides/double-or-nothing',
             },
             {
               title: 'Bills Must Be Paid Coins',
-              description: 'Rare coins, Coin Collector and a source-checked answer to the Coin Rain search term.',
+              description:
+                'Rare coins, Coin Collector and a source-checked answer to the Coin Rain search term.',
               href: '/wiki/coins',
             },
             {
               title: 'Achievements',
-              description: 'Use the official objective list as the checklist for 100% completion.',
+              description:
+                'Use the official objective list as the checklist for 100% completion.',
               href: '/achievements',
             },
           ]}
@@ -153,9 +166,10 @@ export const Route = createFileRoute('/guides/')({
   head: () =>
     buildGamePageHead({
       path: '/guides',
-      title: 'Bills Must Be Paid Guides - Beginner, Prestige & Challenges',
+      title:
+        'Bills Must Be Paid Guides — Piggy Shuffle, Skill Tree, Prestige & More',
       description:
-        'Bills Must Be Paid guides covering the core loop, prestige and bankruptcy, Piggy Shuffle, upgrades and achievements with original sources.',
+        'Bills Must Be Paid guides: Piggy Shuffle, skill tree, prestige & bankruptcy, Double or Nothing, and beginner tips — all source-checked with official links.',
       image: '/images/game/smash-piggy-banks.jpg',
     }),
   component: GuidesPage,

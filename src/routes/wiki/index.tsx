@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { buildGamePageHead } from '@/lib/game-content-seo';
 import {
   ArticleSection,
   ContentCardGrid,
@@ -7,7 +8,6 @@ import {
   GameContentLayout,
 } from '@/components/game-content-layout';
 import { GameLongformExpansion } from '@/components/game-longform-expansion';
-import { buildGamePageHead } from '@/lib/game-content-seo';
 
 function WikiPage() {
   return (
@@ -30,12 +30,14 @@ function WikiPage() {
       related={[
         {
           title: 'Guides',
-          description: 'Problem-solving pages for beginners, progression and challenges.',
+          description:
+            'Problem-solving pages for beginners, progression and challenges.',
           href: '/guides',
         },
         {
           title: 'Tier Lists',
-          description: 'What can and cannot be ranked from the evidence currently available.',
+          description:
+            'What can and cannot be ranked from the evidence currently available.',
           href: '/tier-lists',
         },
         {
@@ -68,17 +70,20 @@ function WikiPage() {
           items={[
             {
               title: 'Beginner Guide',
-              description: 'The complete relationship between smashing, stamina, bills, perks and progression.',
+              description:
+                'The complete relationship between smashing, stamina, bills, perks and progression.',
               href: '/guides/beginner-guide',
             },
             {
               title: 'Prestige & Bankruptcy',
-              description: 'Failing bills, new cycles, progression points and jewelry.',
+              description:
+                'Failing bills, new cycles, progression points and jewelry.',
               href: '/guides/prestige-bankruptcy',
             },
             {
               title: 'Piggy Banks',
-              description: 'Verified facts about piggy behavior, random loot and collection goals.',
+              description:
+                'Verified facts about piggy behavior, random loot and collection goals.',
               href: '/wiki/piggy-banks',
             },
           ]}
@@ -90,17 +95,20 @@ function WikiPage() {
           items={[
             {
               title: 'Hammers',
-              description: 'Official tradeoff dimensions plus confirmed balance changes to named hammers.',
+              description:
+                'Official tradeoff dimensions plus confirmed balance changes to named hammers.',
               href: '/wiki/hammers',
             },
             {
               title: 'Skill Tree',
-              description: 'What the official press kit and screenshots reveal about upgrade directions.',
+              description:
+                'What the official press kit and screenshots reveal about upgrade directions.',
               href: '/wiki/skill-tree',
             },
             {
               title: 'Tier Lists',
-              description: 'Why Phase 1 avoids unsupported S/A/B rankings and what evidence is still needed.',
+              description:
+                'Why Phase 1 avoids unsupported S/A/B rankings and what evidence is still needed.',
               href: '/tier-lists',
             },
           ]}
@@ -112,22 +120,26 @@ function WikiPage() {
           items={[
             {
               title: 'Bills Must Be Paid Coins',
-              description: 'Rare coins, Coin Collector and what first-party sources do or do not say about Coin Rain.',
+              description:
+                'Rare coins, Coin Collector and what first-party sources do or do not say about Coin Rain.',
               href: '/wiki/coins',
             },
             {
               title: 'Achievements',
-              description: 'All 27 official Steam achievements, grouped by goal type.',
+              description:
+                'All 27 official Steam achievements, grouped by goal type.',
               href: '/achievements',
             },
             {
               title: 'Piggy Shuffle',
-              description: 'The Eyes on the Piggy objective and a labeled community workaround.',
+              description:
+                'The Eyes on the Piggy objective and a labeled community workaround.',
               href: '/guides/piggy-shuffle',
             },
             {
               title: 'Double or Nothing',
-              description: 'The coin flip, 50/50 and All or Nothing achievement requirements.',
+              description:
+                'The coin flip, 50/50 and All or Nothing achievement requirements.',
               href: '/guides/double-or-nothing',
             },
           ]}
@@ -154,9 +166,10 @@ export const Route = createFileRoute('/wiki/')({
   head: () =>
     buildGamePageHead({
       path: '/wiki',
-      title: 'Bills Must Be Paid Wiki - Piggy Banks, Hammers & Skills',
+      title:
+        'Bills Must Be Paid Wiki — Piggy Banks, Skill Tree, Hammers & More',
       description:
-        'Bills Must Be Paid wiki with source-checked pages for piggy banks, hammers, the skill tree, bankruptcy, achievements and game versions.',
+        'Bills Must Be Paid wiki: piggy banks, skill tree, hammers, achievements & bankruptcy — source-checked reference pages with official links.',
       image: '/images/game/piggy-types-collection.jpg',
     }),
   component: WikiPage,

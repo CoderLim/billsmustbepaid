@@ -13,6 +13,7 @@ import {
 const FAQ_KEYS = [
   'free',
   'browser',
+  'game',
   'steam',
   'developer',
   'controls',
@@ -72,6 +73,7 @@ const ENGLISH_COPY = {
     free: 'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
     browser:
       'Yes. Bills Must Be Paid runs in the player at the top of this page, so no local game installation is required. Rike Games also links to its own free browser build, and itch.io hosts an HTML5 demo.',
+    game: 'Bills Must Be Paid is a free browser game by Rike Games. Smash piggy banks, pay bills, and upgrade your hammer in short stamina-limited runs. Play instantly on this page — no download. The paid Steam version adds prestige, achievements, and more content.',
     steam:
       'The free Bills Must Be Paid browser and demo versions cover the core loop. The full Steam game adds documented systems including bankruptcy and prestige progression, rings and bracelets, more piggies, hammers and perks, desk gadgets, risk mechanics, an ending, achievements, and Steam Cloud support.',
     developer:

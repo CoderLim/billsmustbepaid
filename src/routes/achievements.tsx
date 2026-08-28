@@ -1,13 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { Link } from '@/core/i18n/navigation';
+import { buildGamePageHead } from '@/lib/game-content-seo';
 import {
   ArticleSection,
   FactList,
   GameContentLayout,
 } from '@/components/game-content-layout';
 import { GameLongformExpansion } from '@/components/game-longform-expansion';
-import { Link } from '@/core/i18n/navigation';
-import { buildGamePageHead } from '@/lib/game-content-seo';
 
 const progression = [
   ['Bills Must Be Paid', 'Pay your first bill'],
@@ -48,11 +48,18 @@ const completion = [
   ['Maxed Out', 'Buy all skill tree upgrades'],
 ] as const;
 
-function AchievementList({ items }: { items: readonly (readonly [string, string])[] }) {
+function AchievementList({
+  items,
+}: {
+  items: readonly (readonly [string, string])[];
+}) {
   return (
     <div className="border-border divide-border overflow-hidden rounded-xl border">
       {items.map(([name, objective]) => (
-        <div key={name} className="divide-border grid gap-1 border-b p-4 last:border-b-0 sm:grid-cols-[220px_1fr] sm:gap-5">
+        <div
+          key={name}
+          className="divide-border grid gap-1 border-b p-4 last:border-b-0 sm:grid-cols-[220px_1fr] sm:gap-5"
+        >
           <strong>{name}</strong>
           <span>{objective}</span>
         </div>
@@ -83,7 +90,8 @@ function AchievementsPage() {
       related={[
         {
           title: 'Eyes on the Piggy / Piggy Shuffle Guide',
-          description: 'Focused help for the Piggy Shuffle achievement, including a clearly labeled community slow-motion method.',
+          description:
+            'Focused help for the Piggy Shuffle achievement, including a clearly labeled community slow-motion method.',
           href: '/guides/piggy-shuffle',
         },
         {
@@ -114,7 +122,10 @@ function AchievementsPage() {
         <AchievementList items={progression} />
       </ArticleSection>
 
-      <ArticleSection id="smashing" title="Smashing, accuracy and Piggy Shuffle">
+      <ArticleSection
+        id="smashing"
+        title="Smashing, accuracy and Piggy Shuffle"
+      >
         <AchievementList items={smashing} />
       </ArticleSection>
 
@@ -126,13 +137,51 @@ function AchievementsPage() {
         <AchievementList items={completion} />
       </ArticleSection>
 
-      <ArticleSection id="guides" title="Use the objectives as guide entry points">
+      <ArticleSection
+        id="guides"
+        title="Use the objectives as guide entry points"
+      >
         <FactList
           items={[
-            <><Link href="/guides/piggy-shuffle" className="text-foreground font-semibold underline underline-offset-4">Bills Must Be Paid Piggy Shuffle guide for Eyes on the Piggy</Link> explains the verified objective and the labeled community slow-motion method.</>,
-            <><Link href="/guides/prestige-bankruptcy" className="text-foreground underline underline-offset-4">Fresh Start</Link> is directly tied to declaring bankruptcy and beginning a new cycle.</>,
-            <><Link href="/wiki/piggy-banks" className="text-foreground underline underline-offset-4">Piggy Bank Collector</Link> confirms that unlocking every piggy is a formal completion goal.</>,
-            <><Link href="/wiki/skill-tree" className="text-foreground underline underline-offset-4">Maxed Out</Link> confirms that buying every skill-tree upgrade is part of 100% completion.</>,
+            <>
+              <Link
+                href="/guides/piggy-shuffle"
+                className="text-foreground font-semibold underline underline-offset-4"
+              >
+                Bills Must Be Paid Piggy Shuffle guide for Eyes on the Piggy
+              </Link>{' '}
+              explains the verified objective and the labeled community
+              slow-motion method.
+            </>,
+            <>
+              <Link
+                href="/guides/prestige-bankruptcy"
+                className="text-foreground underline underline-offset-4"
+              >
+                Fresh Start
+              </Link>{' '}
+              is directly tied to declaring bankruptcy and beginning a new
+              cycle.
+            </>,
+            <>
+              <Link
+                href="/wiki/piggy-banks"
+                className="text-foreground underline underline-offset-4"
+              >
+                Piggy Bank Collector
+              </Link>{' '}
+              confirms that unlocking every piggy is a formal completion goal.
+            </>,
+            <>
+              <Link
+                href="/wiki/skill-tree"
+                className="text-foreground underline underline-offset-4"
+              >
+                Maxed Out
+              </Link>{' '}
+              confirms that buying every skill-tree upgrade is part of 100%
+              completion.
+            </>,
           ]}
         />
       </ArticleSection>
@@ -146,9 +195,10 @@ export const Route = createFileRoute('/achievements')({
   head: () =>
     buildGamePageHead({
       path: '/achievements',
-      title: 'Bills Must Be Paid Achievements - All 27 Steam Achievements',
+      title:
+        'Bills Must Be Paid Achievements List — All 27 Steam Unlocks & How to Get Them',
       description:
-        'Bills Must Be Paid achievements guide with all 27 Steam achievements, official objectives, and help for Eyes on the Piggy, Fresh Start, Freedom and Maxed Out.',
+        'Complete Bills Must Be Paid achievements list: all 27 Steam unlocks with official objectives. Guides for Eyes on the Piggy, Fresh Start, Maxed Out & more.',
       image: '/images/game/rare-coins-collection.jpg',
     }),
   component: AchievementsPage,

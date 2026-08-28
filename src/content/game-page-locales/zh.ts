@@ -17,7 +17,8 @@ export const zhGamePages = {
     tierLists: 'Tier List',
     sourceChecked: '已核对来源',
     updated: '更新于 2026 年 8 月 8 日',
-    screenshotCaption: 'Bills Must Be Paid 官方截图，来源为 Rike Games / Steam。',
+    screenshotCaption:
+      'Bills Must Be Paid 官方截图，来源为 Rike Games / Steam。',
     onThisPage: '本页内容',
     relatedPages: '相关页面',
     originalSources: '原始资料来源',
@@ -26,9 +27,9 @@ export const zhGamePages = {
   },
   pages: {
     guides: {
-      metaTitle: 'Bills Must Be Paid 攻略 - 新手、转生与挑战',
+      metaTitle: 'Bills Must Be Paid 攻略 — Piggy Shuffle、技能树、转生与更多',
       metaDescription:
-        'Bills Must Be Paid 攻略中心：新手玩法、转生破产、Piggy Shuffle、技能树、锤子与成就，内容均标注可靠来源。',
+        'Bills Must Be Paid 攻略：Piggy Shuffle、技能树、转生破产、Double or Nothing 与新手入门，均标注可靠来源。',
       eyebrow: '攻略',
       title: 'Bills Must Be Paid 攻略大全',
       description:
@@ -164,9 +165,18 @@ export const zhGamePages = {
         '下一步学什么',
       ],
       related: [
-        { title: '转生与破产', description: '理解周期重置和戒指、手镯等持续成长。' },
-        { title: '锤子', description: '查看官方确认的锤子取舍和已公布平衡变化。' },
-        { title: '技能树', description: '查看 Rike Games 已公开的升级方向与示例。' },
+        {
+          title: '转生与破产',
+          description: '理解周期重置和戒指、手镯等持续成长。',
+        },
+        {
+          title: '锤子',
+          description: '查看官方确认的锤子取舍和已公布平衡变化。',
+        },
+        {
+          title: '技能树',
+          description: '查看 Rike Games 已公开的升级方向与示例。',
+        },
       ],
       sources: [
         { label: 'Rike Games — Bills Must Be Paid 官方 Press Kit' },
@@ -274,9 +284,18 @@ export const zhGamePages = {
         '版本说明',
       ],
       related: [
-        { title: '新手攻略', description: '先理解破产在整个游戏循环里的位置。' },
-        { title: 'Demo 与完整版', description: '完整版改动较大，因此 Demo 存档不会转移。' },
-        { title: '成就', description: '查看 Fresh Start、Prestige Jewelry 等官方目标。' },
+        {
+          title: '新手攻略',
+          description: '先理解破产在整个游戏循环里的位置。',
+        },
+        {
+          title: 'Demo 与完整版',
+          description: '完整版改动较大，因此 Demo 存档不会转移。',
+        },
+        {
+          title: '成就',
+          description: '查看 Fresh Start、Prestige Jewelry 等官方目标。',
+        },
       ],
       sources: [
         {
@@ -360,9 +379,10 @@ export const zhGamePages = {
       ],
     },
     'piggy-shuffle': {
-      metaTitle: 'Bills Must Be Paid Piggy Shuffle 攻略',
+      metaTitle:
+        'Bills Must Be Paid Piggy Shuffle 攻略 — 如何完成 Eyes on the Piggy',
       metaDescription:
-        'Bills Must Be Paid Piggy Shuffle 攻略：Eyes on the Piggy 官方目标，以及明确标注为社区方法的慢动作录像技巧。',
+        'Bills Must Be Paid Piggy Shuffle 攻略：Eyes on the Piggy 官方目标与慢动作社区方法，帮你选对存钱罐。',
       eyebrow: '挑战攻略',
       title: 'Bills Must Be Paid Piggy Shuffle 攻略',
       description:
@@ -378,9 +398,18 @@ export const zhGamePages = {
         '失败排查与证据边界',
       ],
       related: [
-        { title: '存钱罐', description: '查看官方资料中的存钱罐类型、行为与收藏目标。' },
-        { title: '成就', description: '在全部官方成就中查看 Eyes on the Piggy。' },
-        { title: '新手攻略', description: '回到核心玩法、体力和长期成长循环。' },
+        {
+          title: '存钱罐',
+          description: '查看官方资料中的存钱罐类型、行为与收藏目标。',
+        },
+        {
+          title: '成就',
+          description: '在全部官方成就中查看 Eyes on the Piggy。',
+        },
+        {
+          title: '新手攻略',
+          description: '回到核心玩法、体力和长期成长循环。',
+        },
       ],
       sources: [
         {
@@ -449,9 +478,9 @@ export const zhGamePages = {
       ],
     },
     wiki: {
-      metaTitle: 'Bills Must Be Paid Wiki - 存钱罐、锤子与技能树',
+      metaTitle: 'Bills Must Be Paid Wiki — 存钱罐、技能树、锤子与更多',
       metaDescription:
-        'Bills Must Be Paid Wiki：存钱罐、锤子、技能树、破产、成就与版本差异，所有核心资料按来源和版本整理。',
+        'Bills Must Be Paid Wiki：存钱罐、技能树、锤子、成就与破产 — 附官方来源的参考页面。',
       eyebrow: 'Wiki',
       title: 'Bills Must Be Paid Wiki',
       description:
@@ -468,9 +497,18 @@ export const zhGamePages = {
         '资料如何加入 Wiki',
       ],
       related: [
-        { title: '攻略', description: '面向新手、进度和挑战的解决问题型页面。' },
-        { title: 'Tier List', description: '说明当前哪些内容可以排名、哪些证据仍不足。' },
-        { title: 'Demo 与完整版', description: '区分 Demo 机制和 7 月 29 日完整版。' },
+        {
+          title: '攻略',
+          description: '面向新手、进度和挑战的解决问题型页面。',
+        },
+        {
+          title: 'Tier List',
+          description: '说明当前哪些内容可以排名、哪些证据仍不足。',
+        },
+        {
+          title: 'Demo 与完整版',
+          description: '区分 Demo 机制和 7 月 29 日完整版。',
+        },
       ],
       sources: [
         { label: 'Rike Games — Bills Must Be Paid 官方 Press Kit' },
@@ -563,16 +601,28 @@ export const zhGamePages = {
         '锤子与整体 Build',
       ],
       related: [
-        { title: 'Tier List', description: '解释为什么没有完整数据时不制造 S/A/B 锤子排名。' },
-        { title: '技能树', description: '查看会改变锤子 Build 环境的其他升级方向。' },
-        { title: '新手攻略', description: '理解锤子选择在完整资源循环里的位置。' },
+        {
+          title: 'Tier List',
+          description: '解释为什么没有完整数据时不制造 S/A/B 锤子排名。',
+        },
+        {
+          title: '技能树',
+          description: '查看会改变锤子 Build 环境的其他升级方向。',
+        },
+        {
+          title: '新手攻略',
+          description: '理解锤子选择在完整资源循环里的位置。',
+        },
       ],
       sources: [
         {
           label: 'Rike Games — Bills Must Be Paid 官方 Press Kit',
           note: '确认锤子的暴击率、攻击范围、速度和伤害取舍。',
         },
-        { label: 'Steam — Bills Must Be Paid', note: '当前商店描述再次确认锤子的取舍设计。' },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: '当前商店描述再次确认锤子的取舍设计。',
+        },
         {
           label: 'Steam Community — 开发者公告',
           note: 'Demo Bug Fix v0.2.7 记录 Ultracrit-Hammer 范围增大和 Toy-Hammer 攻击变快。',
@@ -658,9 +708,18 @@ export const zhGamePages = {
         '完成度关系',
       ],
       related: [
-        { title: 'Piggy Shuffle 攻略', description: '用官方目标和明确标注的社区方法解决 Eyes on the Piggy。' },
-        { title: '成就', description: '查看 Piggy Bank Collector 和其余官方完成目标。' },
-        { title: '新手攻略', description: '理解存钱罐如何影响金钱、体力和成长。' },
+        {
+          title: 'Piggy Shuffle 攻略',
+          description: '用官方目标和明确标注的社区方法解决 Eyes on the Piggy。',
+        },
+        {
+          title: '成就',
+          description: '查看 Piggy Bank Collector 和其余官方完成目标。',
+        },
+        {
+          title: '新手攻略',
+          description: '理解存钱罐如何影响金钱、体力和成长。',
+        },
       ],
       sources: [
         { label: 'Rike Games — Bills Must Be Paid 官方 Press Kit' },
@@ -753,14 +812,29 @@ export const zhGamePages = {
         '如何阅读 Build 建议',
       ],
       related: [
-        { title: '新手攻略', description: '理解技能树消费与账单、体力和锤子的关系。' },
-        { title: '锤子', description: '比较 Rike Games 已确认的装备属性取舍。' },
+        {
+          title: '新手攻略',
+          description: '理解技能树消费与账单、体力和锤子的关系。',
+        },
+        {
+          title: '锤子',
+          description: '比较 Rike Games 已确认的装备属性取舍。',
+        },
         { title: 'Tier List', description: '查看当前升级排名所需的证据标准。' },
       ],
       sources: [
-        { label: 'Rike Games — Bills Must Be Paid 官方 Press Kit', note: '列出多个技能树主题和升级示例。' },
-        { label: 'Steam — Bills Must Be Paid', note: '确认当前完整版包含技能树系统。' },
-        { label: 'Steam Community — 开发者公告', note: '上线公告说明部分技能节点从 Demo 到完整版发生变化。' },
+        {
+          label: 'Rike Games — Bills Must Be Paid 官方 Press Kit',
+          note: '列出多个技能树主题和升级示例。',
+        },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: '确认当前完整版包含技能树系统。',
+        },
+        {
+          label: 'Steam Community — 开发者公告',
+          note: '上线公告说明部分技能节点从 Demo 到完整版发生变化。',
+        },
       ],
       sections: [
         {
@@ -778,7 +852,13 @@ export const zhGamePages = {
             '一手资料明确提到握力、咖啡因、健身、手腕和幸运相关升级，也展示过落石以及锤子电击等更特殊效果。这些例子说明 Bills Must Be Paid 技能树同时包含基础强化和机制型节点，后期 Build 不一定只是提高一个伤害数值。',
             '这些名称只是开发者公开示例，不代表本站已经掌握所有当前节点。任何完整节点表都需要当前游戏版本、清晰效果和可靠来源。尤其开发者已经确认完整版改变过部分技能树节点，所以从 Demo 截图或旧指南直接补全当前技能树，容易把过时信息写成事实。',
           ],
-          bullets: ['握力相关提升', '咖啡因相关升级', '健身相关升级', '手腕与幸运方向', '落石和电击锤等特殊效果'],
+          bullets: [
+            '握力相关提升',
+            '咖啡因相关升级',
+            '健身相关升级',
+            '手腕与幸运方向',
+            '落石和电击锤等特殊效果',
+          ],
         },
         {
           id: 'changes',
@@ -811,7 +891,12 @@ export const zhGamePages = {
             '技能节点已经被开发者明确确认发生过版本变化，因此版本标签不是可选项。Demo 中看到的名称、效果或路线可能无法一一对应完整版。遇到旧截图、旧视频或社区 Build 时，应先判断它来自 4 月 21 日后的 Demo 阶段，还是 7 月 29 日完整版之后。',
             '版本化也直接影响 Tier List。即使某个玩家在 Demo 中做了非常严谨的测试，只要节点和数值后来变化，结论就不应自动继承。Bills Must Be Paid 的未来排名页应该记录游戏 Build、更新日期和测试条件，并在补丁后重新验证受影响节点。',
           ],
-          bullets: ['升级建议必须标明版本', 'Demo 节点不能默认等同于完整版', '补丁后需要重新测试受影响结论', '官方事实、实测结果和偏好应分开'],
+          bullets: [
+            '升级建议必须标明版本',
+            'Demo 节点不能默认等同于完整版',
+            '补丁后需要重新测试受影响结论',
+            '官方事实、实测结果和偏好应分开',
+          ],
         },
         {
           id: 'skill-build-reading',
@@ -824,9 +909,10 @@ export const zhGamePages = {
       ],
     },
     achievements: {
-      metaTitle: 'Bills Must Be Paid 成就 - 27 个 Steam 目标',
+      metaTitle:
+        'Bills Must Be Paid 成就列表 — 全部 27 个 Steam 解锁与获取方法',
       metaDescription:
-        'Bills Must Be Paid 27 个 Steam 成就：账单、敲击、准确率、金钱、赌博、贷款、收藏、破产与技能树完成目标。',
+        'Bills Must Be Paid 完整成就列表：27 个 Steam 解锁目标与官方条件，含 Eyes on the Piggy、Fresh Start、Maxed Out 等攻略入口。',
       eyebrow: '完成度',
       title: 'Bills Must Be Paid 全部 27 个成就',
       description:
@@ -844,16 +930,28 @@ export const zhGamePages = {
         '如何核实成就',
       ],
       related: [
-        { title: 'Piggy Shuffle 攻略', description: '解决 Eyes on the Piggy，并区分官方目标与社区方法。' },
-        { title: '转生与破产', description: '理解 Fresh Start 和 Prestige Jewelry 背后的系统。' },
-        { title: '存钱罐', description: '查看 Piggy Bank Collector 所对应的存钱罐资料。' },
+        {
+          title: 'Piggy Shuffle 攻略',
+          description: '解决 Eyes on the Piggy，并区分官方目标与社区方法。',
+        },
+        {
+          title: '转生与破产',
+          description: '理解 Fresh Start 和 Prestige Jewelry 背后的系统。',
+        },
+        {
+          title: '存钱罐',
+          description: '查看 Piggy Bank Collector 所对应的存钱罐资料。',
+        },
       ],
       sources: [
         {
           label: 'Steam Community — Bills Must Be Paid 官方成就',
           note: '27 个成就名称和目标的主要来源；全球完成率会变化，因此不固定复制。',
         },
-        { label: 'Steam — Bills Must Be Paid', note: '确认完整版支持 Steam Achievements。' },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: '确认完整版支持 Steam Achievements。',
+        },
       ],
       sections: [
         {
@@ -977,14 +1075,20 @@ export const zhGamePages = {
         '为什么不虚构排名',
       ],
       related: [
-        { title: '锤子', description: '查看官方确认的装备属性取舍和具名补丁。' },
+        {
+          title: '锤子',
+          description: '查看官方确认的装备属性取舍和具名补丁。',
+        },
         { title: '技能树', description: '查看已确认升级示例和完整版变化。' },
         { title: '新手攻略', description: '先理解系统，再决定如何优化。' },
       ],
       sources: [
         { label: 'Rike Games — Bills Must Be Paid 官方 Press Kit' },
         { label: 'Steam — Bills Must Be Paid' },
-        { label: 'Steam Community — 开发者公告', note: '证明锤子等平衡会随着版本变化。' },
+        {
+          label: 'Steam Community — 开发者公告',
+          note: '证明锤子等平衡会随着版本变化。',
+        },
       ],
       sections: [
         {
@@ -1018,7 +1122,13 @@ export const zhGamePages = {
             '至少需要五项：明确游戏版本、完整当前物品或节点列表、可验证数值或可复现测试、公开排名标准，以及补丁后更新记录。只有这样，读者才能知道一个等级描述的具体环境，也能在未来版本变化时理解为什么某个位置上升或下降。',
             '如果缺少其中任何核心部分，榜单仍然可以作为个人偏好分享，但不应被写成“权威 Bills Must Be Paid Tier List”。本站希望排名页和 Wiki 的事实层互相支持：事实页提供来源，排名页提供分析方法，两者都保留版本信息。',
           ],
-          bullets: ['明确游戏版本', '完整物品或节点列表', '可验证效果或测试', '清晰排名标准', '补丁后的变更记录'],
+          bullets: [
+            '明确游戏版本',
+            '完整物品或节点列表',
+            '可验证效果或测试',
+            '清晰排名标准',
+            '补丁后的变更记录',
+          ],
         },
         {
           id: 'tier-method',
@@ -1066,16 +1176,40 @@ export const zhGamePages = {
         '存档与版本语境',
       ],
       related: [
-        { title: '新手攻略', description: '先学习 Demo 与完整版共享的核心循环。' },
-        { title: '转生与破产', description: '了解完整版重点增加和调整的长期成长系统。' },
-        { title: '技能树', description: '部分升级节点在 Demo 与完整版之间发生变化。' },
+        {
+          title: '新手攻略',
+          description: '先学习 Demo 与完整版共享的核心循环。',
+        },
+        {
+          title: '转生与破产',
+          description: '了解完整版重点增加和调整的长期成长系统。',
+        },
+        {
+          title: '技能树',
+          description: '部分升级节点在 Demo 与完整版之间发生变化。',
+        },
       ],
       sources: [
-        { label: 'Steam — Bills Must Be Paid Demo', note: '官方 Steam Demo 页面；发布日期为 2026 年 4 月 21 日。' },
-        { label: 'Steam — Bills Must Be Paid', note: '完整版页面；发布日期为 2026 年 7 月 29 日。' },
-        { label: 'Steam Community — Bills Must Be Paid 开发者公告', note: '说明完整版新增系统并明确 Demo 存档不转移。' },
-        { label: 'Rike Games — Bills Must Be Paid 官方 Press Kit', note: '链接官方浏览器/itch.io Demo 与 Steam 版本。' },
-        { label: 'Rike Games on itch.io — Bills Must Be Paid', note: '开发者发布的浏览器 HTML5 Demo。' },
+        {
+          label: 'Steam — Bills Must Be Paid Demo',
+          note: '官方 Steam Demo 页面；发布日期为 2026 年 4 月 21 日。',
+        },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: '完整版页面；发布日期为 2026 年 7 月 29 日。',
+        },
+        {
+          label: 'Steam Community — Bills Must Be Paid 开发者公告',
+          note: '说明完整版新增系统并明确 Demo 存档不转移。',
+        },
+        {
+          label: 'Rike Games — Bills Must Be Paid 官方 Press Kit',
+          note: '链接官方浏览器/itch.io Demo 与 Steam 版本。',
+        },
+        {
+          label: 'Rike Games on itch.io — Bills Must Be Paid',
+          note: '开发者发布的浏览器 HTML5 Demo。',
+        },
       ],
       sections: [
         {
@@ -1085,7 +1219,10 @@ export const zhGamePages = {
             'Steam Demo 的官方发布日期是 2026 年 4 月 21 日，Bills Must Be Paid 完整版则于 2026 年 7 月 29 日上线。这个时间边界对阅读旧攻略非常重要：4 月到 7 月之间发布的内容很可能基于 Demo，而上线后的完整版本已经包含更多系统和若干结构变化。',
             'Rike Games 还通过自己的渠道和 itch.io 提供浏览器可玩的 HTML5 Demo。它们属于开发者关联的 Bills Must Be Paid 体验，但公开资料不足以证明所有浏览器打包版本与 Steam Demo 在每个字节或每个内部配置上完全相同。因此本页只比较开发者明确确认的共同点和差异。',
           ],
-          bullets: ['Steam Demo：2026 年 4 月 21 日', 'Steam 完整版：2026 年 7 月 29 日'],
+          bullets: [
+            'Steam Demo：2026 年 4 月 21 日',
+            'Steam 完整版：2026 年 7 月 29 日',
+          ],
         },
         {
           id: 'saves',
@@ -1102,7 +1239,15 @@ export const zhGamePages = {
             '上线前公告重点提到转生/破产成长、戒指和手镯、新商店中的桌面小工具、更多存钱罐类型、更多 Perk、更多锤子、更多赌博或风险机制，以及一个正式结局。Steam 完整版页面还列出成就和 Steam Cloud。',
             '这些内容说明完整版并不是简单把 Demo 时间拉长。长期周期、持续首饰成长和更多装备会改变资源决策，风险机制和结局又扩大目标范围。不过开发者把它们作为上线亮点，而不是数学意义上的完整差异清单，因此本站称为“已确认新增内容”，不会声称所有版本差异都已经列完。',
           ],
-          bullets: ['转生与破产成长', '戒指和手镯', '桌面小工具商店', '更多存钱罐、Perk 和锤子', '更多风险/赌博机制', '正式结局', 'Steam 成就与 Steam Cloud'],
+          bullets: [
+            '转生与破产成长',
+            '戒指和手镯',
+            '桌面小工具商店',
+            '更多存钱罐、Perk 和锤子',
+            '更多风险/赌博机制',
+            '正式结局',
+            'Steam 成就与 Steam Cloud',
+          ],
         },
         {
           id: 'browser',

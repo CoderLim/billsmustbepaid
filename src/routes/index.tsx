@@ -21,11 +21,13 @@ const ENGLISH_FAQ_ANSWERS = {
   controls:
     'Use the left mouse button on desktop to move the hammer over piggy banks. The hammer swings while you hover over targets, and smashing consumes stamina.',
   idle: 'No. Rike Games describes Bills Must Be Paid as an active incremental game. Runs involve smashing targets, watching stamina, paying bills, choosing perks, and deciding how to spend money on upgrades.',
+  game: 'Bills Must Be Paid is a free browser game by Rike Games. Smash piggy banks, pay bills, and upgrade your hammer in short stamina-limited runs. Play instantly above — no download. The paid Steam version adds prestige, achievements, and more content.',
 } as const;
 
 const FAQ_KEYS = [
   'free',
   'browser',
+  'game',
   'steam',
   'developer',
   'controls',
@@ -34,19 +36,19 @@ const FAQ_KEYS = [
 
 const HOME_SEO = {
   en: {
-    title: 'Bills Must Be Paid Game Wiki & Guides | Play Free',
+    title: 'Bills Must Be Paid — Play Free Online Game | Wiki & Guides',
     description:
-      'Bills Must Be Paid game wiki: Piggy Shuffle, skill tree, achievements, and beginner guides. Play free in your browser. Steam full game on Windows and Mac.',
+      'Play Bills Must Be Paid free in your browser — no download. Wiki with Piggy Shuffle guides, skill tree, achievements & beginner tips. Steam full game on Windows & Mac.',
   },
   zh: {
-    title: 'Bills Must Be Paid 游戏 Wiki 与攻略 | 免费在线玩',
+    title: 'Bills Must Be Paid — 免费在线游戏 | Wiki 与攻略',
     description:
-      'Bills Must Be Paid 游戏 Wiki：Piggy Shuffle、技能树、成就与新手攻略。浏览器免费畅玩，Steam 完整版支持 Windows 与 Mac。',
+      '浏览器免费畅玩 Bills Must Be Paid，无需下载。含 Piggy Shuffle、技能树、成就与新手攻略。Steam 完整版支持 Windows 与 Mac。',
   },
   es: {
-    title: 'Bills Must Be Paid Juego: Wiki, Guías y Gratis',
+    title: 'Bills Must Be Paid — Juego Gratis Online | Wiki y Guías',
     description:
-      'Wiki y guías de Bills Must Be Paid: cómo jugar, Piggy Shuffle, logros y árbol de habilidades. Juega el juego gratis en el navegador o descárgalo en Steam.',
+      'Juega Bills Must Be Paid gratis en el navegador, sin descargar. Wiki con Piggy Shuffle, logros, árbol de habilidades y guías. Versión completa en Steam para Windows y Mac.',
   },
 } as const;
 

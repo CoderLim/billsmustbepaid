@@ -17,7 +17,8 @@ export const esGamePages = {
     tierLists: 'Tier Lists',
     sourceChecked: 'Fuentes verificadas',
     updated: 'Actualizado el 8 de agosto de 2026',
-    screenshotCaption: 'Captura oficial de Bills Must Be Paid de Rike Games / Steam.',
+    screenshotCaption:
+      'Captura oficial de Bills Must Be Paid de Rike Games / Steam.',
     onThisPage: 'En esta página',
     relatedPages: 'Páginas relacionadas',
     originalSources: 'Fuentes originales',
@@ -26,9 +27,10 @@ export const esGamePages = {
   },
   pages: {
     guides: {
-      metaTitle: 'Bills Must Be Paid Guías - Inicio, Prestigio y Retos',
+      metaTitle:
+        'Bills Must Be Paid Guías — Piggy Shuffle, Habilidades y Prestigio',
       metaDescription:
-        'Bills Must Be Paid guías: principiantes, prestigio, bancarrota, Piggy Shuffle, martillos, habilidades y logros con fuentes verificadas.',
+        'Guías de Bills Must Be Paid: Piggy Shuffle, árbol de habilidades, prestigio, bancarrota, Double or Nothing y consejos para principiantes.',
       eyebrow: 'Guías',
       title: 'Bills Must Be Paid Guías',
       description:
@@ -45,9 +47,20 @@ export const esGamePages = {
         'Qué consideramos evidencia',
       ],
       related: [
-        { title: 'Bills Must Be Paid Wiki', description: 'Referencias de huchas, martillos y árbol de habilidades.' },
-        { title: 'Logros', description: 'Los 27 logros oficiales de Steam y sus objetivos.' },
-        { title: 'Demo vs juego completo', description: 'Qué cambió entre la demo gratuita y el lanzamiento del 29 de julio.' },
+        {
+          title: 'Bills Must Be Paid Wiki',
+          description:
+            'Referencias de huchas, martillos y árbol de habilidades.',
+        },
+        {
+          title: 'Logros',
+          description: 'Los 27 logros oficiales de Steam y sus objetivos.',
+        },
+        {
+          title: 'Demo vs juego completo',
+          description:
+            'Qué cambió entre la demo gratuita y el lanzamiento del 29 de julio.',
+        },
       ],
       sources: [
         {
@@ -117,7 +130,8 @@ export const esGamePages = {
         },
         {
           id: 'guide-version-context',
-          title: 'Por qué la versión importa en las guías de Bills Must Be Paid',
+          title:
+            'Por qué la versión importa en las guías de Bills Must Be Paid',
           paragraphs: [
             'Bills Must Be Paid existe como experiencia jugable en navegador, demo HTML5 de itch.io, demo de Steam y juego completo de Steam. La demo de Steam salió el 21 de abril de 2026 y la versión completa el 29 de julio de 2026. Rike Games explicó que las partidas guardadas de la demo no se transfieren porque cambiaron prestigio, bancarrota, algunos nodos, balance y sistemas internos.',
             'Por eso una guía antigua puede seguir explicando correctamente cómo romper huchas y administrar resistencia, pero ser insuficiente para describir la progresión final. Lo mismo ocurre con el balance de martillos: Rike Games ya ha publicado cambios concretos. Las páginas de Bills Must Be Paid prefieren evidencia fechada y verificable para evitar presentar una recomendación correcta en abril como una verdad automática en agosto.',
@@ -155,14 +169,29 @@ export const esGamePages = {
         'Qué aprender después',
       ],
       related: [
-        { title: 'Prestigio y bancarrota', description: 'Entiende el reinicio de ciclo y la progresión persistente con joyería.' },
-        { title: 'Martillos', description: 'Consulta los compromisos oficiales y cambios de balance confirmados.' },
-        { title: 'Árbol de habilidades', description: 'Consulta las rutas y ejemplos documentados por Rike Games.' },
+        {
+          title: 'Prestigio y bancarrota',
+          description:
+            'Entiende el reinicio de ciclo y la progresión persistente con joyería.',
+        },
+        {
+          title: 'Martillos',
+          description:
+            'Consulta los compromisos oficiales y cambios de balance confirmados.',
+        },
+        {
+          title: 'Árbol de habilidades',
+          description:
+            'Consulta las rutas y ejemplos documentados por Rike Games.',
+        },
       ],
       sources: [
         { label: 'Rike Games — press kit oficial de Bills Must Be Paid' },
         { label: 'Steam — Bills Must Be Paid' },
-        { label: 'Steam Community — anuncios del desarrollador de Bills Must Be Paid' },
+        {
+          label:
+            'Steam Community — anuncios del desarrollador de Bills Must Be Paid',
+        },
       ],
       sections: [
         {
@@ -196,7 +225,8 @@ export const esGamePages = {
         },
         {
           id: 'hammers',
-          title: '4. Los martillos de Bills Must Be Paid funcionan por compromisos',
+          title:
+            '4. Los martillos de Bills Must Be Paid funcionan por compromisos',
           paragraphs: [
             'La descripción oficial compara martillos por probabilidad de crítico, radio de golpe, velocidad y daño. Un modelo puede favorecer críticos a cambio de menor radio, mientras otro puede golpear más rápido y cubrir más área con menos daño. Esa estructura significa que “mejor martillo” necesita una condición: lo que gana en un objetivo concreto puede no ser lo que gana frente a varias huchas móviles.',
             'El balance también cambia. Rike Games documentó que Demo Bug Fix v0.2.7 aumentó algo el radio de Ultracrit-Hammer y aceleró los golpes de Toy-Hammer. Una tier list antigua puede quedar desactualizada aunque fuera razonable en su momento. Como principiante en Bills Must Be Paid, aprende primero qué estadísticas importan y luego usa datos de tu versión antes de tratar una clasificación como definitiva.',
@@ -228,7 +258,8 @@ export const esGamePages = {
         },
         {
           id: 'beginner-read-systems',
-          title: 'Cómo leer información sobre los sistemas de Bills Must Be Paid',
+          title:
+            'Cómo leer información sobre los sistemas de Bills Must Be Paid',
           paragraphs: [
             'Separa hechos oficiales de análisis. Que crítico, radio, velocidad y daño sean dimensiones de martillos es un hecho documentado; que un martillo concreto sea S en todas las situaciones requiere datos completos y una metodología. Lo mismo ocurre con habilidades y huchas. La versión completa cambió partes del juego, así que una afirmación precisa sin fecha o build merece más cautela.',
             'Los consejos comunitarios también pueden ser valiosos sin convertirse en reglas oficiales. El método de cámara lenta para Piggy Shuffle es un buen ejemplo: ayuda a algunos jugadores a seguir el objetivo, pero proviene de Steam Community. Las páginas de Bills Must Be Paid indican ese origen para que un principiante pueda usar una idea práctica y, al mismo tiempo, saber qué parte está confirmada por el desarrollador.',
@@ -265,14 +296,35 @@ export const esGamePages = {
         'Notas de versión',
       ],
       related: [
-        { title: 'Guía para principiantes', description: 'Sitúa la bancarrota dentro del bucle completo del juego.' },
-        { title: 'Demo vs juego completo', description: 'El lanzamiento cambió suficiente progresión como para no transferir guardados.' },
-        { title: 'Logros', description: 'Fresh Start y otros objetivos relacionados con la progresión.' },
+        {
+          title: 'Guía para principiantes',
+          description:
+            'Sitúa la bancarrota dentro del bucle completo del juego.',
+        },
+        {
+          title: 'Demo vs juego completo',
+          description:
+            'El lanzamiento cambió suficiente progresión como para no transferir guardados.',
+        },
+        {
+          title: 'Logros',
+          description:
+            'Fresh Start y otros objetivos relacionados con la progresión.',
+        },
       ],
       sources: [
-        { label: 'Steam — Bills Must Be Paid', note: 'La descripción actual usa “legacy points” y conecta la bancarrota con anillos y pulseras.' },
-        { label: 'Steam Community — anuncios del desarrollador', note: 'El anuncio de junio describe bancarrota, nuevos ciclos y “Prestige Points”; el lanzamiento explica la incompatibilidad de guardados.' },
-        { label: 'Steam Community — logros oficiales', note: 'Fresh Start exige declarar bancarrota y comenzar un nuevo ciclo.' },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: 'La descripción actual usa “legacy points” y conecta la bancarrota con anillos y pulseras.',
+        },
+        {
+          label: 'Steam Community — anuncios del desarrollador',
+          note: 'El anuncio de junio describe bancarrota, nuevos ciclos y “Prestige Points”; el lanzamiento explica la incompatibilidad de guardados.',
+        },
+        {
+          label: 'Steam Community — logros oficiales',
+          note: 'Fresh Start exige declarar bancarrota y comenzar un nuevo ciclo.',
+        },
       ],
       sections: [
         {
@@ -342,9 +394,10 @@ export const esGamePages = {
       ],
     },
     'piggy-shuffle': {
-      metaTitle: 'Bills Must Be Paid Piggy Shuffle - Guía',
+      metaTitle:
+        'Bills Must Be Paid Piggy Shuffle — Cómo Ganar Eyes on the Piggy',
       metaDescription:
-        'Bills Must Be Paid Piggy Shuffle: objetivo oficial Eyes on the Piggy y método comunitario de grabación a cámara lenta claramente etiquetado.',
+        'Guía de Piggy Shuffle en Bills Must Be Paid: objetivo oficial Eyes on the Piggy y método comunitario a cámara lenta para elegir la hucha correcta.',
       eyebrow: 'Guía de reto',
       title: 'Bills Must Be Paid Piggy Shuffle - Guía',
       description:
@@ -360,13 +413,30 @@ export const esGamePages = {
         'Solución de problemas',
       ],
       related: [
-        { title: 'Huchas', description: 'Qué dicen las fuentes oficiales sobre tipos, comportamiento y colección.' },
-        { title: 'Logros', description: 'Consulta Eyes on the Piggy dentro de la lista oficial completa.' },
-        { title: 'Guía para principiantes', description: 'Vuelve al bucle principal y a la progresión general.' },
+        {
+          title: 'Huchas',
+          description:
+            'Qué dicen las fuentes oficiales sobre tipos, comportamiento y colección.',
+        },
+        {
+          title: 'Logros',
+          description:
+            'Consulta Eyes on the Piggy dentro de la lista oficial completa.',
+        },
+        {
+          title: 'Guía para principiantes',
+          description: 'Vuelve al bucle principal y a la progresión general.',
+        },
       ],
       sources: [
-        { label: 'Steam Community — logros oficiales', note: 'Confirma Eyes on the Piggy: escoger la hucha correcta en Piggy Shuffle.' },
-        { label: 'Steam Community Guide — guía de Luca para Piggy Shuffle', note: 'Método creado por un jugador usando grabación de móvil y reproducción lenta; no es documentación del desarrollador.' },
+        {
+          label: 'Steam Community — logros oficiales',
+          note: 'Confirma Eyes on the Piggy: escoger la hucha correcta en Piggy Shuffle.',
+        },
+        {
+          label: 'Steam Community Guide — guía de Luca para Piggy Shuffle',
+          note: 'Método creado por un jugador usando grabación de móvil y reproducción lenta; no es documentación del desarrollador.',
+        },
       ],
       sections: [
         {
@@ -425,14 +495,16 @@ export const esGamePages = {
       ],
     },
     wiki: {
-      metaTitle: 'Bills Must Be Paid Wiki - Huchas, Martillos y Habilidades',
+      metaTitle:
+        'Bills Must Be Paid Wiki — Huchas, Habilidades, Martillos y Más',
       metaDescription:
-        'Bills Must Be Paid Wiki: huchas, martillos, árbol de habilidades, bancarrota, logros y versiones con datos organizados por fuente.',
+        'Wiki de Bills Must Be Paid: huchas, árbol de habilidades, martillos, logros y bancarrota — referencias verificadas con enlaces oficiales.',
       eyebrow: 'Wiki',
       title: 'Bills Must Be Paid Wiki',
       description:
         'Referencia de Bills Must Be Paid para huchas, martillos, habilidades, logros, versiones y progresión, separando hechos, comunidad y análisis.',
-      imageAlt: 'Captura oficial de la colección de huchas de Bills Must Be Paid',
+      imageAlt:
+        'Captura oficial de la colección de huchas de Bills Must Be Paid',
       breadcrumbs: ['Wiki'],
       toc: [
         'Sistemas de juego',
@@ -444,9 +516,20 @@ export const esGamePages = {
         'Cómo añadimos información',
       ],
       related: [
-        { title: 'Guías', description: 'Páginas de resolución para principiantes, progresión y retos.' },
-        { title: 'Tier Lists', description: 'Qué se puede clasificar hoy y qué evidencia falta.' },
-        { title: 'Demo vs juego completo', description: 'Separa mecánicas de demo del lanzamiento del 29 de julio.' },
+        {
+          title: 'Guías',
+          description:
+            'Páginas de resolución para principiantes, progresión y retos.',
+        },
+        {
+          title: 'Tier Lists',
+          description: 'Qué se puede clasificar hoy y qué evidencia falta.',
+        },
+        {
+          title: 'Demo vs juego completo',
+          description:
+            'Separa mecánicas de demo del lanzamiento del 29 de julio.',
+        },
       ],
       sources: [
         { label: 'Rike Games — press kit oficial de Bills Must Be Paid' },
@@ -539,14 +622,35 @@ export const esGamePages = {
         'Martillos dentro de una build',
       ],
       related: [
-        { title: 'Tier Lists', description: 'Por qué no fabricamos una clasificación sin una tabla completa de datos.' },
-        { title: 'Árbol de habilidades', description: 'Otras mejoras que pueden cambiar el contexto de un martillo.' },
-        { title: 'Guía para principiantes', description: 'Dónde encaja la elección de equipo en el bucle completo.' },
+        {
+          title: 'Tier Lists',
+          description:
+            'Por qué no fabricamos una clasificación sin una tabla completa de datos.',
+        },
+        {
+          title: 'Árbol de habilidades',
+          description:
+            'Otras mejoras que pueden cambiar el contexto de un martillo.',
+        },
+        {
+          title: 'Guía para principiantes',
+          description:
+            'Dónde encaja la elección de equipo en el bucle completo.',
+        },
       ],
       sources: [
-        { label: 'Rike Games — press kit oficial de Bills Must Be Paid', note: 'Explica los compromisos entre crítico, radio, velocidad y daño.' },
-        { label: 'Steam — Bills Must Be Paid', note: 'La descripción actual repite el diseño de compromisos de martillos.' },
-        { label: 'Steam Community — anuncios del desarrollador', note: 'Demo Bug Fix v0.2.7 registra mayor radio para Ultracrit-Hammer y golpes más rápidos para Toy-Hammer.' },
+        {
+          label: 'Rike Games — press kit oficial de Bills Must Be Paid',
+          note: 'Explica los compromisos entre crítico, radio, velocidad y daño.',
+        },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: 'La descripción actual repite el diseño de compromisos de martillos.',
+        },
+        {
+          label: 'Steam Community — anuncios del desarrollador',
+          note: 'Demo Bug Fix v0.2.7 registra mayor radio para Ultracrit-Hammer y golpes más rápidos para Toy-Hammer.',
+        },
       ],
       sections: [
         {
@@ -572,7 +676,12 @@ export const esGamePages = {
             'Crítico, radio, velocidad y daño son las cuatro dimensiones nombradas directamente por fuentes de primera parte. Sirven para explicar por qué dos martillos pueden ser buenos en situaciones distintas, pero no producen automáticamente un ganador. Una comparación responsable de Bills Must Be Paid debe incluir además la versión, el objetivo de la prueba y el tipo de situación que se intenta optimizar.',
             'Con datos completos, una tabla futura podría separar daño a un objetivo, cobertura, velocidad o eficiencia bajo resistencia. Hacer visible el criterio es mejor que comprimir todas las cualidades en una letra. Para jugadores y buscadores, una metodología clara sigue siendo útil después de un parche porque se puede repetir; una etiqueta S sin datos solo parece precisa mientras nadie pregunta cómo se obtuvo.',
           ],
-          bullets: ['Probabilidad de crítico', 'Radio de golpe', 'Velocidad de ataque o impacto', 'Daño'],
+          bullets: [
+            'Probabilidad de crítico',
+            'Radio de golpe',
+            'Velocidad de ataque o impacto',
+            'Daño',
+          ],
         },
         {
           id: 'tier-list',
@@ -628,9 +737,21 @@ export const esGamePages = {
         'Contexto de finalización',
       ],
       related: [
-        { title: 'Guía de Piggy Shuffle', description: 'Resuelve Eyes on the Piggy con fuentes oficiales y comunidad claramente separadas.' },
-        { title: 'Logros', description: 'Piggy Bank Collector y el resto de objetivos oficiales.' },
-        { title: 'Guía para principiantes', description: 'Cómo encajan las huchas en dinero, resistencia y progresión.' },
+        {
+          title: 'Guía de Piggy Shuffle',
+          description:
+            'Resuelve Eyes on the Piggy con fuentes oficiales y comunidad claramente separadas.',
+        },
+        {
+          title: 'Logros',
+          description:
+            'Piggy Bank Collector y el resto de objetivos oficiales.',
+        },
+        {
+          title: 'Guía para principiantes',
+          description:
+            'Cómo encajan las huchas en dinero, resistencia y progresión.',
+        },
       ],
       sources: [
         { label: 'Rike Games — press kit oficial de Bills Must Be Paid' },
@@ -704,9 +825,9 @@ export const esGamePages = {
       ],
     },
     'skill-tree': {
-      metaTitle: 'Bills Must Be Paid Árbol de Habilidades - Guía',
+      metaTitle: 'Bills Must Be Paid Árbol de Habilidades — Guía de Mejoras',
       metaDescription:
-        'Bills Must Be Paid árbol de habilidades: agarre, cafeína, gimnasio, suerte, efectos especiales, cambios de versión y límites de tier lists.',
+        'Guía del árbol de habilidades de Bills Must Be Paid: agarre, cafeína, gimnasio, suerte y nodos especiales con fuentes verificadas.',
       eyebrow: 'Wiki',
       title: 'Bills Must Be Paid Árbol de Habilidades',
       description:
@@ -723,14 +844,34 @@ export const esGamePages = {
         'Cómo leer consejos de build',
       ],
       related: [
-        { title: 'Guía para principiantes', description: 'Cómo encaja el gasto de habilidades con facturas, resistencia y martillos.' },
-        { title: 'Martillos', description: 'Compara los compromisos de equipo documentados por Rike Games.' },
-        { title: 'Tier Lists', description: 'Criterio actual para publicar rankings de mejoras.' },
+        {
+          title: 'Guía para principiantes',
+          description:
+            'Cómo encaja el gasto de habilidades con facturas, resistencia y martillos.',
+        },
+        {
+          title: 'Martillos',
+          description:
+            'Compara los compromisos de equipo documentados por Rike Games.',
+        },
+        {
+          title: 'Tier Lists',
+          description: 'Criterio actual para publicar rankings de mejoras.',
+        },
       ],
       sources: [
-        { label: 'Rike Games — press kit oficial de Bills Must Be Paid', note: 'Nombra varias direcciones y ejemplos del árbol.' },
-        { label: 'Steam — Bills Must Be Paid', note: 'Confirma el árbol de habilidades en el juego completo.' },
-        { label: 'Steam Community — anuncios del desarrollador', note: 'El anuncio de lanzamiento confirma que algunos nodos cambiaron respecto a la demo.' },
+        {
+          label: 'Rike Games — press kit oficial de Bills Must Be Paid',
+          note: 'Nombra varias direcciones y ejemplos del árbol.',
+        },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: 'Confirma el árbol de habilidades en el juego completo.',
+        },
+        {
+          label: 'Steam Community — anuncios del desarrollador',
+          note: 'El anuncio de lanzamiento confirma que algunos nodos cambiaron respecto a la demo.',
+        },
       ],
       sections: [
         {
@@ -748,7 +889,13 @@ export const esGamePages = {
             'Los materiales oficiales mencionan fuerza de agarre, mejoras relacionadas con cafeína, gimnasio, muñeca y suerte. También describen efectos menos convencionales, como rocas que caen del cielo y un martillo electrificado. Estos ejemplos son importantes porque muestran que Bills Must Be Paid combina aumentos básicos con mecánicas que pueden cambiar la forma de jugar.',
             'No deben confundirse con una lista exhaustiva de nodos. El hecho de que una fuente nombre varios ejemplos no permite rellenar todos los huecos del árbol ni inventar valores. Además, algunos nodos de la demo cambiaron para el juego completo. La referencia conserva aquello que está documentado y deja visibles los datos ausentes hasta poder verificarlos en una build actual.',
           ],
-          bullets: ['Fuerza de agarre', 'Cafeína', 'Mejoras de gimnasio', 'Muñeca y suerte', 'Rocas y electrificación del martillo'],
+          bullets: [
+            'Fuerza de agarre',
+            'Cafeína',
+            'Mejoras de gimnasio',
+            'Muñeca y suerte',
+            'Rocas y electrificación del martillo',
+          ],
         },
         {
           id: 'changes',
@@ -781,7 +928,12 @@ export const esGamePages = {
             'El desarrollador ha confirmado que los nodos cambiaron entre builds, por lo que una etiqueta de versión es obligatoria para recomendaciones precisas. Una captura de demo puede mostrar una ruta que ya no coincide con el lanzamiento. Al leer vídeos o guías antiguas de Bills Must Be Paid, comprueba si pertenecen al periodo posterior al 21 de abril o a la versión completa del 29 de julio en adelante.',
             'La misma frontera afecta las tier lists. Una prueba rigurosa realizada en la demo puede volverse obsoleta sin que el autor haya cometido un error. Un ranking actual debe incluir build, fecha y condiciones; tras un parche, solo los nodos afectados necesitan volver a medirse. Esa disciplina permite que el análisis evolucione sin presentar resultados históricos como verdades permanentes.',
           ],
-          bullets: ['Indica la versión de cada recomendación', 'No supongas que los nodos de demo son idénticos', 'Repite pruebas tras cambios de balance', 'Separa hechos, pruebas y preferencias'],
+          bullets: [
+            'Indica la versión de cada recomendación',
+            'No supongas que los nodos de demo son idénticos',
+            'Repite pruebas tras cambios de balance',
+            'Separa hechos, pruebas y preferencias',
+          ],
         },
         {
           id: 'skill-build-reading',
@@ -794,9 +946,10 @@ export const esGamePages = {
       ],
     },
     achievements: {
-      metaTitle: 'Bills Must Be Paid Logros - Los 27 Objetivos',
+      metaTitle:
+        'Bills Must Be Paid Logros — Los 27 Desbloqueos de Steam y Cómo Conseguirlos',
       metaDescription:
-        'Bills Must Be Paid: los 27 logros de Steam sobre facturas, precisión, dinero, apuestas, préstamos, colecciones, bancarrota y habilidades.',
+        'Lista completa de logros de Bills Must Be Paid: los 27 desbloqueos de Steam con objetivos oficiales. Guías para Eyes on the Piggy, Fresh Start y más.',
       eyebrow: 'Finalización',
       title: 'Bills Must Be Paid - Los 27 Logros',
       description:
@@ -814,13 +967,27 @@ export const esGamePages = {
         'Verificación',
       ],
       related: [
-        { title: 'Guía de Piggy Shuffle', description: 'Ayuda para Eyes on the Piggy con un método comunitario etiquetado.' },
-        { title: 'Prestigio y bancarrota', description: 'Contexto para Fresh Start y Prestige Jewelry.' },
+        {
+          title: 'Guía de Piggy Shuffle',
+          description:
+            'Ayuda para Eyes on the Piggy con un método comunitario etiquetado.',
+        },
+        {
+          title: 'Prestigio y bancarrota',
+          description: 'Contexto para Fresh Start y Prestige Jewelry.',
+        },
         { title: 'Huchas', description: 'Contexto para Piggy Bank Collector.' },
       ],
       sources: [
-        { label: 'Steam Community — logros globales oficiales de Bills Must Be Paid', note: 'Fuente principal para los 27 nombres y objetivos. No fijamos porcentajes globales porque cambian.' },
-        { label: 'Steam — Bills Must Be Paid', note: 'Confirma soporte para Steam Achievements.' },
+        {
+          label:
+            'Steam Community — logros globales oficiales de Bills Must Be Paid',
+          note: 'Fuente principal para los 27 nombres y objetivos. No fijamos porcentajes globales porque cambian.',
+        },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: 'Confirma soporte para Steam Achievements.',
+        },
       ],
       sections: [
         {
@@ -944,14 +1111,28 @@ export const esGamePages = {
         'Por qué no inventamos rankings',
       ],
       related: [
-        { title: 'Martillos', description: 'Compromisos de equipo y cambios de balance documentados.' },
-        { title: 'Árbol de habilidades', description: 'Ejemplos verificados y notas de cambios del juego completo.' },
-        { title: 'Guía para principiantes', description: 'Entiende los sistemas antes de optimizarlos.' },
+        {
+          title: 'Martillos',
+          description:
+            'Compromisos de equipo y cambios de balance documentados.',
+        },
+        {
+          title: 'Árbol de habilidades',
+          description:
+            'Ejemplos verificados y notas de cambios del juego completo.',
+        },
+        {
+          title: 'Guía para principiantes',
+          description: 'Entiende los sistemas antes de optimizarlos.',
+        },
       ],
       sources: [
         { label: 'Rike Games — press kit oficial de Bills Must Be Paid' },
         { label: 'Steam — Bills Must Be Paid' },
-        { label: 'Steam Community — anuncios del desarrollador', note: 'Demuestra que los cambios de balance pueden alterar el rendimiento.' },
+        {
+          label: 'Steam Community — anuncios del desarrollador',
+          note: 'Demuestra que los cambios de balance pueden alterar el rendimiento.',
+        },
       ],
       sections: [
         {
@@ -985,7 +1166,13 @@ export const esGamePages = {
             'Como mínimo: versión identificada, lista completa de candidatos, efectos verificables o pruebas repetibles, criterio explícito y registro de cambios. Sin esos elementos, una tabla puede ser una opinión válida de un jugador, pero no debería presentarse como clasificación de referencia. El lector debe poder saber qué significa un nivel y en qué entorno se obtuvo.',
             'El historial de parches forma parte del método porque Bills Must Be Paid ya ha cambiado equipo y nodos. Si una actualización invalida un resultado, la página debe explicar por qué una posición se mueve. Esa transparencia convierte el ranking en una herramienta que puede mantenerse con el tiempo, en lugar de una captura de opinión sin fecha.',
           ],
-          bullets: ['Versión del juego', 'Lista completa de objetos o nodos', 'Efectos o pruebas verificables', 'Criterio de ranking explícito', 'Registro tras cambios de balance'],
+          bullets: [
+            'Versión del juego',
+            'Lista completa de objetos o nodos',
+            'Efectos o pruebas verificables',
+            'Criterio de ranking explícito',
+            'Registro tras cambios de balance',
+          ],
         },
         {
           id: 'tier-method',
@@ -1014,9 +1201,9 @@ export const esGamePages = {
       ],
     },
     'demo-vs-full-game': {
-      metaTitle: 'Bills Must Be Paid Demo vs Full Game - Diferencias',
+      metaTitle: 'Bills Must Be Paid Demo vs Juego Completo — Gratis y Steam',
       metaDescription:
-        'Bills Must Be Paid Demo vs Full Game: fechas, guardados, prestigio, bancarrota, joyería, tienda, huchas, martillos y novedades.',
+        'Bills Must Be Paid gratis en navegador vs juego completo de Steam: guardados, prestigio, bancarrota, logros y diferencias confirmadas.',
       eyebrow: 'Versiones',
       title: 'Bills Must Be Paid Demo vs Full Game',
       description:
@@ -1033,16 +1220,41 @@ export const esGamePages = {
         'Contexto de guardado y versión',
       ],
       related: [
-        { title: 'Guía para principiantes', description: 'Aprende el bucle principal que comparten las versiones.' },
-        { title: 'Prestigio y bancarrota', description: 'La gran capa de progresión del lanzamiento completo.' },
-        { title: 'Árbol de habilidades', description: 'Algunos nodos cambiaron entre demo y versión final.' },
+        {
+          title: 'Guía para principiantes',
+          description:
+            'Aprende el bucle principal que comparten las versiones.',
+        },
+        {
+          title: 'Prestigio y bancarrota',
+          description: 'La gran capa de progresión del lanzamiento completo.',
+        },
+        {
+          title: 'Árbol de habilidades',
+          description: 'Algunos nodos cambiaron entre demo y versión final.',
+        },
       ],
       sources: [
-        { label: 'Steam — Bills Must Be Paid Demo', note: 'Página oficial de la demo; lanzamiento el 21 de abril de 2026.' },
-        { label: 'Steam — Bills Must Be Paid', note: 'Página del juego completo; lanzamiento el 29 de julio de 2026.' },
-        { label: 'Steam Community — anuncios del desarrollador', note: 'Los posts de junio y lanzamiento describen novedades y confirman que los guardados no se transfieren.' },
-        { label: 'Rike Games — press kit oficial de Bills Must Be Paid', note: 'Enlaza la demo de navegador/itch.io y la versión de Steam.' },
-        { label: 'Rike Games en itch.io — Bills Must Be Paid', note: 'Demo HTML5 de primera parte para navegador.' },
+        {
+          label: 'Steam — Bills Must Be Paid Demo',
+          note: 'Página oficial de la demo; lanzamiento el 21 de abril de 2026.',
+        },
+        {
+          label: 'Steam — Bills Must Be Paid',
+          note: 'Página del juego completo; lanzamiento el 29 de julio de 2026.',
+        },
+        {
+          label: 'Steam Community — anuncios del desarrollador',
+          note: 'Los posts de junio y lanzamiento describen novedades y confirman que los guardados no se transfieren.',
+        },
+        {
+          label: 'Rike Games — press kit oficial de Bills Must Be Paid',
+          note: 'Enlaza la demo de navegador/itch.io y la versión de Steam.',
+        },
+        {
+          label: 'Rike Games en itch.io — Bills Must Be Paid',
+          note: 'Demo HTML5 de primera parte para navegador.',
+        },
       ],
       sections: [
         {
@@ -1052,7 +1264,10 @@ export const esGamePages = {
             'La demo de Steam de Bills Must Be Paid se lanzó el 21 de abril de 2026 y el juego completo el 29 de julio de 2026. Esta frontera es útil al evaluar guías antiguas: un contenido publicado durante el periodo de demo puede explicar bien el bucle compartido, pero no necesariamente los sistemas de progresión que Rike Games cambió o amplió para el lanzamiento final.',
             'Rike Games también ofrece una experiencia de navegador mediante sus propios canales y una demo HTML5 en itch.io. Son formas oficiales o enlazadas por el desarrollador de probar Bills Must Be Paid, pero las fuentes públicas no justifican afirmar que cada paquete de navegador es idéntico byte por byte a la demo de Steam. Esta comparación se limita a diferencias que sí pueden verificarse.',
           ],
-          bullets: ['Steam Demo: 21 de abril de 2026', 'Juego completo: 29 de julio de 2026'],
+          bullets: [
+            'Steam Demo: 21 de abril de 2026',
+            'Juego completo: 29 de julio de 2026',
+          ],
         },
         {
           id: 'saves',
@@ -1069,7 +1284,15 @@ export const esGamePages = {
             'Antes del lanzamiento, el desarrollador destacó progresión de prestigio/bancarrota, anillos y pulseras, una nueva tienda con gadgets de escritorio, más tipos de hucha, más perks, más martillos, más mecánicas de apuestas o riesgo y un final. Steam también lista logros y Steam Cloud para la versión completa de Bills Must Be Paid.',
             'La lista representa novedades documentadas, no un changelog matemáticamente exhaustivo. Sirve para demostrar que el juego completo amplía estructura y contenido, pero no para afirmar que cada detalle de cada build está incluido aquí. Si futuras notas oficiales describen más diferencias, la página puede crecer manteniendo la misma regla: añadir lo que tenga una fuente y marcar claramente el contexto de versión.',
           ],
-          bullets: ['Prestigio y bancarrota', 'Anillos y pulseras', 'Gadgets de escritorio', 'Más huchas, perks y martillos', 'Más riesgo/apuestas', 'Un final', 'Logros y Steam Cloud'],
+          bullets: [
+            'Prestigio y bancarrota',
+            'Anillos y pulseras',
+            'Gadgets de escritorio',
+            'Más huchas, perks y martillos',
+            'Más riesgo/apuestas',
+            'Un final',
+            'Logros y Steam Cloud',
+          ],
         },
         {
           id: 'browser',
@@ -1089,7 +1312,8 @@ export const esGamePages = {
         },
         {
           id: 'demo-full-additions',
-          title: 'Por qué las novedades cambian la estructura de Bills Must Be Paid',
+          title:
+            'Por qué las novedades cambian la estructura de Bills Must Be Paid',
           paragraphs: [
             'Prestigio y bancarrota conectan una ronda con ciclos posteriores; la joyería añade progresión persistente; más huchas y martillos amplían decisiones; gadgets y riesgo crean usos adicionales del dinero. Por tanto, “demo vs juego completo” no es solo comparar cantidad de contenido. La versión final cambia el horizonte de progresión y la variedad de elecciones que el jugador debe administrar.',
             'Esto ayuda a entender la incompatibilidad de guardados. Si algunos nodos, balance y sistemas internos han cambiado, mover un estado antiguo no es trivial ni necesariamente coherente. La demo sirve como vista previa del núcleo y el juego completo como entorno de progreso oficial. Future notas de Rike Games pueden añadir detalles a esta comparación sin alterar esa diferencia fundamental.',

@@ -39,7 +39,10 @@ const bundles: Partial<Record<string, GamePageLocaleBundle>> = {
 };
 
 type SeoOverride = Partial<
-  Pick<LocalizedGamePage, 'metaTitle' | 'metaDescription' | 'title' | 'description'>
+  Pick<
+    LocalizedGamePage,
+    'metaTitle' | 'metaDescription' | 'title' | 'description'
+  >
 >;
 
 const pageOverrides: Partial<
@@ -47,9 +50,10 @@ const pageOverrides: Partial<
 > = {
   zh: {
     achievements: {
-      metaTitle: 'Bills Must Be Paid 成就 - 全部 27 个 Steam 成就',
+      metaTitle:
+        'Bills Must Be Paid 成就列表 — 全部 27 个 Steam 成就与获取方法',
       metaDescription:
-        'Bills Must Be Paid 成就：查看全部 27 个 Steam 成就、官方目标，以及 Eyes on the Piggy、Fresh Start、Freedom、Maxed Out 等任务攻略入口。',
+        'Bills Must Be Paid 完整成就列表：27 个 Steam 解锁目标与官方条件，含 Eyes on the Piggy、Fresh Start、Maxed Out 等攻略入口。',
       title: 'Bills Must Be Paid 成就：全部 27 个 Steam 成就',
       description:
         '完整整理 27 个官方 Steam 成就与目标，并为 Eyes on the Piggy、Fresh Start、Piggy Bank Collector 等高意图任务提供对应攻略入口。',
@@ -57,9 +61,10 @@ const pageOverrides: Partial<
   },
   es: {
     guides: {
-      metaTitle: 'Bills Must Be Paid Guía - Cómo jugar, prestigio y retos',
+      metaTitle:
+        'Bills Must Be Paid Guía — Piggy Shuffle, Habilidades y Prestigio',
       metaDescription:
-        'Bills Must Be Paid guía: aprende cómo jugar, gestionar resistencia y facturas, elegir mejoras y avanzar hacia prestigio, bancarrota y retos.',
+        'Guías de Bills Must Be Paid: Piggy Shuffle, árbol de habilidades, prestigio, bancarrota, Double or Nothing y consejos para principiantes.',
       title: 'Bills Must Be Paid Guía: cómo jugar, progresar y superar retos',
       description:
         'Empieza por el bucle principal y pasa a guías concretas de prestigio, bancarrota, Piggy Shuffle, martillos, habilidades y logros.',
@@ -81,25 +86,27 @@ const pageOverrides: Partial<
         'Entiende qué activa la bancarrota, cómo comienza un nuevo ciclo y cómo se conectan los puntos de progresión con anillos y pulseras.',
     },
     'piggy-shuffle': {
-      metaTitle: 'Bills Must Be Paid Piggy Shuffle - Guía Eyes on the Piggy',
+      metaTitle:
+        'Bills Must Be Paid Piggy Shuffle — Cómo Ganar Eyes on the Piggy',
       metaDescription:
-        'Bills Must Be Paid Piggy Shuffle: cómo superar Eyes on the Piggy con el objetivo oficial y un método comunitario a cámara lenta claramente identificado.',
+        'Guía de Piggy Shuffle en Bills Must Be Paid: objetivo oficial Eyes on the Piggy y método comunitario a cámara lenta para elegir la hucha correcta.',
       title: 'Bills Must Be Paid Piggy Shuffle: Guía de Eyes on the Piggy',
       description:
         'Consulta el objetivo oficial de Eyes on the Piggy y una solución comunitaria a cámara lenta claramente separada de las mecánicas confirmadas por el desarrollador.',
     },
     achievements: {
-      metaTitle: 'Bills Must Be Paid Logros - Los 27 logros de Steam',
+      metaTitle:
+        'Bills Must Be Paid Logros — Los 27 Desbloqueos de Steam y Cómo Conseguirlos',
       metaDescription:
-        'Bills Must Be Paid logros: consulta los 27 logros oficiales de Steam, sus objetivos y las guías para Eyes on the Piggy, Fresh Start y Maxed Out.',
+        'Lista completa de logros de Bills Must Be Paid: los 27 desbloqueos de Steam con objetivos oficiales. Guías para Eyes on the Piggy, Fresh Start y más.',
       title: 'Bills Must Be Paid Logros: los 27 logros de Steam',
       description:
         'Lista completa de los 27 logros oficiales de Steam con objetivos y accesos directos a las guías de Eyes on the Piggy, Fresh Start y otros retos.',
     },
     'demo-vs-full-game': {
-      metaTitle: 'Bills Must Be Paid Demo vs Juego Completo - Diferencias',
+      metaTitle: 'Bills Must Be Paid Demo vs Juego Completo — Gratis y Steam',
       metaDescription:
-        'Bills Must Be Paid Demo vs juego completo: compara fechas, guardados, prestigio, bancarrota, joyería, tienda y funciones añadidas en Steam.',
+        'Bills Must Be Paid gratis en navegador vs juego completo de Steam: guardados, prestigio, bancarrota, logros y diferencias confirmadas.',
       title: 'Bills Must Be Paid Demo vs Juego Completo: Diferencias',
       description:
         'Compara la demo gratuita con el lanzamiento completo de Steam: compatibilidad de guardados, prestigio, bancarrota, joyería, tienda y contenido añadido.',
@@ -166,9 +173,7 @@ export function getGameLocaleBundle(
   return bundles[locale];
 }
 
-export function getGameCommon(
-  locale: string
-): GamePageLocaleBundle['common'] {
+export function getGameCommon(locale: string): GamePageLocaleBundle['common'] {
   const common = bundles[locale]?.common ?? enGameCommon;
 
   if (locale !== 'zh') return common;
