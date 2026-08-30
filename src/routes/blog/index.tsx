@@ -16,26 +16,41 @@ export const Route = createFileRoute('/blog/')({
     return { locale, posts };
   },
   head: ({ loaderData }) => {
-    const locale = loaderData?.locale;
+    const locale = loaderData?.locale ?? 'en';
     const urlFor = (loc: string) =>
       localizeUrl(`${envConfigs.app_url}/blog`, { locale: loc as any }).href;
+    const title = `${m['blog.title']({}, { locale: locale as any })} | ${envConfigs.app_name}`;
+    const description = m['blog.description']({}, { locale: locale as any });
+    const canonical = urlFor(locale);
+    const ogImage = new URL(
+      '/images/game/bills-must-be-paid-header.jpg',
+      envConfigs.app_url
+    ).href;
+
     return {
       meta: [
-        {
-          title: `${m['blog.title']({}, { locale: locale as any })} | ${envConfigs.app_name}`,
-        },
-        {
-          name: 'description',
-          content: m['blog.description']({}, { locale: locale as any }),
-        },
+        { title },
+        { name: 'description', content: description },
+        { name: 'robots', content: 'index, follow' },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: canonical },
+        { property: 'og:site_name', content: envConfigs.app_name },
+        { property: 'og:image', content: ogImage },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: ogImage },
       ],
       links: [
-        { rel: 'canonical', href: urlFor(locale ?? 'en') },
+        { rel: 'canonical', href: canonical },
         ...locales.map((loc) => ({
           rel: 'alternate',
           hrefLang: loc,
           href: urlFor(loc),
         })),
+        { rel: 'alternate', hrefLang: 'x-default', href: urlFor('en') },
       ],
     };
   },

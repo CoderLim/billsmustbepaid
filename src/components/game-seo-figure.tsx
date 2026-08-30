@@ -29,6 +29,7 @@ export function GameSeoFigure({
         width={image.width}
         height={image.height}
         loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
         decoding="async"
         className="aspect-video w-full object-cover"
       />

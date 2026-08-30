@@ -1,4 +1,5 @@
 import { envConfigs } from '@/config';
+import { getLocale, locales, localizeUrl } from '@/paraglide/runtime.js';
 
 /** Head metadata for authenticated / utility pages that should not be indexed. */
 export function buildPrivatePageHead(title?: string) {
@@ -20,7 +21,12 @@ export function buildStaticPageHead({
   title: string;
   description: string;
 }) {
-  const canonical = new URL(path, envConfigs.app_url).href;
+  const locale = getLocale();
+  const urlFor = (loc: string) =>
+    localizeUrl(new URL(path, envConfigs.app_url).href, {
+      locale: loc as (typeof locales)[number],
+    }).href;
+  const canonical = urlFor(locale);
   const ogImage = new URL('/logo.png', envConfigs.app_url).href;
 
   return {
@@ -34,10 +40,19 @@ export function buildStaticPageHead({
       { property: 'og:url', content: canonical },
       { property: 'og:site_name', content: envConfigs.app_name },
       { property: 'og:image', content: ogImage },
-      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: ogImage },
     ],
-    links: [{ rel: 'canonical', href: canonical }],
+    links: [
+      { rel: 'canonical', href: canonical },
+      ...locales.map((loc) => ({
+        rel: 'alternate',
+        hrefLang: loc,
+        href: urlFor(loc),
+      })),
+      { rel: 'alternate', hrefLang: 'x-default', href: urlFor('en') },
+    ],
   };
 }

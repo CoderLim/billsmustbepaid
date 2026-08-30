@@ -1,15 +1,10 @@
 import { Fragment, type ReactNode } from 'react';
 import { BookOpen, ExternalLink, ShieldCheck } from 'lucide-react';
 
-import { Footer } from '@/blocks/footer';
-import { gameSeoImages, type GameSeoImageKey } from '@/config/game-seo-images';
-import {
-  getGameCommon,
-  getLocalizedGamePage,
-  type LocalizedGamePage,
-} from '@/content/game-page-locales';
 import { Link, usePathname } from '@/core/i18n/navigation';
+import { gameSeoImages, type GameSeoImageKey } from '@/config/game-seo-images';
 import { getLocale } from '@/paraglide/runtime.js';
+import { Footer } from '@/blocks/footer';
 import { SiteHeader } from '@/components/site-header';
 import {
   Breadcrumb,
@@ -18,6 +13,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import {
+  getGameCommon,
+  getLocalizedGamePage,
+  type LocalizedGamePage,
+} from '@/content/game-page-locales';
 
 export type ContentBreadcrumb = {
   label: string;
@@ -234,6 +234,8 @@ export function GameContentLayout({
               width={image.width}
               height={image.height}
               alt={localized?.imageAlt ?? imageAlt}
+              loading="eager"
+              fetchPriority="high"
               decoding="async"
               className="aspect-video h-auto w-full object-cover"
             />
@@ -323,7 +325,9 @@ function LocalizedSections({
           {section.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-          {section.bullets?.length ? <FactList items={section.bullets} /> : null}
+          {section.bullets?.length ? (
+            <FactList items={section.bullets} />
+          ) : null}
         </ArticleSection>
       ))}
     </>
