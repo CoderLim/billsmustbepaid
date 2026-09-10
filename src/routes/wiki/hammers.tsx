@@ -1,5 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { Link } from '@/core/i18n/navigation';
+import { buildGamePageHead } from '@/lib/game-content-seo';
 import {
   ArticleSection,
   FactList,
@@ -8,8 +10,6 @@ import {
   SourceNote,
 } from '@/components/game-content-layout';
 import { GameLongformExpansion } from '@/components/game-longform-expansion';
-import { Link } from '@/core/i18n/navigation';
-import { buildGamePageHead } from '@/lib/game-content-seo';
 
 function HammersPage() {
   return (
@@ -31,19 +31,34 @@ function HammersPage() {
       ]}
       related={[
         {
-          title: 'Tier Lists',
-          description: 'Why we are not fabricating an S/A/B hammer ranking without a complete stat source.',
-          href: '/tier-lists',
-        },
-        {
-          title: 'Skill Tree',
-          description: 'Other upgrade choices that can change how a hammer build behaves.',
+          title: 'Skill Tree Wiki',
+          description:
+            'Verified upgrade directions and named examples from Rike Games’ skill tree.',
           href: '/wiki/skill-tree',
         },
         {
+          title: 'Piggy Shuffle Guide',
+          description:
+            'Unlock Eyes on the Piggy — verified objective plus a labeled community slow-motion method.',
+          href: '/guides/piggy-shuffle',
+        },
+        {
+          title: 'Tier Lists',
+          description:
+            'Evidence standard for rankings — what we can and cannot tier yet.',
+          href: '/tier-lists',
+        },
+        {
           title: 'Beginner Guide',
-          description: 'See where hammer choice fits in the full game loop.',
+          description:
+            'Core loop: smash piggies, spend stamina, pay bills, and unlock long-term upgrades.',
           href: '/guides/beginner-guide',
+        },
+        {
+          title: 'Piggy Banks Wiki',
+          description:
+            'Piggy types, behavior, and collection goals backed by official sources.',
+          href: '/wiki/piggy-banks',
         },
       ]}
       sources={[
@@ -64,9 +79,15 @@ function HammersPage() {
         },
       ]}
     >
-      <ArticleSection id="tradeoffs" title="Hammers are designed around stat tradeoffs">
+      <ArticleSection
+        id="tradeoffs"
+        title="Hammers are designed around stat tradeoffs"
+      >
         <p>
-          The official description gives a direct example of how hammer choice works: a hammer may provide higher critical chance but a smaller hit radius, while another may swing faster and cover a larger radius at the cost of damage.
+          The official description gives a direct example of how hammer choice
+          works: a hammer may provide higher critical chance but a smaller hit
+          radius, while another may swing faster and cover a larger radius at
+          the cost of damage.
         </p>
         <GameScreenshot
           imageKey="hammers"
@@ -75,18 +96,29 @@ function HammersPage() {
         />
       </ArticleSection>
 
-      <ArticleSection id="patches" title="Confirmed named hammer balance changes">
+      <ArticleSection
+        id="patches"
+        title="Confirmed named hammer balance changes"
+      >
         <p>
-          Rike Games’ Demo Bug Fix v0.2.7 announcement names two specific hammers and changes:
+          Rike Games’ Demo Bug Fix v0.2.7 announcement names two specific
+          hammers and changes:
         </p>
         <FactList
           items={[
-            <><strong>Ultracrit-Hammer:</strong> its radius was made a bit bigger.</>,
-            <><strong>Toy-Hammer:</strong> it was changed to hit a bit faster.</>,
+            <>
+              <strong>Ultracrit-Hammer:</strong> its radius was made a bit
+              bigger.
+            </>,
+            <>
+              <strong>Toy-Hammer:</strong> it was changed to hit a bit faster.
+            </>,
           ]}
         />
         <p>
-          These patch notes are important because they prove hammer balance can change over time. Any future ranking should therefore be versioned rather than treated as permanent.
+          These patch notes are important because they prove hammer balance can
+          change over time. Any future ranking should therefore be versioned
+          rather than treated as permanent.
         </p>
       </ArticleSection>
 
@@ -100,18 +132,34 @@ function HammersPage() {
           ]}
         />
         <p>
-          Those four dimensions are directly named in first-party descriptions. Other stats should not be added to a comparison table until they are verified from the game or an authoritative source.
+          Those four dimensions are directly named in first-party descriptions.
+          Other stats should not be added to a comparison table until they are
+          verified from the game or an authoritative source.
         </p>
       </ArticleSection>
 
-      <ArticleSection id="tier-list" title="Why there is no fabricated S/A/B list here">
+      <ArticleSection
+        id="tier-list"
+        title="Why there is no fabricated S/A/B list here"
+      >
         <SourceNote title="Evidence before ranking">
           <p>
-            The official sources reviewed for Phase 1 explain the design tradeoffs and provide selected patch notes, but they do not publish a complete, versioned stat table for every hammer. A precise ranking without that data would be guesswork.
+            The official sources reviewed for Phase 1 explain the design
+            tradeoffs and provide selected patch notes, but they do not publish
+            a complete, versioned stat table for every hammer. A precise ranking
+            without that data would be guesswork.
           </p>
         </SourceNote>
         <p>
-          The <Link href="/tier-lists" className="text-foreground underline underline-offset-4">Tier Lists page</Link> records what can currently be ranked responsibly and what evidence is still missing.
+          The{' '}
+          <Link
+            href="/tier-lists"
+            className="text-foreground underline underline-offset-4"
+          >
+            Tier Lists page
+          </Link>{' '}
+          records what can currently be ranked responsibly and what evidence is
+          still missing.
         </p>
       </ArticleSection>
 

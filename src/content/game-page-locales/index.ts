@@ -27,7 +27,7 @@ export const enGameCommon: GamePageLocaleBundle['common'] = {
   screenshotCaption:
     'Official Bills Must Be Paid screenshot from Rike Games / Steam.',
   onThisPage: 'On this page',
-  relatedPages: 'Related pages',
+  relatedPages: 'Related Guides',
   originalSources: 'Original sources',
   sourcesIntro:
     'Facts on this page are tied to the first-party or clearly labeled community sources below. Community advice is not presented as an official game mechanic.',

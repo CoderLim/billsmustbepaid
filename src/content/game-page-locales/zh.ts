@@ -20,7 +20,7 @@ export const zhGamePages = {
     screenshotCaption:
       'Bills Must Be Paid 官方截图，来源为 Rike Games / Steam。',
     onThisPage: '本页内容',
-    relatedPages: '相关页面',
+    relatedPages: '相关攻略',
     originalSources: '原始资料来源',
     sourcesIntro:
       '本页事实优先依据 Rike Games、Steam 商店、开发者公告和官方成就等一手资料；玩家社区技巧会明确标注，不会被写成官方机制。',
@@ -399,16 +399,24 @@ export const zhGamePages = {
       ],
       related: [
         {
-          title: '存钱罐',
-          description: '查看官方资料中的存钱罐类型、行为与收藏目标。',
+          title: '技能树 Wiki',
+          description: 'Rike Games 已公开的技能树升级方向与具名示例。',
         },
         {
-          title: '成就',
-          description: '在全部官方成就中查看 Eyes on the Piggy。',
+          title: '成就列表',
+          description: '全部 27 个 Steam 成就、官方目标与攻略入口。',
+        },
+        {
+          title: '转生与破产攻略',
+          description: '破产如何开启新周期，以及戒指、手镯与转生点数如何保留。',
+        },
+        {
+          title: '存钱罐 Wiki',
+          description: '官方来源确认的存钱罐类型、行为与收藏目标。',
         },
         {
           title: '新手攻略',
-          description: '回到核心玩法、体力和长期成长循环。',
+          description: '核心循环：敲存钱罐、消耗体力、付账单，并解锁长期成长。',
         },
       ],
       sources: [
@@ -813,14 +821,26 @@ export const zhGamePages = {
       ],
       related: [
         {
-          title: '新手攻略',
-          description: '理解技能树消费与账单、体力和锤子的关系。',
+          title: 'Piggy Shuffle 攻略',
+          description:
+            '解锁 Eyes on the Piggy：官方目标 + 明确标注的社区慢动作方法。',
         },
         {
-          title: '锤子',
-          description: '比较 Rike Games 已确认的装备属性取舍。',
+          title: '锤子升级 Wiki',
+          description: '锤子属性取舍（暴击、范围、速度、伤害）与具名平衡补丁。',
         },
-        { title: 'Tier List', description: '查看当前升级排名所需的证据标准。' },
+        {
+          title: '转生与破产攻略',
+          description: '破产如何开启新周期，以及戒指、手镯与转生点数如何保留。',
+        },
+        {
+          title: '新手攻略',
+          description: '核心循环：敲存钱罐、消耗体力、付账单，并解锁长期成长。',
+        },
+        {
+          title: '成就列表',
+          description: '全部 27 个 Steam 成就、官方目标与攻略入口。',
+        },
       ],
       sources: [
         {

@@ -31,21 +31,34 @@ function SkillTreePage() {
       ]}
       related={[
         {
-          title: 'Beginner Guide',
+          title: 'Piggy Shuffle Guide',
           description:
-            'See how skill-tree spending fits alongside bills, stamina and hammers.',
-          href: '/guides/beginner-guide',
+            'Unlock Eyes on the Piggy — verified objective plus a labeled community slow-motion method.',
+          href: '/guides/piggy-shuffle',
         },
         {
-          title: 'Hammers',
+          title: 'Hammer Upgrades Wiki',
           description:
-            'Compare the equipment tradeoffs documented by Rike Games.',
+            'Hammer tradeoffs (crit, radius, speed, damage) and named balance patches.',
           href: '/wiki/hammers',
         },
         {
-          title: 'Tier Lists',
-          description: 'Our current evidence standard for upgrade rankings.',
-          href: '/tier-lists',
+          title: 'Prestige & Bankruptcy Guide',
+          description:
+            'How bankruptcy starts a new cycle and how rings, bracelets, and prestige points carry over.',
+          href: '/guides/prestige-bankruptcy',
+        },
+        {
+          title: 'Beginner Guide',
+          description:
+            'Core loop: smash piggies, spend stamina, pay bills, and unlock long-term upgrades.',
+          href: '/guides/beginner-guide',
+        },
+        {
+          title: 'Achievements List',
+          description:
+            'All 27 Steam achievements with official objectives and guide links.',
+          href: '/achievements',
         },
       ]}
       sources={[

@@ -89,20 +89,34 @@ function AchievementsPage() {
       ]}
       related={[
         {
-          title: 'Eyes on the Piggy / Piggy Shuffle Guide',
+          title: 'Piggy Shuffle Guide',
           description:
-            'Focused help for the Piggy Shuffle achievement, including a clearly labeled community slow-motion method.',
+            'Unlock Eyes on the Piggy — verified objective plus a labeled community slow-motion method.',
           href: '/guides/piggy-shuffle',
         },
         {
-          title: 'Prestige & Bankruptcy',
-          description: 'Background for Fresh Start and Prestige Jewelry.',
+          title: 'Prestige & Bankruptcy Guide',
+          description:
+            'How bankruptcy starts a new cycle and how rings, bracelets, and prestige points carry over.',
           href: '/guides/prestige-bankruptcy',
         },
         {
-          title: 'Piggy Banks',
-          description: 'Background for Piggy Bank Collector.',
+          title: 'Skill Tree Wiki',
+          description:
+            'Verified upgrade directions and named examples from Rike Games’ skill tree.',
+          href: '/wiki/skill-tree',
+        },
+        {
+          title: 'Piggy Banks Wiki',
+          description:
+            'Piggy types, behavior, and collection goals backed by official sources.',
           href: '/wiki/piggy-banks',
+        },
+        {
+          title: 'Beginner Guide',
+          description:
+            'Core loop: smash piggies, spend stamina, pay bills, and unlock long-term upgrades.',
+          href: '/guides/beginner-guide',
         },
       ]}
       sources={[

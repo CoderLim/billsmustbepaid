@@ -18,6 +18,7 @@ import {
   getLocalizedGamePage,
   type LocalizedGamePage,
 } from '@/content/game-page-locales';
+import { getRelatedGuidesForPath } from '@/content/related-guides';
 
 export type ContentBreadcrumb = {
   label: string;
@@ -167,7 +168,11 @@ export function GameContentLayout({
   const image = gameSeoImages[imageKey];
   const displayedBreadcrumbs = localizeBreadcrumbs(breadcrumbs, localized);
   const displayedToc = localizeToc(toc, localized);
-  const displayedRelated = localizeRelated(related, localized);
+  // Prefer shared cross-link catalog (already localized) over per-page related props.
+  const catalogRelated = getRelatedGuidesForPath(pathname, locale);
+  const displayedRelated = catalogRelated.length
+    ? catalogRelated
+    : localizeRelated(related, localized);
   const displayedSources = localizeSources(sources, localized);
 
   return (

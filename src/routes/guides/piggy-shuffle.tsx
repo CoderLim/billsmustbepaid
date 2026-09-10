@@ -32,20 +32,33 @@ function PiggyShufflePage() {
       ]}
       related={[
         {
-          title: 'Achievements',
+          title: 'Skill Tree Wiki',
           description:
-            'See Eyes on the Piggy in the complete list of 27 official Steam achievements.',
+            'Verified upgrade directions and named examples from Rike Games’ skill tree.',
+          href: '/wiki/skill-tree',
+        },
+        {
+          title: 'Achievements List',
+          description:
+            'All 27 Steam achievements with official objectives and guide links.',
           href: '/achievements',
         },
         {
-          title: 'Piggy Banks',
+          title: 'Prestige & Bankruptcy Guide',
           description:
-            'What official sources say about piggy types, behavior and collection.',
+            'How bankruptcy starts a new cycle and how rings, bracelets, and prestige points carry over.',
+          href: '/guides/prestige-bankruptcy',
+        },
+        {
+          title: 'Piggy Banks Wiki',
+          description:
+            'Piggy types, behavior, and collection goals backed by official sources.',
           href: '/wiki/piggy-banks',
         },
         {
           title: 'Beginner Guide',
-          description: 'Return to the main game loop and progression systems.',
+          description:
+            'Core loop: smash piggies, spend stamina, pay bills, and unlock long-term upgrades.',
           href: '/guides/beginner-guide',
         },
       ]}

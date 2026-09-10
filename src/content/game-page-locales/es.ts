@@ -20,7 +20,7 @@ export const esGamePages = {
     screenshotCaption:
       'Captura oficial de Bills Must Be Paid de Rike Games / Steam.',
     onThisPage: 'En esta página',
-    relatedPages: 'Páginas relacionadas',
+    relatedPages: 'Guías relacionadas',
     originalSources: 'Fuentes originales',
     sourcesIntro:
       'Los datos de esta página se contrastan con Rike Games, Steam, anuncios del desarrollador y logros oficiales. Los consejos de la comunidad se identifican como tales y no se presentan como mecánicas oficiales.',
@@ -414,18 +414,29 @@ export const esGamePages = {
       ],
       related: [
         {
-          title: 'Huchas',
+          title: 'Wiki del árbol de habilidades',
           description:
-            'Qué dicen las fuentes oficiales sobre tipos, comportamiento y colección.',
+            'Direcciones de mejora verificadas y ejemplos nombrados del árbol de Rike Games.',
         },
         {
-          title: 'Logros',
+          title: 'Lista de logros',
           description:
-            'Consulta Eyes on the Piggy dentro de la lista oficial completa.',
+            'Los 27 logros de Steam con objetivos oficiales y enlaces a guías.',
+        },
+        {
+          title: 'Guía de prestigio y bancarrota',
+          description:
+            'Cómo la bancarrota inicia un ciclo nuevo y qué llevan anillos, pulseras y puntos de prestigio.',
+        },
+        {
+          title: 'Wiki de huchas',
+          description:
+            'Tipos de hucha, comportamiento y metas de colección con fuentes oficiales.',
         },
         {
           title: 'Guía para principiantes',
-          description: 'Vuelve al bucle principal y a la progresión general.',
+          description:
+            'Bucle principal: romper huchas, gastar stamina, pagar facturas y desbloquear progreso.',
         },
       ],
       sources: [
@@ -845,18 +856,29 @@ export const esGamePages = {
       ],
       related: [
         {
+          title: 'Guía de Piggy Shuffle',
+          description:
+            'Desbloquea Eyes on the Piggy: objetivo verificado y método comunitario a cámara lenta.',
+        },
+        {
+          title: 'Wiki de mejoras de martillo',
+          description:
+            'Compensaciones del martillo (crítico, radio, velocidad, daño) y parches nombrados.',
+        },
+        {
+          title: 'Guía de prestigio y bancarrota',
+          description:
+            'Cómo la bancarrota inicia un ciclo nuevo y qué llevan anillos, pulseras y puntos de prestigio.',
+        },
+        {
           title: 'Guía para principiantes',
           description:
-            'Cómo encaja el gasto de habilidades con facturas, resistencia y martillos.',
+            'Bucle principal: romper huchas, gastar stamina, pagar facturas y desbloquear progreso.',
         },
         {
-          title: 'Martillos',
+          title: 'Lista de logros',
           description:
-            'Compara los compromisos de equipo documentados por Rike Games.',
-        },
-        {
-          title: 'Tier Lists',
-          description: 'Criterio actual para publicar rankings de mejoras.',
+            'Los 27 logros de Steam con objetivos oficiales y enlaces a guías.',
         },
       ],
       sources: [

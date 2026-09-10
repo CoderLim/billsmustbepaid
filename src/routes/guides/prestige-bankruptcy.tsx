@@ -1,5 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { Link } from '@/core/i18n/navigation';
+import { buildGamePageHead } from '@/lib/game-content-seo';
 import {
   ArticleSection,
   FactList,
@@ -8,8 +10,6 @@ import {
   SourceNote,
 } from '@/components/game-content-layout';
 import { GameLongformExpansion } from '@/components/game-longform-expansion';
-import { Link } from '@/core/i18n/navigation';
-import { buildGamePageHead } from '@/lib/game-content-seo';
 
 function PrestigeBankruptcyPage() {
   return (
@@ -17,7 +17,10 @@ function PrestigeBankruptcyPage() {
       eyebrow="Progression Guide"
       title="Bills Must Be Paid: How Prestige & Bankruptcy Unlock Rings, Bracelets & New Cycles"
       description="See how bankruptcy becomes progression in Bills Must Be Paid, how Prestige/Legacy Points connect to paid bills, and how rings and bracelets strengthen future cycles."
-      breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Prestige & Bankruptcy' }]}
+      breadcrumbs={[
+        { label: 'Guides', href: '/guides' },
+        { label: 'Prestige & Bankruptcy' },
+      ]}
       imageKey="bills"
       imageAlt="Bills Must Be Paid bill payment screen"
       toc={[
@@ -32,19 +35,34 @@ function PrestigeBankruptcyPage() {
       ]}
       related={[
         {
+          title: 'Piggy Shuffle Guide',
+          description:
+            'Unlock Eyes on the Piggy — verified objective plus a labeled community slow-motion method.',
+          href: '/guides/piggy-shuffle',
+        },
+        {
+          title: 'Skill Tree Wiki',
+          description:
+            'Verified upgrade directions and named examples from Rike Games’ skill tree.',
+          href: '/wiki/skill-tree',
+        },
+        {
+          title: 'Achievements List',
+          description:
+            'All 27 Steam achievements with official objectives and guide links.',
+          href: '/achievements',
+        },
+        {
           title: 'Beginner Guide',
-          description: 'See where bankruptcy fits into the wider game loop.',
+          description:
+            'Core loop: smash piggies, spend stamina, pay bills, and unlock long-term upgrades.',
           href: '/guides/beginner-guide',
         },
         {
           title: 'Demo vs Full Game',
-          description: 'The full release changed progression enough that demo saves do not transfer.',
+          description:
+            'What the free demo covers versus Steam full release — and why demo saves do not transfer.',
           href: '/demo-vs-full-game',
-        },
-        {
-          title: 'Achievements',
-          description: 'Fresh Start and other official objectives tied to progression.',
-          href: '/achievements',
         },
       ]}
       sources={[
@@ -72,7 +90,11 @@ function PrestigeBankruptcyPage() {
     >
       <ArticleSection id="trigger" title="What triggers bankruptcy?">
         <p>
-          In the full game, official Steam material says that failing or ignoring a bill results in bankruptcy. This is not merely a game-over label: the developer’s pre-launch explanation ties it directly to the next progression cycle and to the persistent upgrades you buy afterward.
+          In the full game, official Steam material says that failing or
+          ignoring a bill results in bankruptcy. This is not merely a game-over
+          label: the developer’s pre-launch explanation ties it directly to the
+          next progression cycle and to the persistent upgrades you buy
+          afterward.
         </p>
         <GameScreenshot
           imageKey="bills"
@@ -83,29 +105,48 @@ function PrestigeBankruptcyPage() {
 
       <ArticleSection id="cycle" title="Bankruptcy starts a new cycle">
         <p>
-          The clearest first-party confirmation is reinforced by Steam’s <strong>Fresh Start</strong> achievement: “Declare bankruptcy and start a new cycle.” That wording establishes the reset/cycle relationship without requiring us to infer it from player behavior.
+          The clearest first-party confirmation is reinforced by Steam’s{' '}
+          <strong>Fresh Start</strong> achievement: “Declare bankruptcy and
+          start a new cycle.” That wording establishes the reset/cycle
+          relationship without requiring us to infer it from player behavior.
         </p>
       </ArticleSection>
 
       <ArticleSection id="points" title="Prestige Points vs legacy points">
         <p>
-          Pay more before bankruptcy and the progression reward grows. Rike Games’ June pre-launch announcement says Prestige Points are based on the total amount paid toward bills, with more paid producing more points. A launch-version community run documented by Whisper of the House paid five bills totaling <strong>$2,015</strong> and received <strong>40 Legacy Points</strong> at bankruptcy.
+          Pay more before bankruptcy and the progression reward grows. Rike
+          Games’ June pre-launch announcement says Prestige Points are based on
+          the total amount paid toward bills, with more paid producing more
+          points. A launch-version community run documented by Whisper of the
+          House paid five bills totaling <strong>$2,015</strong> and received{' '}
+          <strong>40 Legacy Points</strong> at bankruptcy.
         </p>
         <SourceNote title="The $2,015 → 40 points example is community evidence">
           <p>
-            The $2,015 figure is useful as a concrete launch-version example, but it is not an official universal formula. Rike Games confirms the relationship between paid bills and post-bankruptcy points, while community sources differ on the exact calculation shown by specific builds. Treat the number as version-specific evidence rather than a guaranteed conversion for every patch.
+            The $2,015 figure is useful as a concrete launch-version example,
+            but it is not an official universal formula. Rike Games confirms the
+            relationship between paid bills and post-bankruptcy points, while
+            community sources differ on the exact calculation shown by specific
+            builds. Treat the number as version-specific evidence rather than a
+            guaranteed conversion for every patch.
           </p>
         </SourceNote>
         <SourceNote title="Terminology changed in official material">
           <p>
-            Rike Games’ June announcement uses <strong>Prestige Points</strong>, while the current Steam store description calls the post-bankruptcy currency <strong>legacy points</strong>. Functionally, both descriptions connect bill-paying, bankruptcy and jewelry-based persistent progression.
+            Rike Games’ June announcement uses <strong>Prestige Points</strong>,
+            while the current Steam store description calls the post-bankruptcy
+            currency <strong>legacy points</strong>. Functionally, both
+            descriptions connect bill-paying, bankruptcy and jewelry-based
+            persistent progression.
           </p>
         </SourceNote>
       </ArticleSection>
 
       <ArticleSection id="jewelry" title="What are the points spent on?">
         <p>
-          Both official descriptions connect the post-bankruptcy resource to <strong>rings and bracelets</strong>. The developer announcement says these jewelry items upgrade your hand and can provide unique perks.
+          Both official descriptions connect the post-bankruptcy resource to{' '}
+          <strong>rings and bracelets</strong>. The developer announcement says
+          these jewelry items upgrade your hand and can provide unique perks.
         </p>
         <FactList
           items={[
@@ -116,12 +157,26 @@ function PrestigeBankruptcyPage() {
         />
       </ArticleSection>
 
-      <ArticleSection id="demo-save" title="The demo save does not transfer to the full game">
+      <ArticleSection
+        id="demo-save"
+        title="The demo save does not transfer to the full game"
+      >
         <p>
-          On launch day, Rike Games said demo saves cannot be carried into the full game because the full release changes prestige/bankruptcy, some skill-tree nodes, balance and under-the-hood systems. If you are moving from the browser or Steam demo, treat the full release as a fresh progression start.
+          On launch day, Rike Games said demo saves cannot be carried into the
+          full game because the full release changes prestige/bankruptcy, some
+          skill-tree nodes, balance and under-the-hood systems. If you are
+          moving from the browser or Steam demo, treat the full release as a
+          fresh progression start.
         </p>
         <p>
-          See <Link href="/demo-vs-full-game" className="text-foreground underline underline-offset-4">Demo vs Full Game</Link> for the complete first-party comparison we can verify.
+          See{' '}
+          <Link
+            href="/demo-vs-full-game"
+            className="text-foreground underline underline-offset-4"
+          >
+            Demo vs Full Game
+          </Link>{' '}
+          for the complete first-party comparison we can verify.
         </p>
       </ArticleSection>
 

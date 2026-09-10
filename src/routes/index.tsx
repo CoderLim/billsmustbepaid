@@ -7,6 +7,7 @@ import { getLocale, locales, localizeUrl } from '@/paraglide/runtime.js';
 import { Footer } from '@/blocks/footer';
 import { GamePlay } from '@/blocks/game-play';
 import { GameSeo } from '@/blocks/game-seo';
+import { GuidesHub } from '@/blocks/guides-hub';
 import { Header } from '@/blocks/header';
 import { PiggyShufflePromo } from '@/components/piggy-shuffle-promo';
 
@@ -62,6 +63,7 @@ function HomePage() {
       <Header />
       <main>
         <GamePlay />
+        <GuidesHub />
         <GameSeo />
         <PiggyShufflePromo />
       </main>
