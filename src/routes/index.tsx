@@ -15,6 +15,8 @@ const ENGLISH_FAQ_ANSWERS = {
   free: 'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
   browser:
     'Yes. The player at the top of this page runs in the browser, so no local game installation is required. Rike Games also links to its own free browser build, and itch.io hosts an HTML5 demo.',
+  download:
+    'To download Bills Must Be Paid officially, use Steam: there is a free Steam demo and a paid full release for Windows and macOS. This site hosts the free browser version — play above without downloading. There is no official mobile APK from Rike Games on this page yet.',
   steam:
     'The free browser and demo versions cover the core loop. The full Steam game adds documented systems including bankruptcy and prestige progression, rings and bracelets, more piggies, hammers and perks, desk gadgets, risk mechanics, an ending, achievements, and Steam Cloud support.',
   developer:
@@ -28,6 +30,7 @@ const ENGLISH_FAQ_ANSWERS = {
 const FAQ_KEYS = [
   'free',
   'browser',
+  'download',
   'game',
   'steam',
   'developer',
@@ -49,7 +52,7 @@ const HOME_SEO = {
   es: {
     title: 'Bills Must Be Paid — Juego Gratis Online | Wiki y Guías',
     description:
-      'Juega Bills Must Be Paid gratis en el navegador, sin descargar. Wiki con Piggy Shuffle, logros, árbol de habilidades y guías. Versión completa en Steam para Windows y Mac.',
+      'Juega Bills Must Be Paid gratis online sin descargar, o descárgalo oficialmente en Steam (demo gratis / juego completo). Wiki, Piggy Shuffle, logros y guías.',
   },
 } as const;
 

@@ -1,5 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { Link } from '@/core/i18n/navigation';
+import { buildGamePageHead } from '@/lib/game-content-seo';
 import {
   ArticleSection,
   FactList,
@@ -7,8 +9,6 @@ import {
   SourceNote,
 } from '@/components/game-content-layout';
 import { GameLongformExpansion } from '@/components/game-longform-expansion';
-import { Link } from '@/core/i18n/navigation';
-import { buildGamePageHead } from '@/lib/game-content-seo';
 
 function DemoVsFullGamePage() {
   return (
@@ -23,25 +23,35 @@ function DemoVsFullGamePage() {
         { label: 'Release dates', href: '#dates' },
         { label: 'Save compatibility', href: '#saves' },
         { label: 'Full-game additions', href: '#additions' },
+        {
+          label: 'Download on Steam vs play in browser',
+          href: '#download-vs-browser',
+        },
         { label: 'Browser and Steam demo', href: '#browser' },
         { label: 'Shared core loop', href: '#demo-shared-loop' },
-        { label: 'Full-game additions in context', href: '#demo-full-additions' },
+        {
+          label: 'Full-game additions in context',
+          href: '#demo-full-additions',
+        },
         { label: 'Save and version context', href: '#demo-save-context' },
       ]}
       related={[
         {
           title: 'Beginner Guide',
-          description: 'Learn the shared core loop before diving into full-release progression.',
+          description:
+            'Learn the shared core loop before diving into full-release progression.',
           href: '/guides/beginner-guide',
         },
         {
           title: 'Prestige & Bankruptcy',
-          description: 'The major full-game progression system described before launch.',
+          description:
+            'The major full-game progression system described before launch.',
           href: '/guides/prestige-bankruptcy',
         },
         {
           title: 'Skill Tree',
-          description: 'Some upgrade nodes changed between demo and full release.',
+          description:
+            'Some upgrade nodes changed between demo and full release.',
           href: '/wiki/skill-tree',
         },
       ]}
@@ -76,29 +86,47 @@ function DemoVsFullGamePage() {
       <ArticleSection id="dates" title="Release dates">
         <FactList
           items={[
-            <><strong>Steam demo:</strong> April 21, 2026.</>,
-            <><strong>Full game:</strong> July 29, 2026.</>,
+            <>
+              <strong>Steam demo:</strong> April 21, 2026.
+            </>,
+            <>
+              <strong>Full game:</strong> July 29, 2026.
+            </>,
           ]}
         />
         <p>
-          Rike Games also distributes a free browser-playable demo through its itch.io page, which is the same game project rather than an unrelated namesake.
+          Rike Games also distributes a free browser-playable demo through its
+          itch.io page, which is the same game project rather than an unrelated
+          namesake.
         </p>
       </ArticleSection>
 
-      <ArticleSection id="saves" title="Demo saves do not transfer to the full game">
+      <ArticleSection
+        id="saves"
+        title="Demo saves do not transfer to the full game"
+      >
         <p>
-          Rike Games stated this directly on launch day. The reason given was not just a technical limitation: the full release changes prestige/bankruptcy, some upgrade nodes, balance and under-the-hood systems.
+          Rike Games stated this directly on launch day. The reason given was
+          not just a technical limitation: the full release changes
+          prestige/bankruptcy, some upgrade nodes, balance and under-the-hood
+          systems.
         </p>
         <SourceNote title="Plan on a fresh start">
           <p>
-            If you have substantial progress in the browser or Steam demo, do not expect that save to become full-game progression. The developer explicitly says it will not transfer.
+            If you have substantial progress in the browser or Steam demo, do
+            not expect that save to become full-game progression. The developer
+            explicitly says it will not transfer.
           </p>
         </SourceNote>
       </ArticleSection>
 
-      <ArticleSection id="additions" title="What the developer announced for the full game">
+      <ArticleSection
+        id="additions"
+        title="What the developer announced for the full game"
+      >
         <p>
-          In the June release-date announcement, Rike Games highlighted several launch features beyond the demo:
+          In the June release-date announcement, Rike Games highlighted several
+          launch features beyond the demo:
         </p>
         <FactList
           items={[
@@ -111,16 +139,73 @@ function DemoVsFullGamePage() {
           ]}
         />
         <p>
-          The announcement presents these as launch highlights rather than a mathematically exhaustive list, so this page does not claim that every difference is captured here.
+          The announcement presents these as launch highlights rather than a
+          mathematically exhaustive list, so this page does not claim that every
+          difference is captured here.
         </p>
+      </ArticleSection>
+
+      <ArticleSection
+        id="download-vs-browser"
+        title="Download Bills Must Be Paid on Steam vs play free in the browser"
+      >
+        <p>
+          If you want an official PC download, use Steam: a free demo and a paid
+          full release for Windows and macOS, with achievements and Steam Cloud.
+          On this site you can play the free browser build without downloading —
+          use the player on the{' '}
+          <Link
+            href="/"
+            className="text-foreground underline underline-offset-4"
+          >
+            homepage
+          </Link>
+          . We do not host third-party APKs or unofficial installers.
+        </p>
+        <p>
+          Steam demo and browser/HTML5 builds share the core loop but are not
+          the same installer. Download on Steam when you want the full release
+          or an installable demo; play in the browser when you want the fastest
+          no-install try. The{' '}
+          <Link
+            href="/guides/beginner-guide"
+            className="text-foreground underline underline-offset-4"
+          >
+            Beginner Guide
+          </Link>{' '}
+          covers the loop both versions share.
+        </p>
+        <FactList
+          items={[
+            'Official download: Steam (free demo + paid full game).',
+            'No download: free browser player on this site / CrazyGames / itch.io.',
+            'Demo saves do not transfer to the full game.',
+          ]}
+        />
       </ArticleSection>
 
       <ArticleSection id="browser" title="Browser demo vs Steam demo">
         <p>
-          The Rike Games press kit points to itch.io as a free demo / browser-play option and to Steam for the PC release. The Steam demo is a separate Steam app, while the itch.io version runs in the browser.
+          The Rike Games press kit points to itch.io as a free demo /
+          browser-play option and to Steam for the PC release. The Steam demo is
+          a separate Steam app, while the itch.io version runs in the browser.
         </p>
         <p>
-          For mechanics that are shared across builds, start with the <Link href="/guides/beginner-guide" className="text-foreground underline underline-offset-4">Beginner Guide</Link>. For full-release-specific progression, use the <Link href="/guides/prestige-bankruptcy" className="text-foreground underline underline-offset-4">Prestige & Bankruptcy guide</Link>.
+          For mechanics that are shared across builds, start with the{' '}
+          <Link
+            href="/guides/beginner-guide"
+            className="text-foreground underline underline-offset-4"
+          >
+            Beginner Guide
+          </Link>
+          . For full-release-specific progression, use the{' '}
+          <Link
+            href="/guides/prestige-bankruptcy"
+            className="text-foreground underline underline-offset-4"
+          >
+            Prestige & Bankruptcy guide
+          </Link>
+          .
         </p>
       </ArticleSection>
 

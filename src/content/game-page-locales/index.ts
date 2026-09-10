@@ -104,12 +104,13 @@ const pageOverrides: Partial<
         'Lista completa de los 27 logros oficiales de Steam con objetivos y accesos directos a las guías de Eyes on the Piggy, Fresh Start y otros retos.',
     },
     'demo-vs-full-game': {
-      metaTitle: 'Bills Must Be Paid Demo vs Juego Completo — Gratis y Steam',
+      metaTitle:
+        'Bills Must Be Paid Demo vs Completo — Gratis, Descargar Steam',
       metaDescription:
-        'Bills Must Be Paid gratis en navegador vs juego completo de Steam: guardados, prestigio, bancarrota, logros y diferencias confirmadas.',
+        '¿Descargar Bills Must Be Paid o jugar gratis en el navegador? Demo vs Steam completo: guardados, prestigio, bancarrota y diferencias confirmadas.',
       title: 'Bills Must Be Paid Demo vs Juego Completo: Diferencias',
       description:
-        'Compara la demo gratuita con el lanzamiento completo de Steam: compatibilidad de guardados, prestigio, bancarrota, joyería, tienda y contenido añadido.',
+        'Compara jugar gratis sin descargar con la descarga oficial en Steam: guardados, prestigio, bancarrota, joyería, tienda y contenido añadido.',
     },
   },
 };

@@ -18,7 +18,10 @@ import {
   getLocalizedGamePage,
   type LocalizedGamePage,
 } from '@/content/game-page-locales';
-import { getRelatedGuidesForPath } from '@/content/related-guides';
+import {
+  getRelatedGuidesForPath,
+  withBeginnerGuideHub,
+} from '@/content/related-guides';
 
 export type ContentBreadcrumb = {
   label: string;
@@ -169,10 +172,15 @@ export function GameContentLayout({
   const displayedBreadcrumbs = localizeBreadcrumbs(breadcrumbs, localized);
   const displayedToc = localizeToc(toc, localized);
   // Prefer shared cross-link catalog (already localized) over per-page related props.
+  // Always lead with "Start here: Beginner Guide" so the hub is clear to crawlers.
   const catalogRelated = getRelatedGuidesForPath(pathname, locale);
-  const displayedRelated = catalogRelated.length
-    ? catalogRelated
-    : localizeRelated(related, localized);
+  const displayedRelated = withBeginnerGuideHub(
+    catalogRelated.length
+      ? catalogRelated
+      : localizeRelated(related, localized),
+    pathname,
+    locale
+  );
   const displayedSources = localizeSources(sources, localized);
 
   return (

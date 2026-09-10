@@ -326,12 +326,27 @@ export const RELATED_GUIDES_BY_PATH: Record<string, string[]> = {
     '/guides/beginner-guide',
   ],
   '/wiki': [
+    '/guides/beginner-guide',
     '/wiki/skill-tree',
     '/wiki/hammers',
     '/wiki/piggy-banks',
     '/guides/piggy-shuffle',
-    '/achievements',
   ],
+};
+
+const BEGINNER_GUIDE_HREF = '/guides/beginner-guide';
+
+/** Hub card title — makes Beginner Guide the clear internal-link center. */
+const START_HERE_TITLE: Record<GuideLocale, string> = {
+  en: 'Start here: Beginner Guide',
+  zh: '从这里开始：新手攻略',
+  es: 'Empieza aquí: Guía para principiantes',
+};
+
+const START_HERE_DESCRIPTION: Record<GuideLocale, string> = {
+  en: 'The hub for the core loop — then branch into every guide and wiki page.',
+  zh: '核心循环枢纽页，再由此进入各攻略与 Wiki。',
+  es: 'El hub del bucle principal; desde aquí pasas a cada guía y wiki.',
 };
 
 function normalizePath(pathname: string): string {
@@ -349,6 +364,31 @@ function toLocale(locale: string): GuideLocale {
   return 'en';
 }
 
+function beginnerHubCard(locale: GuideLocale): RelatedGuideLink {
+  return {
+    href: BEGINNER_GUIDE_HREF,
+    title: START_HERE_TITLE[locale],
+    description: START_HERE_DESCRIPTION[locale],
+  };
+}
+
+/**
+ * Ensure every content page (except the hub itself) leads with a
+ * "Start here: Beginner Guide" related card for internal-link topology.
+ */
+export function withBeginnerGuideHub(
+  links: RelatedGuideLink[],
+  pathname: string,
+  locale: string
+): RelatedGuideLink[] {
+  const path = normalizePath(pathname);
+  const loc = toLocale(locale);
+  if (path === BEGINNER_GUIDE_HREF) return links;
+
+  const rest = links.filter((link) => link.href !== BEGINNER_GUIDE_HREF);
+  return [beginnerHubCard(loc), ...rest].slice(0, 5);
+}
+
 export function getRelatedGuidesForPath(
   pathname: string,
   locale: string
@@ -357,7 +397,7 @@ export function getRelatedGuidesForPath(
   const hrefs = RELATED_GUIDES_BY_PATH[path];
   if (!hrefs?.length) return [];
   const loc = toLocale(locale);
-  return hrefs
+  const links = hrefs
     .map((href) => BY_HREF[href])
     .filter(Boolean)
     .map((entry) => ({
@@ -365,6 +405,7 @@ export function getRelatedGuidesForPath(
       title: entry.title[loc],
       description: entry.description[loc],
     }));
+  return withBeginnerGuideHub(links, path, loc);
 }
 
 export function getHomepageGuideHub(locale: string) {

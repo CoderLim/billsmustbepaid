@@ -15,7 +15,6 @@ import { ThemeProvider } from 'next-themes';
 import { envConfigs } from '@/config';
 import { getQueryClient } from '@/lib/query-client';
 import { getLocale } from '@/paraglide/runtime.js';
-import { Ads } from '@/components/analytics/ads';
 import { GoogleAnalytics } from '@/components/analytics/google-analytics';
 import { Pageview } from '@/components/analytics/pageview';
 import { Plausible } from '@/components/analytics/plausible';
@@ -39,7 +38,6 @@ const getAnalyticsConfigs = createServerFn().handler(async () => {
     gaId: configs.google_analytics_id?.trim() || '',
     plausibleDomain: configs.plausible_domain?.trim() || '',
     plausibleSrc: configs.plausible_src?.trim() || '',
-    adsenseCode: configs.adsense_code?.trim() || '',
     crispWebsiteId:
       configs.crisp_enabled === 'true'
         ? configs.crisp_website_id?.trim() || ''
@@ -95,10 +93,6 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   const analytics = Route.useLoaderData();
-  // Temporarily disable adsbygoogle.js site-wide (keep account meta for
-  // verification). Re-enable with: pathname !== '/' (homepage still skips —
-  // Publisher Policies disallow Google ads beside framed third-party content).
-  const loadAdScript = false;
 
   return (
     <QueryClientProvider client={getQueryClient()}>
@@ -121,9 +115,6 @@ function RootComponent() {
             domain={analytics.plausibleDomain}
             src={analytics.plausibleSrc || undefined}
           />
-        ) : null}
-        {analytics?.adsenseCode ? (
-          <Ads code={analytics.adsenseCode} loadScript={loadAdScript} />
         ) : null}
         <CustomerService
           crispWebsiteId={analytics?.crispWebsiteId || undefined}

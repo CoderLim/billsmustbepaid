@@ -13,6 +13,7 @@ import {
 const FAQ_KEYS = [
   'free',
   'browser',
+  'download',
   'game',
   'steam',
   'developer',
@@ -59,11 +60,11 @@ const ENGLISH_COPY = {
       'Bills Must Be Paid also has rare coins that can drop instead of regular money. Rike Games describes these as a collection that carries across runs. The Steam release also supports achievements, so collection and completion sit alongside the core goal of paying bills and improving your build.',
   },
   platformsBody:
-    'Bills Must Be Paid can be played for free in the browser on this page. Other official or developer-authorized options include Steam, CrazyGames, and itch.io.',
+    'Bills Must Be Paid can be played for free in the browser on this page — no download. Official PC download is on Steam (free demo or paid full game). Other browser options include CrazyGames and itch.io.',
   platforms: {
-    browser: 'Free browser build (this page) — no install required',
+    browser: 'Play free in the browser (this page) — no download or install',
     steam:
-      'Steam (Windows & macOS) — full game, free demo, achievements, and Steam Cloud',
+      'Download on Steam (Windows & macOS) — free demo and paid full game, achievements, Steam Cloud',
     crazygames: 'CrazyGames — desktop browser version by Rike Games',
     itch: 'itch.io — HTML5 demo by RikeGames',
   },
@@ -73,6 +74,8 @@ const ENGLISH_COPY = {
     free: 'Yes. Bills Must Be Paid can be played in a browser for free, and Rike Games also offers free demos on Steam and itch.io. The complete Steam release is paid.',
     browser:
       'Yes. Bills Must Be Paid runs in the player at the top of this page, so no local game installation is required. Rike Games also links to its own free browser build, and itch.io hosts an HTML5 demo.',
+    download:
+      'To download Bills Must Be Paid officially, use Steam: there is a free Steam demo and a paid full release for Windows and macOS. This site hosts the free browser version — play above without downloading. There is no official mobile APK from Rike Games on this page yet.',
     game: 'Bills Must Be Paid is a free browser game by Rike Games. Smash piggy banks, pay bills, and upgrade your hammer in short stamina-limited runs. Play instantly on this page — no download. The paid Steam version adds prestige, achievements, and more content.',
     steam:
       'The free Bills Must Be Paid browser and demo versions cover the core loop. The full Steam game adds documented systems including bankruptcy and prestige progression, rings and bracelets, more piggies, hammers and perks, desk gadgets, risk mechanics, an ending, achievements, and Steam Cloud support.',

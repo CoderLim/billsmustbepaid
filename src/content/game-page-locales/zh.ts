@@ -1190,6 +1190,7 @@ export const zhGamePages = {
         '发布日期',
         '存档兼容性',
         '完整版新增内容',
+        'Steam 下载 vs 浏览器畅玩',
         '浏览器版与 Steam Demo',
         '共同的核心循环',
         '完整版新增内容的意义',
@@ -1267,6 +1268,19 @@ export const zhGamePages = {
             '更多风险/赌博机制',
             '正式结局',
             'Steam 成就与 Steam Cloud',
+          ],
+        },
+        {
+          id: 'download-vs-browser',
+          title: 'Steam 下载 Bills Must Be Paid，还是浏览器免费畅玩',
+          paragraphs: [
+            '如果你在找「下载 Bills Must Be Paid」，官方 PC 渠道是 Steam：有免费 Demo 与付费完整版（Windows / macOS），含成就与 Steam Cloud。本站提供免费浏览器版，无需下载——在首页播放器即可开玩。我们不托管第三方 APK 或非官方安装包。',
+            'Steam Demo 与浏览器/HTML5 版本共享核心循环，但不是同一个安装包。想要完整版或可安装 Demo 时选 Steam；想最快试用、不装软件时选浏览器。两者共享的循环见新手攻略。',
+          ],
+          bullets: [
+            '官方下载：Steam（免费 Demo + 付费完整版）。',
+            '无需下载：本站 / CrazyGames / itch.io 浏览器畅玩。',
+            'Demo 存档不会转移到完整版。',
           ],
         },
         {

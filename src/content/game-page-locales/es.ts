@@ -1223,19 +1223,21 @@ export const esGamePages = {
       ],
     },
     'demo-vs-full-game': {
-      metaTitle: 'Bills Must Be Paid Demo vs Juego Completo — Gratis y Steam',
+      metaTitle:
+        'Bills Must Be Paid Demo vs Completo — Gratis, Descargar Steam',
       metaDescription:
-        'Bills Must Be Paid gratis en navegador vs juego completo de Steam: guardados, prestigio, bancarrota, logros y diferencias confirmadas.',
+        '¿Descargar Bills Must Be Paid o jugar gratis en el navegador? Demo vs Steam completo: guardados, prestigio, bancarrota y diferencias confirmadas.',
       eyebrow: 'Versiones',
       title: 'Bills Must Be Paid Demo vs Full Game',
       description:
-        'Diferencias verificadas entre la demo gratuita/navegador y el lanzamiento completo de Steam, con fechas, guardados y sistemas añadidos o modificados.',
+        'Compara jugar gratis sin descargar con la descarga oficial en Steam: fechas, guardados y sistemas añadidos o modificados.',
       imageAlt: 'Arte oficial de Bills Must Be Paid',
       breadcrumbs: ['Demo vs juego completo'],
       toc: [
         'Fechas de lanzamiento',
         'Compatibilidad de guardados',
         'Novedades del juego completo',
+        'Descargar en Steam vs jugar en el navegador',
         'Navegador y Steam Demo',
         'Bucle compartido',
         'Qué cambian las novedades',
@@ -1314,6 +1316,20 @@ export const esGamePages = {
             'Más riesgo/apuestas',
             'Un final',
             'Logros y Steam Cloud',
+          ],
+        },
+        {
+          id: 'download-vs-browser',
+          title:
+            'Descargar Bills Must Be Paid en Steam vs jugar gratis en el navegador',
+          paragraphs: [
+            'Si buscas «Bills Must Be Paid descargar», la vía oficial de descarga para PC es Steam: ahí hay una demo gratis y el juego completo de pago para Windows y macOS, con logros y Steam Cloud. En billsmustbepaid.net puedes jugar la versión de navegador gratis sin descargar — el reproductor está en la [página principal](/). No publicamos APKs de terceros ni enlaces no oficiales.',
+            'La demo de Steam y la build HTML5/navegador comparten el bucle principal, pero no son el mismo instalador. Descargar en Steam tiene sentido si quieres la experiencia completa o una demo instalable; jugar en el navegador es la opción más rápida para probar sin instalación. La [guía para principiantes](/guides/beginner-guide) explica el bucle que ambas comparten.',
+          ],
+          bullets: [
+            'Descarga oficial: Steam (demo gratis + juego completo de pago).',
+            'Sin descargar: reproductor gratis en esta web / CrazyGames / itch.io.',
+            'Los guardados de demo no se transfieren al juego completo.',
           ],
         },
         {
