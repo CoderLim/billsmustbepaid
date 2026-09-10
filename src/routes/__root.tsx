@@ -12,7 +12,6 @@ import {
 import { createServerFn } from '@tanstack/react-start';
 import { ThemeProvider } from 'next-themes';
 
-import { usePathname } from '@/core/i18n/navigation';
 import { envConfigs } from '@/config';
 import { getQueryClient } from '@/lib/query-client';
 import { getLocale } from '@/paraglide/runtime.js';
@@ -96,11 +95,10 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   const analytics = Route.useLoaderData();
-  // Homepage embeds a third-party game iframe — keep the AdSense account
-  // meta for verification, but do not load adsbygoogle.js there (Publisher
-  // Policies disallow Google ads on framed third-party content pages).
-  const pathname = usePathname();
-  const loadAdScript = pathname !== '/';
+  // Temporarily disable adsbygoogle.js site-wide (keep account meta for
+  // verification). Re-enable with: pathname !== '/' (homepage still skips —
+  // Publisher Policies disallow Google ads beside framed third-party content).
+  const loadAdScript = false;
 
   return (
     <QueryClientProvider client={getQueryClient()}>

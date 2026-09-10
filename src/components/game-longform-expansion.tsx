@@ -1,3 +1,6 @@
+import type { ReactNode } from 'react';
+
+import { Link } from '@/core/i18n/navigation';
 import { ArticleSection, FactList } from '@/components/game-content-layout';
 
 type ExpansionKey =
@@ -16,7 +19,7 @@ type ExpansionKey =
 type ExpansionSection = {
   id: string;
   title: string;
-  paragraphs: string[];
+  paragraphs: ReactNode[];
   bullets?: string[];
 };
 
@@ -140,7 +143,8 @@ const EXPANSIONS: Record<ExpansionKey, ExpansionSection[]> = {
     },
     {
       id: 'shuffle-method',
-      title: 'How the Bills Must Be Paid Piggy Shuffle slow-motion method works',
+      title:
+        'How the Bills Must Be Paid Piggy Shuffle slow-motion method works',
       paragraphs: [
         'A Steam Community guide proposes a practical Bills Must Be Paid Piggy Shuffle method: record the shuffle with a phone, replay the movement in slow motion, track the originally marked piggy through the swaps, then return to the game and select the target. The method is easy to understand because it changes the observation problem rather than claiming to change Bills Must Be Paid itself.',
         'The important label is “community method.” Rike Games does not present slow-motion phone recording as an official Bills Must Be Paid Piggy Shuffle mechanic, and this site does not guarantee the community guide title’s claim of perfect success. The value of the method is simply that slower playback can make rapid movement easier to follow. If a player can track the target directly, no recording is required; the recording is an external aid suggested by another player.',
@@ -155,7 +159,8 @@ const EXPANSIONS: Record<ExpansionKey, ExpansionSection[]> = {
     },
     {
       id: 'shuffle-troubleshooting',
-      title: 'Bills Must Be Paid Piggy Shuffle troubleshooting and evidence limits',
+      title:
+        'Bills Must Be Paid Piggy Shuffle troubleshooting and evidence limits',
       paragraphs: [
         'If the Bills Must Be Paid Piggy Shuffle method still fails, the first thing to check is whether the target remained visible in the recording. Motion blur, a cropped screen or losing the original target at the start can make slow playback useless. Those are recording limitations, not documented Bills Must Be Paid mechanics. A cleaner capture may help more than searching for an unsupported “always pick this position” rule.',
         'The Bills Must Be Paid Piggy Shuffle guide intentionally does not publish anecdotal tells unless they can be tied to repeatable evidence or a stronger source. That protects the page from turning temporary player impressions into permanent claims. If Rike Games later documents how Piggy Shuffle selects movement or target positions, the new first-party information can replace the current uncertainty.',
@@ -282,7 +287,8 @@ const EXPANSIONS: Record<ExpansionKey, ExpansionSection[]> = {
     },
     {
       id: 'skill-versioning-expanded',
-      title: 'Bills Must Be Paid skill tree differences between demo and full game',
+      title:
+        'Bills Must Be Paid skill tree differences between demo and full game',
       paragraphs: [
         'The Bills Must Be Paid skill tree cannot be treated as permanently identical across versions. Rike Games said at launch that some upgrade nodes changed between the demo and the full release, alongside balance and under-the-hood differences. That statement is one of the reasons the developer gave for demo saves not transferring into the complete Bills Must Be Paid game.',
         'For players reading older guides, this means a Bills Must Be Paid skill tree recommendation needs a version check. An upgrade name, effect or route shown in the demo may not map perfectly to the July 29 full release. The Demo vs Full Game page should be used whenever a Bills Must Be Paid skill tree claim comes from pre-launch material or a demo-era community post.',
@@ -301,7 +307,21 @@ const EXPANSIONS: Record<ExpansionKey, ExpansionSection[]> = {
       title: 'How to read Bills Must Be Paid skill tree advice',
       paragraphs: [
         'A useful Bills Must Be Paid skill tree guide should separate facts from build analysis. The fact layer says which upgrade themes and effects are documented. The analysis layer can discuss why a player might value damage, stamina, recovery, speed, luck or a special effect, but that analysis should not be presented as an official Rike Games ranking.',
-        'The same distinction applies when the Bills Must Be Paid skill tree interacts with hammers. Rike Games documents hammer tradeoffs in critical chance, radius, speed and damage. A skill that changes the hand or adds a special effect may alter the context in which those hammer stats matter, but this page does not claim a hidden multiplier without a source. Players who want equipment-specific details can move to the Bills Must Be Paid hammers wiki.',
+        <>
+          The same distinction applies when the Bills Must Be Paid skill tree
+          interacts with hammers. Rike Games documents hammer tradeoffs in
+          critical chance, radius, speed and damage. A skill that changes the
+          hand or adds a special effect may alter the context in which those
+          hammer stats matter, but this page does not claim a hidden multiplier
+          without a source. Players who want equipment-specific details can{' '}
+          <Link
+            href="/wiki/hammers"
+            className="text-foreground underline underline-offset-4"
+          >
+            see the Hammer Upgrades wiki for crit/radius/speed tradeoffs
+          </Link>
+          .
+        </>,
         'As more current data becomes available, the Bills Must Be Paid skill tree reference can support tables, build examples and a real tier list with a version label. Until then, the most reliable use of this Bills Must Be Paid page is to understand the documented upgrade directions, the demo-to-full-game caveat and the completion objective tied to buying the entire tree.',
       ],
     },
@@ -318,7 +338,8 @@ const EXPANSIONS: Record<ExpansionKey, ExpansionSection[]> = {
     },
     {
       id: 'achievement-completion',
-      title: 'Bills Must Be Paid achievements for money, risk and 100% completion',
+      title:
+        'Bills Must Be Paid achievements for money, risk and 100% completion',
       paragraphs: [
         'Money and risk objectives reveal systems that are easy to miss when a player only follows the basic Bills Must Be Paid loop. Better than Nothing, High Roller and Five Figures set single-run earning targets, while The Richest Broke Person asks for a large amount owned at once. Other Bills Must Be Paid achievements explicitly reference a coinflip, going all in, a Super Jackpot and loans involving Big Toni.',
         'The completion group is even more useful as a roadmap. Piggy Bank Collector requires every piggy bank, Coin Collector requires the full coin collection, Bought It All requires every shop item, Prestige Jewelry requires all rings and bracelets, and Maxed Out requires every Bills Must Be Paid skill-tree upgrade. Those objectives confirm several systems as completion targets even when the public store description does not list every underlying item.',
@@ -333,7 +354,8 @@ const EXPANSIONS: Record<ExpansionKey, ExpansionSection[]> = {
     },
     {
       id: 'achievement-verification',
-      title: 'Why the Bills Must Be Paid achievements page uses the official objective text',
+      title:
+        'Why the Bills Must Be Paid achievements page uses the official objective text',
       paragraphs: [
         'Achievement pages are one place where preserving exact labels is better than aggressively rewriting everything. Bills Must Be Paid achievement names are in-game identifiers, and the objective text is the authoritative description of what Steam is tracking. The surrounding Bills Must Be Paid guide copy is rewritten and organized for clarity, while the names and objectives remain faithful to the source.',
         'The page deliberately omits Steam global completion percentages because those values change as more Bills Must Be Paid players unlock achievements. A fixed percentage copied today can become wrong without any change to the achievement itself. The stable data is the Bills Must Be Paid achievement name and objective, so that is what the reference prioritizes.',
@@ -369,7 +391,8 @@ const EXPANSIONS: Record<ExpansionKey, ExpansionSection[]> = {
     },
     {
       id: 'tier-search-intent',
-      title: 'Why this Bills Must Be Paid tier list page does not invent rankings',
+      title:
+        'Why this Bills Must Be Paid tier list page does not invent rankings',
       paragraphs: [
         'There is clear search value in a Bills Must Be Paid tier list, but search demand is not evidence. Publishing confident S, A and B placements without current data would create a page that looks complete while giving players information that cannot be verified. This Bills Must Be Paid tier list hub instead records the evidence already available and the missing data required for a stronger ranking.',
         'That approach also protects the Bills Must Be Paid wiki from cannibalizing itself. The hammer page owns confirmed hammer facts. The skill-tree page owns verified upgrade descriptions. A future Bills Must Be Paid tier list can then focus on comparative analysis and link back to those references instead of copying the same basic definitions into every ranking page.',
@@ -420,8 +443,8 @@ export function GameLongformExpansion({ page }: { page: ExpansionKey }) {
     <>
       {EXPANSIONS[page].map((section) => (
         <ArticleSection key={section.id} id={section.id} title={section.title}>
-          {section.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+          {section.paragraphs.map((paragraph, index) => (
+            <p key={`${section.id}-${index}`}>{paragraph}</p>
           ))}
           {section.bullets ? <FactList items={section.bullets} /> : null}
         </ArticleSection>
