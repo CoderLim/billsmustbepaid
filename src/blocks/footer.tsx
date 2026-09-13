@@ -41,6 +41,15 @@ export function Footer() {
         { label: m['landing.footer.contact'](), href: '/contact' },
       ],
     },
+    {
+      title: m['landing.footer.more'](),
+      links: [
+        {
+          label: 'Wow Forever',
+          href: 'http://wowforeverwiki.org/',
+        },
+      ],
+    },
   ];
 
   return (
