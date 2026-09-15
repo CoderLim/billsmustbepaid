@@ -48,6 +48,22 @@ export function Footer() {
           label: 'Wow Forever',
           href: 'http://wowforeverwiki.org/',
         },
+        {
+          label: 'Heatwarped Wiki',
+          href: 'https://heatwarped.wiki/',
+        },
+        {
+          label: 'Build a Hooper',
+          href: 'https://buildahooper.org/',
+        },
+        {
+          label: '73-9',
+          href: 'https://73-9.org/',
+        },
+        {
+          label: 'Metro Typing',
+          href: 'https://metrotyping.org/',
+        },
       ],
     },
   ];
